@@ -1,0 +1,77 @@
+.inquiry-section {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(164, 110, 241, 0.15);
+  padding: 50px;
+  margin: 60px auto;
+  font-family: 'Poppins', sans-serif;
+  border-top: 6px solid #f57c9b;
+}
+
+.inquiry-header h2 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #f57c9b, #a46ef1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.inquiry-header p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+  border: 1px solid #e1d8f8;
+  padding: 10px 12px;
+  transition: 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #a46ef1;
+  box-shadow: 0 0 0 0.15rem rgba(245, 124, 155, 0.25);
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #f57c9b, #a46ef1);
+  border: none;
+  color: #fff;
+  padding: 12px 45px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(245, 124, 155, 0.35);
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #a46ef1, #f57c9b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(164, 110, 241, 0.35);
+}
+
+@media (max-width: 768px) {
+  .inquiry-section {
+    padding: 30px 20px;
+  }
+
+  .inquiry-header h2 {
+    font-size: 20px;
+  }
+}

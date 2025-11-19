@@ -1,0 +1,80 @@
+<div class="modal fade show custom-modal" style="display: block;" tabindex="-1">
+  <div class="modal-dialog modal-dialog-slide modal-dialog-scrollable">
+    <div class="modal-content shadow">
+      <div class="modal-header">
+        <h5 class="head-text"><span (click)="close()"><i class="fa-solid fa-chevron-left"></i></span>
+          Add New Address
+        </h5>
+      </div>
+
+      <!-- <form class="modal-form" (ngSubmit)="addAddress()" formGroup="addressForm">
+        <label>Country</label>
+        <select>
+          <option>India</option>
+          <option>Koria</option>
+        </select>
+
+        <label>Name</label>
+        <input type="text" placeholder="Name" value="" />
+
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="+91 XXXXX XXXXX" value="" />
+
+        <label>Postal Code</label>
+        <input type="text" placeholder="Postal Code" value="" />
+
+        <label>Address</label>
+        <textarea placeholder="Enter your address"></textarea>
+
+        <div class="checkbox">
+          <input type="checkbox" id="defaultAddress" checked />
+          <label for="defaultAddress">Use this as my default Shipping Address</label>
+        </div>
+
+        <button type="submit" class="update-btn">Add Address</button>
+      </form> -->
+
+      
+      <form class="modal-form" (ngSubmit)="addAddress()" [formGroup]="addForm">
+        <label>Country</label>
+        <select formControlName="country">
+          <option value="India">India</option>
+          <option value="Korea">Korea</option>
+        </select>
+
+        <label>Name</label>
+        <input type="text" placeholder="Name" formControlName="contactPerson" />
+
+        <label>Mobile Number</label>
+        <input type="tel" maxlength="10" minlength="10" placeholder="+91 XXXXX XXXXX" formControlName="mobileNo" />
+
+        <label>Postal Code</label>
+        <input type="text" maxlength="6" minlength="6" placeholder="Postal Code" formControlName="pincode" />
+
+        <label>Address</label>
+        <textarea placeholder="Enter your address" formControlName="address"></textarea>
+
+        <label>House No</label>
+        <input type="text" placeholder="House No" formControlName="houseNo" />
+
+        <label>City</label>
+        <input type="text" placeholder="city" formControlName="city" />
+
+        <label>State</label>
+        <input type="text" placeholder="State" formControlName="state" />
+
+        <div class="checkbox">
+          <input type="checkbox" id="defaultAddress" formControlName="defaultAddress" />
+          <label for="defaultAddress">Use this as my default Shipping Address</label>
+        </div>
+         
+        <a>
+        <button type="submit" class="btn btn-primary w-100">Add Address</button>
+
+        </a>
+      </form>
+
+
+    </div>
+  </div>
+</div>

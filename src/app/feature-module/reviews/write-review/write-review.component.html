@@ -1,0 +1,77 @@
+<div class="modal fade show custom-modal" style="display: block;" tabindex="-1">
+  <div class="modal-dialog modal-dialog-slide modal-dialog-scrollable">
+    <div class="modal-content shadow">
+      <div class="modal-header">
+        <h5 class="head-text"><span (click)="close()"><i class="fa-solid fa-chevron-left"></i></span>
+          Write a Review
+        </h5>
+      </div>
+       <form class="modal-form" (ngSubmit)="addReviews()" [formGroup]="reviewForm">
+      <div class="review-card">
+
+        <!-- Product Section -->
+        <div class="product-info d-flex align-items-start gap-3 p-1 border-bottom">
+          <img  [src]="productData?.productImageId" alt="Product" width="75" />
+          <div>
+            <h6 class="product-name">{{ productData?.productName }}</h6>
+            <small class="text-sec2">Reduces Dark Spots | Brightens Skin</small>
+          </div>
+        </div>
+
+        <!-- Star Rating -->
+        <div class="rating-box"> 
+          <div class="rating-title">Rate this Product</div>
+          <div class="star-rating">
+            <input type="radio" name="rating" formControlName="rating" id="star5" value="5">
+            <label for="star5"><i class="fa fa-star"></i></label>
+
+            <input type="radio" name="rating" formControlName="rating" id="star4" value="4">
+            <label for="star4"><i class="fa fa-star"></i></label>
+
+            <input type="radio" name="rating"  formControlName="rating" id="star3" value="3">
+            <label for="star3"><i class="fa fa-star"></i></label>
+
+            <input type="radio" name="rating" formControlName="rating" id="star2" value="2">
+            <label for="star2"><i class="fa fa-star"></i></label>
+
+            <input type="radio" name="rating" formControlName="rating" id="star1" value="1">
+            <label for="star1"><i class="fa fa-star"></i></label>
+          </div>
+        </div>
+
+        <!-- Review Form -->
+        <div class="p-2 write-review">
+          <h6>Write a Review</h6>
+          <input type="text" class="form-control mb-2" placeholder="Review Title" />
+          <textarea class="form-control mb-2" formControlName="comment" rows="4" placeholder="Review Description"></textarea>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="p-2 bg-light border-top">
+          <h6 class="add-img">Add Images</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <div *ngFor="let image of images; let i = index" class="position-relative">
+              <img [src]="image" class="img-thumbnail uploaded-img" />
+              <button type="button" class="btn-close position-absolute top-0 start-100 translate-middle"
+                (click)="removeImage(i)"></button>
+            </div>
+
+            <!-- Add Box -->
+            <div class="upload-box d-flex align-items-center justify-content-center" (click)="triggerFileInput()">
+              <i class="fa fa-plus text-pink fs-3"></i>
+              <input type="file" #fileInput hidden (change)="onFileSelected($event)" accept="image/*" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="submit-btn mt-2 text-end">
+          <button type="submit" class="btn btn-primary submit-review w-100" >Submit</button>
+        </div>
+      </div>
+
+</form>
+
+    </div>
+  </div>
+</div>

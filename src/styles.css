@@ -1,0 +1,573 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+.stickybar {
+  position: sticky;
+  top: 0;
+}
+.mat-mdc-option .mat-pseudo-checkbox-minimal {
+  display: none;
+}
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
+  background-color: #ffa633;
+}
+.mat-calendar-body-today:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
+  border-color: #ffa633;
+  background: #ffa633;
+}
+.mat-calendar-body-selected {
+  background-color: #ffa633;
+  color: rgba(0, 0, 0, 0.87);
+}
+.datepicker-icon {
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+}
+.cus-icon-calender {
+  font-size: 16px;
+}
+.datepicker-icon-listing {
+  position: absolute;
+  top: -6px;
+  right: 0;
+  line-height: normal;
+}
+.group-img {
+  position: relative;
+}
+
+.group-img .mat-icon {
+  height: auto;
+}
+.owl-theme .owl-nav [class*="owl-"] {
+  color: #2f2f2f;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: none;
+  color: #fff;
+  text-decoration: none;
+}
+.footer .footer-contact .footer-contact-info .update-form .btn .icon-send {
+  color: #ffffff;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.detail-bigimg button:focus {
+  background: #fff;
+}
+span.mat-mdc-select-min-line {
+  font-size: 14px;
+  color:#111;
+  padding-right: 10px;
+}
+.custom-timepicker {
+  position: absolute;
+  background: #f4f4f4;
+  display: none;
+  z-index: 1;
+  padding: 10px;
+}
+td a.btn.btn-link {
+  color: #000;
+}
+timepicker.custom-timepicker table tbody tr td input {
+  padding: 20px !important;
+}
+.mat-mdc-slider.mat-primary {
+  --mdc-slider-handle-color: #ff5893;
+  --mdc-slider-active-track-color: #ff5893;
+ --mdc-slider-focus-handle-color: #ff5893;  /*#ff9b44 */
+}
+mat-slider.mat-mdc-slider.mdc-slider {
+  width: 100%;
+}
+mat-option.mat-mdc-option:focus.mdc-list-item,
+mat-option.mat-mdc-option.mat-mdc-option-active.mdc-list-item {
+  background-color:  #ff7baa; /*#127384*/
+}
+mat-option.mat-mdc-option.mdc-list-item--selected:not(
+    .mdc-list-item--disabled
+  ):not(.mat-mdc-option-multiple) {
+  background-color: #ff4081;/* #127384*/
+}
+mat-option.mat-mdc-option:hover:not(.mdc-list-item--disabled) {
+  background-color: #ff5893;/*#127384 */
+}
+mat-option.mat-mdc-option {
+  min-height: 35px;
+  font-size: 14px;
+}
+mat-option.mat-mdc-option-active .mdc-list-item__primary-text,
+mat-option.mat-mdc-option:hover .mdc-list-item__primary-text {
+  color: #fff;
+}
+.form-control.select {
+  padding: 0;
+}
+.form-control.select .mat-mdc-select-trigger {
+  padding: 0.240rem 0.75rem;
+}
+mat-option.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled)
+  .mdc-list-item__primary-text {
+  color: #fff;
+}
+/* .dataTables_length label:before {
+  margin-right: 5px;
+  font-size: 14px;
+} */
+.dataTables_length label {
+  color: #111;
+  font-weight: normal !important;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  margin-right: 5px;
+  font-size: 14px;
+}
+app-custom-pagination .tab-footer {
+  margin-top: 20px;
+}
+.form-control.select.user-dashboard-select {
+  width: 140px;
+}
+.mat-mdc-select-trigger .mat-mdc-select-value {
+  text-align: start;
+}
+bs-datepicker-container .theme-green .bs-datepicker-head,
+.bs-datepicker.theme-green .bs-datepicker-head {
+  background-color: #ff9f43;
+}
+
+bs-datepicker-container .theme-green .bs-datepicker-body table td span.selected,
+bs-datepicker-container .theme-green .bs-datepicker-body table td.selected span,
+bs-datepicker-container
+  .theme-green
+  .bs-datepicker-body
+  table
+  td
+  span[class*="select-"]:after,
+bs-datepicker-container
+  .theme-green
+  .bs-datepicker-body
+  table
+  td[class*="select-"]
+  span:after,
+.bs-datepicker.theme-green .bs-datepicker-body table td span.selected,
+.bs-datepicker.theme-green .bs-datepicker-body table td.selected span,
+.bs-datepicker.theme-green
+  .bs-datepicker-body
+  table
+  td
+  span[class*="select-"]:after,
+.bs-datepicker.theme-green
+  .bs-datepicker-body
+  table
+  td[class*="select-"]
+  span:after {
+  background-color: #ff9f43;
+}
+
+.theme-green .bs-datepicker-body table td.week span {
+  color: #ff9f43;
+}
+
+app-custom-pagination .table-footer .page-link {
+  border-radius: 10px;
+}
+
+mat-tooltip-component .mat-mdc-tooltip .mdc-tooltip__surface {
+  background-color: #000;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.table-footer .dataTables_length .form-control {
+  margin-left: 5px;
+}
+
+.stickybar {
+  position: sticky;
+  top: 145px;
+}
+.dashboard-table .table td a{
+  color: #737373;
+}
+.dashboard-table .table td a:active{
+  color: #FFA633;
+}
+.bike-category-slider .owl-theme .owl-nav .owl-prev,
+.bike-feature-slider .owl-theme .owl-nav .owl-prev,
+.blog-slider .owl-theme .owl-nav .owl-prev{
+  width: 33px;
+  height: 33px;
+  font-size: 16px;
+  color: #000;
+  background: #ffffff;
+  box-shadow: 0px 4px 24px 0px rgba(225, 225, 225, 0.2509803922);
+  text-shadow: none;
+  top: 0;
+  cursor: pointer;
+  border: 1px solid #F4F4F4;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.bike-category-slider .owl-theme .owl-nav .owl-next,
+.bike-feature-slider .owl-theme .owl-nav .owl-next,
+.blog-slider .owl-theme .owl-nav .owl-next{
+    width: 33px;
+    height: 33px;
+    font-size: 16px;
+    color: #000;
+    background: #ffffff;
+    box-shadow: 0px 4px 24px 0px rgba(225, 225, 225, 0.2509803922);
+    text-shadow: none;
+    top: 0;
+    cursor: pointer;
+    border: 1px solid #F4F4F4;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.bike-category-slider .owl-theme .owl-nav .owl-next,
+.bike-feature-slider .owl-theme .owl-nav .owl-next,
+.blog-slider .owl-theme .owl-nav .owl-next{
+  right:-20px;
+}
+.bike-category-slider .owl-theme .owl-nav .owl-prev,
+.blog-slider .owl-theme .owl-nav .owl-prev,
+.bike-feature-slider .owl-theme .owl-nav .owl-prev{
+  left:-20px;
+}
+
+.image-slider .owl-theme .owl-nav .owl-next{
+  height: 18px;
+    width: 18px;
+    background: rgba(0, 0, 0, 0.5019607843) !important;
+    color: #ffffff;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transition: 500ms all ease;
+    -ms-transition: 500ms all ease;
+    transition: 500ms all ease;
+    border-radius: 50%;
+}
+.image-slider .owl-theme .owl-nav .owl-prev{
+  height: 18px;
+    width: 18px;
+    background: rgba(0, 0, 0, 0.5019607843) !important;
+    color: #ffffff;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transition: 500ms all ease;
+    -ms-transition: 500ms all ease;
+    transition: 500ms all ease;
+    border-radius: 50%;
+}
+.yacht-image-slider .owl-theme .owl-nav .owl-prev,
+.image-slider .owl-theme .owl-nav .owl-prev,
+.img-slider .owl-theme .owl-nav .owl-prev{
+  height: 18px;
+    width: 18px;
+    background: rgba(0, 0, 0, 0.5019607843) !important;
+    color: #ffffff;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transition: 500ms all ease;
+    -ms-transition: 500ms all ease;
+    transition: 500ms all ease;
+    border-radius: 50%;
+}
+.yacht-image-slider .owl-theme .owl-nav .owl-next,
+.img-slider .owl-theme .owl-nav .owl-next,
+.image-slider .owl-theme .owl-nav .owl-next{
+  height: 18px;
+    width: 18px;
+    background: rgba(0, 0, 0, 0.5019607843) !important;
+    color: #ffffff;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transition: 500ms all ease;
+    -ms-transition: 500ms all ease;
+    transition: 500ms all ease;
+    border-radius: 50%;
+}
+.image-slider .owl-theme .owl-nav .owl-next,
+.yacht-image-slider .owl-theme .owl-nav .owl-next,
+.img-slider .owl-theme .owl-nav .owl-next
+{
+  right:16px;
+}
+.image-slider .owl-theme .owl-nav .owl-prev,
+.yacht-image-slider .owl-theme .owl-nav .owl-prev,
+.img-slider .owl-theme .owl-nav .owl-prev{
+  left:16px;
+}
+.image-slider .owl-theme .owl-dots .owl-dot span,
+.imageOwlOptions .owl-theme .owl-dots .owl-dot span,
+.yacht-image-slider .owl-theme .owl-dots .owl-dot span,
+.img-slider .owl-theme .owl-dots .owl-dot span{
+    width: 4px;
+    height: 4px;
+    border-radius: 40px;
+    background: #DBDBDB;
+    margin: 0 0 15px 0;
+    margin-right: 5px;
+}
+.image-slider .owl-theme .owl-dots .owl-dot.active span,
+.imageOwlOptions .owl-theme .owl-dots .owl-dot span,
+.img-slider .owl-theme .owl-dots .owl-dot.active span{
+  width: 13px;
+  height: 4px;
+  background: #FF9307;
+}
+.yacht-image-slider .owl-theme .owl-dots .owl-dot.active span{
+  width: 14px;
+    background: #FFA633;
+}
+.popular-location-slider .owl-theme .owl-nav .owl-next{
+  width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background: #0A152F;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s all;
+    border: 1px solid #0A152F;
+}
+.popular-location-slider .owl-theme .owl-nav .owl-prev{
+  width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background: #0A152F;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s all;
+    border: 1px solid #0A152F;
+}
+.popular-location-slider .owl-theme .owl-nav .owl-prev{
+  margin-right:5px;
+}
+.blog-slider .owl-theme .owl-nav .owl-next:hover,
+.blog-slider .owl-theme .owl-nav .owl-prev:hover{
+  background: #127384;
+  color: #ffffff;
+}
+.yacht-image-slider .owl-theme .owl-nav .owl-next i,
+.yacht-image-slider .owl-theme .owl-nav .owl-prev i{
+  line-height: 16px;
+}
+.popular-location-slider .owl-theme .owl-nav{
+  display: flex;
+  justify-content: center;
+}
+.display-none {
+  display: none;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.testimonial-slider .testimonial-slider .slick-slide img{
+  width:45px;
+  height:45px;
+  border-radius: 50%;
+}
+.img-slider:hover .owl-nav,
+.image-slider:hover .owl-nav,
+.yacht-image-slider .owl-nav{
+  transition: 500ms all ease;
+    opacity: 1;
+}
+.img-slider .owl-nav,
+.image-slider .owl-nav,
+.yacht-image-slider .owl-nav{
+  transition: 500ms all ease;
+    opacity: 0;
+}
+.img-slider .owl-theme .owl-nav{
+  margin:0;
+}
+.img-slider .owl-theme .owl-dots{
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.img-slider .owl-theme .owl-nav .owl-next{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 8px;
+}
+.img-slider .owl-theme .owl-nav .owl-prev{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 8px;
+}
+.top-rated-yachts-slider .owl-theme .owl-nav{
+  display: block;
+}
+.top-rated-yachts-slider .owl-theme .owl-nav .owl-next{
+  width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background: #0A152F;
+    border: 1px solid #0A152F;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s all;
+}
+.top-rated-yachts-slider .owl-theme .owl-nav .owl-prev{
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: #0A152F;
+  border: 1px solid #0A152F;
+  color: #ffffff;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s all;
+}
+.top-rated-yachts-slider .owl-theme .owl-nav{
+  display: flex;
+}
+.customcolor{
+  background: #F5F5F5 !important;
+}
+.rental-deal-slider .owl-theme .owl-prev{
+  width: 55px;
+    height: 55px;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0px 4px 24px rgba(255, 255, 255, 0.2);
+    background: #ffffff;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.rental-deal-slider .owl-theme .owl-next{
+  width: 55px;
+  height: 55px;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0px 4px 24px rgba(255, 255, 255, 0.2);
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.rental-deal-slider  .owl-theme .owl-next:hover,
+.rental-deal-slider  .owl-theme .owl-prev:hover{
+  background: #FFA633;
+    color: #ffffff;
+}
+.slider-img{
+  position: relative;
+}
+.slider-img::after{
+  content: "";
+    background: linear-gradient(102.39deg, rgba(6, 19, 26, 0.8) 2.09%, rgba(0, 0, 0, 0.64) 81.2%);
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.banner-img-slider .owl-theme .owl-nav .owl-prev{
+ color:#ffffff
+}
+.banner-img-slider .owl-theme .owl-nav .owl-next{
+  color:#ffffff
+ }
+ .banner-img-slider .owl-theme .owl-nav .owl-prev:hover{
+  color:#FFA633;
+ }
+ .banner-img-slider .owl-theme .owl-nav .owl-next:hover{
+  color:#FFA633;
+ }
+ .rental-deal-slider .owl-theme .owl-nav .owl-prev{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .rental-deal-slider .owl-theme .owl-nav .owl-next{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }

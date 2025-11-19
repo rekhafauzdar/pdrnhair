@@ -1,0 +1,1052 @@
+<section class="product-tabs container-fluid">
+  <!-- Banner -->
+  <div class="product-banner text-center">
+    <h2 class="fw-bold mb-2">Product</h2>
+    <p class="text-muted">Reliable Medical Devices from Official Vendors</p>
+  </div>
+  <!-- Tabs Navigation -->
+  <div class="tabs-wrap">
+    <div class="tab-scroll">
+      <ul class="nav flex-wrap tab-nav">
+        <li class="nav-item" *ngFor="let tab of tabs" (click)="selectTab(tab.id)">
+          <a class="nav-link" [class.active]="activeTab === tab.id" href="javascript:void(0)">{{ tab.label }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="filterbutton">
+      <button class="btn btn-filter" (click)="toggleSidebar()">Filter</button>
+    </div>
+  </div>
+
+  <!-------------- Sidebar -->
+  <div class="sidebar" [class.open]="isSidebarOpen">
+    <div class="sidebar-header d-flex align-items-center justify-content-between">
+      <!-- Logo -->
+      <div class="sidebar-logo">
+        <img src="assets/img/Loche-India-Logo-PNG.png" alt="Logo" width="75px" />
+      </div>
+
+      <!-- Close Button --> 
+      <button class="btn-close" (click)="toggleSidebar()">
+        <span>&times;</span>
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+      <div class="theiaStickySidebar">
+        <div class="stickybar">
+          <form action="#" autocomplete="off" class="sidebar-form">
+            <div class="sidebar-heading">
+              <h5 class="py-3">What Are You Looking For</h5>
+            </div>
+            <div class="product-search">
+              <div class="form-custom">
+                <input type="text" class="form-control" id="member_search1" placeholder="">
+                <span><img src="assets/img/icons/search.svg" alt="img"></span>
+              </div>
+            </div>
+            <div class="product-availability">
+              <h6>Availability</h6>
+              <div class="status-toggle">
+                <input id="mobile_notifications" class="check" type="checkbox" checked="">
+                <label for="mobile_notifications" class="checktoggle">checkbox</label>
+              </div>
+            </div>
+            <div class="accord-list">
+              <div class="accordion" id="accordionMain1">
+                <div class="card-header-new" id="headingOne">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Product Category
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionMain1">
+                  <div class="card-body-chat">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div id="checkBoxes1">
+                          <div class="selectBox-cont">
+                            <!-- Manually add product categories -->
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> All
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> Medical Devices
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> Botox
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> Fillers
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> PL
+                            </label>
+                             <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> PN Injector
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> PDRN
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> Skin Booster
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> Lipolysis
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> PDRN Dental Implants
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> Cosmetics
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="category">
+                              <span class="checkmark"></span> Health Functional Food
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="accordion" id="accordionMain9">
+                <div class="card-header-new" id="headingFour">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                      Price
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample4">
+                  <div class="card-body-chat">
+                    <div class="filter-range">
+                      <mat-slider min="0" max="100" discrete [displayWith]="formatLabel">
+                        <input value="50" matSliderThumb />
+                      </mat-slider>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion" id="accordionMain10">
+                <div class="card-header-new" id="headingFive">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                      Rating
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample5">
+                  <div class="card-body-chat">
+                    <div id="checkBoxes4">
+                      <div class="selectBox-cont">
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category">
+                          <span class="checkmark"></span>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <span class="rating-count">5.0</span>
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category">
+                          <span class="checkmark"></span>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star"></i>
+                          <span class="rating-count">4.0</span>
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category">
+                          <span class="checkmark"></span>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <span class="rating-count">3.0</span>
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category">
+                          <span class="checkmark"></span>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <span class="rating-count">2.0</span>
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username">
+                          <span class="checkmark"></span>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <span class="rating-count">1.0</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" id="accordionMain11">
+                <div class="card-header-new" id="headingSix">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                      Customer Recommendation
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample6">
+                  <div class="card-body-chat">
+                    <div id="checkBoxes5">
+                      <div class="selectBox-cont">
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category">
+                          <span class="checkmark"></span> 70% & up
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category">
+                          <span class="checkmark"></span> 60% & up
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category">
+                          <span class="checkmark"></span> 50% & up
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category">
+                          <span class="checkmark"></span> 40% & up
+                        </label>
+                        <div class="viewall-Two">
+                          <label class="custom_check w-100">
+                            <input type="checkbox" name="username">
+                            <span class="checkmark"></span>30% & up
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit"
+              class="d-inline-flex align-items-center justify-content-center btn w-100 btn-primary filter-btn">
+              <span><i class="feather icon-filter me-2"></i></span>Filter results
+            </button>
+            <a href="javascript:void(0);" class="reset-filter">Reset Filter</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional: overlay -->
+  <div class="overlay" *ngIf="isSidebarOpen" (click)="toggleSidebar()"></div>
+
+  <!--------------close Sidebar -->
+
+  <!-- Sort By -->
+  <div class="sort-section  mobile-view-hide">
+    <div class="container-fluid">
+      <div class="sortby-sec">
+        <div class="sorting-div">
+          <div class="justy-containt">
+            <div class="nav-text-first">
+              <div class="count-search">
+                <p>Displaying Total <span> {{getAllProductData.length}} </span> <span> Loche Bio Products</span></p>
+              </div>
+            </div>
+            <div class="nav-text-second">
+              <div class="product-filter-group">
+                <div class="sortbyset">
+                  <ul>
+                    <li>
+                      <!-- <span class="sortbytitle">Sort By </span> -->
+                      <div class="sorting-select select-two">
+                        <mat-select [(ngModel)]="selectedValue2" (selectionChange)="onSortChange($event.value)"
+                          [ngModelOptions]="{ standalone: true }" class="form-control select customcolor"
+                          placeholder="Products">
+                          <mat-option *ngFor="let data of selectedList2" [value]="data.value">
+                            {{ data.value }}
+                          </mat-option>
+                        </mat-select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Sort By -->
+
+  <!-- Tab Content -->
+  <div class="tab-container mt-4">
+    <div *ngIf="filteredProducts.length > 0" class="tab-section fade-in">
+      <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-6" *ngFor="let product of filteredProducts">
+          <div class="listing-item">
+            <div class="listing-img">
+              <div class="img-slider">
+                <div class="slide-images" (click)="productProfile(product.id)">
+                  <a class="product-image" >
+                    <img class="img-fluid" [src]="product.productImageId || product.imageInfo?.imageUrl" [alt]="product.productName"/>
+                  </a>
+                </div>
+              </div>
+              <div class="fav-item justify-content-end" (click)="addToWishlist(product.id)">
+                <a class="fav-icon" tabindex="1">
+                  <i class="feather icon-heart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="listing-content" >
+              <div class="listing-features d-flex align-items-end justify-content-between"  (click)="productProfile(product.id)">
+                <div class="list-rating">
+                  <h3 class="listing-title">
+                    <a>{{ product.productName }}</a>
+                  </h3>
+                  <div class="list-rating">
+                    <i class="fas fa-star filled me-1" *ngFor="let i of [1,2,3,4]"></i>
+                    <i class="fas fa-star"></i>
+                    <!-- <span>{{ product.reviews }} ({{ product.rating }}) | {{ product.reviews }} Reviews</span> -->
+                  <span>({{ product.rating }}) | {{ product.reviews }} Reviews</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="listing-location-details"  (click)="productProfile(product.id)">
+                 <div class="listing-price">
+                    @if(product.mrp){
+                    <h5> ₹ {{ product?.mrp }}</h5>
+                    }@else{
+                   <div class="outof-stock" style="color: red;"> OUT OF STOCK</div>
+                    }
+                  </div>
+              </div>
+
+              @if(product.mrp){
+                <div class="listing-button" (click)="addToCart(product.id)">
+                  <a class="btn btn-order">
+                    <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    Add To Cart
+                  </a>
+                </div>
+              }
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🟡 Optional: if no products found -->
+    <div *ngIf="filteredProducts.length === 0" class="text-center p-5 bg-light rounded">
+      No products available for this category.
+    </div>
+  </div>
+
+
+
+
+
+  <!--Pagination-->
+  <!-- <div class="blog-pagination">
+    <nav>
+      <ul class="pagination page-item justify-content-end">
+        <li class="previtem">
+          <a class="paginationarrow"><i class="fa-solid fa-angles-left"></i></a>
+        </li>
+        <li class="justify-content-center pagination-center">
+          <div class="page-group">
+            <ul>
+              <li class="page-item">
+                <a class="active page-link" href="javascript:void(0);">1</a>
+              </li>
+              <li class="page-item">
+                <a class=" page-link" href="javascript:void(0);">2 <span class="visually-hidden">(current)</span></a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0);">3</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nextlink">
+          <a class="paginationarrow"><i class="fa-solid fa-angles-right"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </div> -->
+  <!--/Pagination-->
+
+</section>
+
+
+
+
+
+
+
+<!-- <section class="section sidebar-section pt-0 mt-4">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-lg-3 col-12 theiaStickySidebar mobile-view-hide">
+        <div class="stickybar">
+          <form action="#" autocomplete="off" class="sidebar-form">
+            <div class="accord-list">
+              <div class="accordion" id="accordionMain9">
+                <div class="card-header-new" id="headingFour">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                      Price
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample4">
+                  <div class="card-body-chat">
+                    <div class="filter-range">
+                      <input type="range" [min]="minPrice" [max]="maxPrice" [step]="100" [(ngModel)]="selectedMax"
+                        (input)="onPriceChange($event)" class="price-slider" />
+
+                      <div class="price-value">Max Price: ₹{{ selectedMax }}</div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="accordion" id="accordionMain2">
+                <div class="card-header-new" id="headingTwo">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      Product Type
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
+                  <div class="card-body-chat">
+                    <div id="checkBoxes2">
+                      <div class="selectBox-cont">
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="Serum" (change)="onCategoryChange($event, 'Serum')" />
+                          <span class="checkmark"></span> Serum
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="Cream" (change)="onCategoryChange($event, 'Cream')" />
+                          <span class="checkmark"></span> Cream
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="Gel" (change)="onCategoryChange($event, 'Gel')" />
+                          <span class="checkmark"></span> Gel
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="Soap" (change)="onCategoryChange($event, 'Soap')" />
+                          <span class="checkmark"></span> Soap
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="Mask" (change)="onCategoryChange($event, 'Mask')" />
+                          <span class="checkmark"></span> Mask
+                        </label>
+                        <div class="view-content">
+                          <div class="viewall-One">
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="Foam" (change)="onCategoryChange($event, 'Foam')" />
+                              <span class="checkmark"></span> Foam
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="Powder" (change)="onCategoryChange($event, 'Powder')" />
+                              <span class="checkmark"></span> Powder
+                            </label>
+                            <label class="custom_check w-100">
+                              <input type="checkbox" name="PeelPads" (change)="onCategoryChange($event, 'Peel Pads')" />
+                              <span class="checkmark"></span> Peel Pads
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" id="accordionMain04">
+                <div class="card-header-new" id="headingfuel">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapsefuel" aria-expanded="true" aria-controls="collapsefuel">
+                      Concern
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapsefuel" class="collapse" aria-labelledby="headingfuel"
+                  data-bs-parent="#accordionExample2">
+                  <div class="card-body-chat">
+                    <div id="checkBoxes2">
+                      <div class="selectBox-cont">
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="Hydration" (change)="onConcernChange($event, 'Hydration')" />
+                          <span class="checkmark"></span> Hydration 24
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="DarkSpots" (change)="onConcernChange($event, 'Dark Spots')" />
+                          <span class="checkmark"></span> Dark Spots/Pigmantations
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="Anti-Aging" (change)="onConcernChange($event, 'Anti-Aging')" />
+                          <span class="checkmark"></span> Anti-Aging
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="PoreCare" (change)="onConcernChange($event, ' Pore Care')" />
+                          <span class="checkmark"></span> Pore Care
+                        </label>
+
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="FineLines" (change)="onConcernChange($event, 'Fine Lines')" />
+                          <span class="checkmark"></span> Fine Lines & Wrinkles
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="Dryness" (change)="onConcernChange($event, 'Dryness')" />
+                          <span class="checkmark"></span> Dryness
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="OilControl" (change)="onConcernChange($event, 'Oil Control')" />
+                          <span class="checkmark"></span> Oil Control
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="SunProtection"
+                            (change)="onConcernChange($event, 'Sun Protection')" />
+                          <span class="checkmark"></span> Sun Protection
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="UnevenSkinTone"
+                            (change)="onConcernChange($event, 'Uneven Skin Tone')" />
+                          <span class="checkmark"></span> Uneven Skin Tone
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="HairFall" (change)="onConcernChange($event, 'Hair Fall')" />
+                          <span class="checkmark"></span> Hair Fall & Thinning
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="Blackheads" (change)="onConcernChange($event, 'Blackheads')" />
+                          <span class="checkmark"></span> Blackheads
+                        </label>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" id="accordionMain5">
+                <div class="card-header-new" id="headingmileage">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapsemileage" aria-expanded="true" aria-controls="collapsemileage">
+                      Skin Type
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapsemileage" class="collapse" aria-labelledby="headingmileage"
+                  data-bs-parent="#accordionExample2">
+                  <div class="card-body-chat">
+                    <div class="fuel-list">
+                      <ul>
+                        <li>
+                          <div class="input-selection">
+                            <input type="radio" name="mileage" id="all" checked="true"
+                              (change)="onSkintypeChange($event, 'Hydration')" />
+                            <label for="all">All</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="input-selection">
+                            <input type="radio" name="mileage" id="Normal" checked=""
+                              (change)="onSkintypeChange($event, 'Oily')" />
+                            <label for="Normal">Oily</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="input-selection">
+                            <input type="radio" name="mileage" id="limited" checked=""
+                              (change)="onSkintypeChange($event, 'Sensitive')" />
+                            <label for="limited">Sensitive</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="input-selection">
+                            <input type="radio" name="mileage" id="Combination" checked=""
+                              (change)="onSkintypeChange($event, 'Combination')" />
+                            <label for="Combination">Combination</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="input-selection">
+                            <input type="radio" name="mileage" id="Normals" checked=""
+                              (change)="onSkintypeChange($event, 'Normal')" />
+                            <label for="Normals">Normal</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="input-selection">
+                            <input type="radio" name="mileage" id="Dry" checked=""
+                              (change)="onSkintypeChange($event, 'Dry')" />
+                            <label for="Dry">Dry</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" id="accordionMain6">
+                <div class="card-header-new" id="headingrental">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapserental" aria-expanded="true" aria-controls="collapserental">
+                      Preference
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapserental" class="collapse" aria-labelledby="headingrental"
+                  data-bs-parent="#accordionExample2">
+                  <div class="card-body-chat">
+                    <div id="checkBoxes2">
+                      <div class="selectBox-cont">
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username"
+                            (change)="onPreferenceChange($event, 'Paraben Free')" />
+                          <span class="checkmark"></span> Paraben Free
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username" (change)="onPreferenceChange($event, 'Vegan')" />
+                          <span class="checkmark"></span> Vegan
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username"
+                            (change)="onPreferenceChange($event, 'Sulphate Free')" />
+                          <span class="checkmark"></span> Sulphate Free
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username" (change)="onPreferenceChange($event, 'Organic')" />
+                          <span class="checkmark"></span> Organic
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username"
+                            (change)="onPreferenceChange($event, 'Chemical Free')" />
+                          <span class="checkmark"></span> Chemical Free
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username"
+                            (change)="onPreferenceChange($event, 'Fragrance-Free')" />
+                          <span class="checkmark"></span> Fragrance-Free
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username"
+                            (change)="onPreferenceChange($event, 'Dermacosmetic')" />
+                          <span class="checkmark"></span> Dermacosmetic
+
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username"
+                            (change)="onPreferenceChange($event, 'Mineral Oil-Free')" />
+                          <span class="checkmark"></span> Mineral Oil-Free
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username"
+                            (change)="onPreferenceChange($event, 'Cruelty-Free')" />
+                          <span class="checkmark"></span> Cruelty-Free
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username" (change)="onPreferenceChange($event, 'Natural')" />
+                          <span class="checkmark"></span> Natural
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="username" (change)="onPreferenceChange($event, 'Herbal')" />
+                          <span class="checkmark"></span> Herbal
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="accordion" id="accordionMain8">
+                <div class="card-header-new" id="headingThree">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      Formulation
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample3">
+                  <div class="card-body-chat">
+                    <div id="checkBoxes3">
+                      <div class="selectBox-cont">
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Liquid')" />
+                          <span class="checkmark"></span> Liquid
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Gel')" />
+                          <span class="checkmark"></span> Gel
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Cream')" />
+                          <span class="checkmark"></span> Cream
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Foam')" />
+                          <span class="checkmark"></span> Foam
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus"
+                            (change)="onFormulationChange($event, 'Water-Based')" />
+                          <span class="checkmark"></span> Water-Based
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Oil-Based')" />
+                          <span class="checkmark"></span> Oil-based
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Balm')" />
+                          <span class="checkmark"></span> Balm
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Powder')" />
+                          <span class="checkmark"></span> Powder
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Spray')" />
+                          <span class="checkmark"></span> Spray
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Mist')" />
+                          <span class="checkmark"></span> Mist
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onFormulationChange($event, 'Stick')" />
+                          <span class="checkmark"></span> Stick
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion" id="accordionMain4">
+                <div class="card-header-new" id="headingtransmiss">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapsetransmission" aria-expanded="true" aria-controls="collapsetransmission">
+                      Ingredient
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapsetransmission" class="collapse" aria-labelledby="headingtransmiss"
+                  data-bs-parent="#accordionExample2">
+                  <div class="card-body-chat">
+                    <div id="checkBoxes3">
+                      <div class="selectBox-cont">
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onIngredientChange($event, 'Vitamin C')" />
+                          <span class="checkmark"></span> Vitamin C
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onIngredientChange($event, 'Aloe Vera')" />
+                          <span class="checkmark"></span> Aloe Vera
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onIngredientChange($event, 'Neem')" />
+                          <span class="checkmark"></span> Neem
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onIngredientChange($event, 'Vitamin E')" />
+                          <span class="checkmark"></span> Vitamin E
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onIngredientChange($event, 'Tea Tree')" />
+                          <span class="checkmark"></span> Tea Tree
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus"
+                            (change)="onIngredientChange($event, 'Salicylic Acid')" />
+                          <span class="checkmark"></span> Salicylic Acid
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onIngredientChange($event, 'Turmeric')" />
+                          <span class="checkmark"></span> Turmeric
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onIngredientChange($event, 'Niacinamide')" />
+                          <span class="checkmark"></span> Niacinamide
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus"
+                            (change)="onIngredientChange($event, 'Hyaluronic Acid')" />
+                          <span class="checkmark"></span> Hyaluronic Acid
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onIngredientChange($event, 'Charcoal')" />
+                          <span class="checkmark"></span> Charcoal
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onIngredientChange($event, 'Honey')" />
+                          <span class="checkmark"></span> Honey
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" id="accordionMain10">
+                <div class="card-header-new" id="headingFive">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                      Benefits
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample5">
+                  <div class="card-body-chat">
+                    <div id="checkBoxes4">
+                      <div class="selectBox-cont">
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Brightening')" />
+                          <span class="checkmark"></span> Brightening
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Hydrating')" />
+                          <span class="checkmark"></span> Hydrating
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Moisturising')" />
+                          <span class="checkmark"></span> Moisturising
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Nourishing')" />
+                          <span class="checkmark"></span> Nourishing
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Fairness')" />
+                          <span class="checkmark"></span> Fairness
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Light Weight')" />
+                          <span class="checkmark"></span> Light Weight
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Calming')" />
+                          <span class="checkmark"></span> Calming
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Long Lasting')" />
+                          <span class="checkmark"></span> Long Lasting
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Cooling')" />
+                          <span class="checkmark"></span> Cooling
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="bystatus" (change)="onConcernChange($event, 'Anti Ageing')" />
+                          <span class="checkmark"></span> Anti Ageing
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" id="accordionMain11">
+                <div class="card-header-new" id="headingSix">
+                  <h6 class="filter-title">
+                    <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                      Conscious
+                      <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
+                    </a>
+                  </h6>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample6">
+                  <div class="card-body-chat">
+                    <div id="checkBoxes5">
+                      <div class="selectBox-cont">
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category" (change)="onCategoryChange($event, 'Cruelty-Free')" />
+                          <span class="checkmark"></span> Cruelty-Free
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category" (change)="onCategoryChange($event, 'Clean')" />
+                          <span class="checkmark"></span> Clean
+                        </label>
+                        <label class="custom_check w-100">
+                          <input type="checkbox" name="category" (change)="onCategoryChange($event, 'Vegan')" />
+                          <span class="checkmark"></span> Vegan
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class=" col-md-8 col-lg-9">
+        <div class="row product-b">
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-4 col-6"
+            *ngFor="let item of getAllProductData; trackBy: trackByProductId">
+            <div class="listing-item">
+              <div class="listing-img">
+                <div class="img-slider" (click)="productProfile(item.id)">
+                  <div class="slide-images">
+                    <a class="product-image">
+                      <img *ngIf="!item?.productImageId" src="assets/img/product/glossys1.webp" class="img-fluid"
+                        alt="product" />
+                      <img *ngIf="item?.productImageId" [src]="item?.productImageId" class="img-fluid" alt="product" />
+
+                    </a>
+                  </div>
+                </div>
+                <div class="fav-item justify-content-end">
+                  <a class="fav-icon" (click)="toggleClass(item.id)" tabindex="1"
+                    [ngClass]="{ selected: isClassAdded[item.id] }">
+                    <i class="feather icon-heart" (click)="addToWishlist(item.id)"></i>
+                  </a>
+
+                </div>
+              </div>
+              <div class="listing-content">
+                <div class="listing-features d-flex align-items-end justify-content-between"
+                  (click)="productProfile(item.id)">
+                  <div class="list-rating">
+                    <h3 class="listing-title">
+                      <a>{{item.productName}}</a>
+                    </h3>
+                    <div class="listing-concern">
+                      Use For:- {{item.concern}}
+                    </div>
+                    <div class="list-rating">
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star"></i>
+                      <span>{{item.reviews}} (4.0) | 138 Reviews</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="listing-location-details" (click)="productProfile(item.id)">
+                  <div class="listing-price">
+                    @if(item.mrp){
+                    <h5> ₹ {{ item?.mrp }}</h5>
+                    }@else{
+                    <div class="outof-stock" style="color: red;"> OUT OF STOCK</div>
+                    }
+                  </div>
+                </div>
+
+                @if(item.mrp){
+                <div class="listing-button" (click)="addToCart(item.id)">
+                  <a class="btn btn-order">
+                    <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    Add To Cart
+                  </a>
+                </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row product-b" *ngIf="getAllProductData.length === 0">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+            </ngx-spinner>
+          </div>
+        </div>
+
+        <div class="blog-pagination">
+          <nav>
+            <ul class="pagination page-item justify-content-end">
+              <li class="previtem">
+                <a class="page-link"><i class="fa-solid fa-angles-left"></i></a>
+              </li>
+              <li class="justify-content-center pagination-center">
+                <div class="page-group">
+                  <ul>
+                    <li class="page-item">
+                      <a class="active page-link" href="javascript:void(0);">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class=" page-link" href="javascript:void(0);">2 <span
+                          class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0);">3</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nextlink">
+                <a class="page-link"><i class="fa-solid fa-angles-right"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

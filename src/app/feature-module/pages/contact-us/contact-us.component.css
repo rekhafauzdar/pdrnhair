@@ -1,0 +1,108 @@
+
+.contact-section {
+  position: relative;
+  z-index: 1;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('/assets/img/bg/contact-bg3.avif') center/cover no-repeat;
+  z-index: -1;
+}
+.section-title {
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.section-title p {
+  font-size: 16px;
+  color: #eee;
+}
+
+.contect-form{
+    box-shadow: 0px 4px 24px rgba(225, 225, 225, 0.25);
+    border-radius: 15px;
+}
+.contact-section .contact-info-area .single-contact-info {
+    text-align: left;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 20px 0px;
+    transition: all 0.5s;
+}
+.icon-data{
+    margin-right: 10px;
+}
+.form-sec{
+    background: white;
+    padding: 6% 5%;
+    margin: 15px 0px;
+    border-radius: 15px;
+}
+.form-sec h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.contact-section .contact-info-area .single-contact-info i {
+    color: #2f2f2f;
+    transition: all 0.5s;
+    font-size: 21px;
+    width: 49px;
+    height: 49px;
+    margin: 0 auto 15px;
+    line-height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.contact-section .contact-info-area .single-contact-info h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #b1b1b1;
+    margin: 0 0 5px;
+    transition: all 0.5s;
+}
+.contact-section .contact-info-area .single-contact-info p a {
+    font-size: 15px;
+    margin: 0 0 5px;
+    transition: all 0.5s;
+    color: white;
+}
+.contact-section .contact-info-area .single-contact-info p:hover a {
+    font-size: 15px;
+    margin: 0 0 5px;
+    transition: all 0.5s;
+    color:#e80071;
+}
+ .contact-section .contact-info-area .single-contact-info:hover i {
+    background: #ffffff;
+    transition: all 0.5s;
+    color: #e80071;
+}
+.contact-section .contact-info-area .single-contact-info:hover h3 {
+    color: #ffffff;
+    transition: all 0.5s;
+}
+@media only screen and (max-width: 767px) {
+.contact-section .contact-info-area .single-contact-info {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.contact-section .contact-info-area .single-contact-info {
+    padding: 20px 20px;
+}
+}

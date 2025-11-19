@@ -1,0 +1,9 @@
+h4.heading-section {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.point-head{
+    margin-right: 7px;
+    font-weight: 500;
+    color: rgb(59, 50, 50) !important;
+}

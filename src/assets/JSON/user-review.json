@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "carName": "Ferrari 458 MM Speciale",
+      "rentalType": "Hourly",
+      "review": "The car arrived early & the rep was courteous and polite.",
+      "img": "assets/img/cars/car-04.jpg",
+      "feature":"Delivery",
+      "rating": "(4.5)"
+    },
+    {
+      "carName": "Toyota Camry SE 350",
+      "rentalType": "Day",
+      "review": "The car was a lovely car to drive no problem with it all.",
+      "img": "assets/img/cars/car-01.jpg",
+      "feature":"Self Pickup",
+      "ratings": "(4.0)"
+    },
+    {
+      "carName": "Kia Soul 2016",
+      "rentalType": "Weekly",
+      "review": "Experience was great travelling wih Dreams Rental",
+      "img": "",
+      "feature":"Delivery",
+      "ratings": "(5.0)"
+    },
+    {
+      "carName": "Audi A3 2019 new",
+      "rentalType": "Monthly",
+      "review": "Best service with good price, nice vehicle overall very good",
+      "img": "assets/img/cars/car-03.jpg",
+      "feature":"Self Pickup",
+      "ratings": "(5.0)"
+    },
+    {
+      "carName": "2018 Chevrolet Camaro",
+      "rentalType": "Day",
+      "review": "Smooth process, modern vehicle & fair price - great rental experience",
+      "img": "",
+      "feature":"Delivery",
+      "ratings": "(5.0)"
+    },
+
+    {
+      "carName": "Acura Sport Version",
+      "rentalType": "Hourly",
+      "review": "Excellent service, clean car & smooth pickup & drop-off process",
+      "img": "assets/img/cars/car-06.jpg",
+      "feature":"Self Pickup",
+      "ratings": "(5.0)"
+    },
+    {
+      "carName": "Toyota Tacoma 4wD",
+      "rentalType": "Monthly",
+      "review": "Quick & easy rental and also fair price for what you get",
+      "img": "assets/img/cars/car-08.jpg",
+      "feature":"Delivery",
+      "ratings": "(4.0)"
+    }
+  ],
+  "totalData": 7
+}

@@ -1,0 +1,201 @@
+/* 🌸 General Styling */
+.profile-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* 🌿 Profile Header */
+.profile-header {
+  background: linear-gradient(135deg, #a46ef1, #6b9dfc);
+  padding: 0px 30px 80px;
+  position: relative;
+}
+
+.profile-card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(40px);
+}
+
+/* ✏️ Edit Button */
+.edit-icon {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 14px;
+  color: #6b6b7a;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-icon:hover {
+  color: #8b5cf6;
+  transform: scale(1.1);
+}
+
+.edit-link i {
+  margin-right: 5px;
+}
+
+/* 👤 Profile Avatar */
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  margin-right: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 💎 Profile Info */
+.profile-info {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2b2b3c;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.info-row {
+  font-size: 14px;
+  color: #666;
+  margin: 6px 0;
+}
+
+.label {
+  font-weight: 500;
+  color: #555;
+}
+
+.user-email {
+  color: #444;
+}
+
+.verified {
+  display: block;
+  font-size: 12px;
+  color: #8b5cf6;
+  margin-top: 4px;
+}
+
+/* 🏠 Address Section */
+.address-section {
+  padding: 70px 30px 40px;
+}
+
+.address-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 12px;
+}
+
+.address-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #2b2b3c;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.address-title i {
+  color: #8b5cf6;
+  font-size: 1.3rem;
+}
+
+.add-address {
+  font-weight: 500;
+  color: #8b5cf6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-address:hover {
+  text-decoration: underline;
+  color: #6b46c1;
+}
+
+/* 📦 Address Cards */
+.address-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.address-card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px 20px;
+  transition: all 0.3s ease;
+}
+
+.address-card:hover {
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.15);
+  transform: translateY(-3px);
+}
+
+.address-tag {
+  font-weight: 600;
+  color: #8b5cf6;
+  margin-bottom: 6px;
+}
+
+.address-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2b2b3c;
+}
+
+.contact-info {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ✅ Checkmark */
+.mobile-hide img {
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 15px;
+  }
+
+  .profile-avatar {
+    margin: 0 0 15px 0;
+  }
+
+  .edit-icon {
+    top: 15px;
+    right: 15px;
+  }
+
+  .address-section {
+    padding: 60px 15px 30px;
+  }
+}

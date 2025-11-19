@@ -1,0 +1,152 @@
+/*-----------------
+    8. Breadcrumb
+-----------------------*/
+
+.breadcrumb-bar {
+    background:#ebebeb;// $__goose-gray
+    // padding: 60px 0 0px;
+     padding: 0px 0 0px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    @include respond-below(custom991) {
+        // padding: 50px 0 0px;
+     } 
+    &:before {
+		content: "";
+        background: url(../../img/breadcrumbleft.png) no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 393px;
+        height: 334px;
+        background-size: cover;
+        @include respond-below(custom991) {
+            display: none;
+        } 
+	}
+    &:after {
+        content: "";
+        // background: url(../../img/bg/about-top-bg.svg) no-repeat;
+        position: absolute;
+        top: -288px;
+        right: 53px;
+        width: 543px;
+        // height: 475px;
+        height: 332px;
+        background-size: cover;
+        @include respond-below(custom991) {
+           display: none;
+        } 
+	}
+    .breadcrumb-title {
+        font-weight: 600;
+        color: #5d5d5d;
+        padding: 60px 0px 0px;
+        font-size:60px;
+        @include margin-padding(0 0 15px, null);
+        @include respond-below(custom991) {
+            font-size: $__font__size__32;
+             padding: 50px 0 0px;
+        } 
+         @include respond-below(custom767) {
+               font-size: $__font__size__20;
+             padding: 50px 0 0px;
+            }
+    }
+    .breadcrumb {
+        margin: 0;
+        li {
+            a {
+                color: $__white;
+            }
+        }
+        &.active {
+            color: $__white;
+        }
+      }
+    .breadcrumb-item+.breadcrumb-item {
+        &::before {
+            color: $__white;
+        }
+    }
+    .breadcrumb-item.active {
+        color: $__primarycolor;
+    }
+      
+      
+}
+//------------ costom css ----------------------//
+    nav.page-breadcrumb {
+        background:#334156;
+        padding: 10px 0px;
+        font-family: "Roboto", sans-serif;
+    }
+    @media only screen and (max-width: 767.5px) {
+        .mobile-view-hide{
+            display: none;
+        }
+    }
+    @media only screen and (min-width: 767.6px) {
+        .big-screen-hide{
+            display: none;
+        }
+    }
+.head-nav-tital{
+    @media only screen and (max-width: 480px) {
+        .breadcrumb-bar .breadcrumb-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+    }
+    .breadcrumb-bar {
+        padding: 0px 0 1px;
+    }
+    nav.page-breadcrumb {
+        background: #334156;
+        padding: 3px 0px;
+        font-family: "Roboto", sans-serif;
+    }
+    .breadcrumb-bar .breadcrumb-title {
+        text-align: center;
+    }
+    li.breadcrumb-item {
+        font-size: 12px;
+    }
+    .breadcrumb-bar {
+        background: #f7f7f7;
+    }
+    .breadcrumb-bar .breadcrumb-title {
+        color: #494949;
+    }
+    @media only screen and (min-width: 767.5px) {
+        nav.page-breadcrumb {
+            background: #f1f1f1;
+            padding: 5px 0px;
+            font-size: 14px;
+        }
+        li.breadcrumb-item{
+            font-size: 13px;
+        }
+        ol.breadcrumb {
+            margin: 0px;
+        }
+        li.breadcrumb-item a {
+            color: #696969;
+            font-weight: 600;
+        }
+        .breadcrumb-item.active {
+            color: #e80071;
+            font-weight: 500;
+        }
+    }
+}
+
+// for product box 
+@media only screen and (max-width: 767px) {
+     .product-b {
+    border-top: 1px solid #ededed;
+    }
+}

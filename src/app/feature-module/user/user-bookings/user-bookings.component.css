@@ -1,0 +1,165 @@
+@media only screen and (max-width: 576px) {
+  .hide-for-mobil{
+    display: none;
+  }
+}
+.add-more {
+    border: 0.5px dashed #d1d1d1;
+    width: 95%;
+    justify-self: center;
+    margin: 5px;
+}
+.order-list .card:hover {
+    box-shadow: 0 1px 12px 2px #dbdbdb;
+}
+#tablefilter{
+    margin: 0px;
+}
+.form-control {
+    font-size: 14px;
+}
+.shared-info{
+    margin-bottom: 16px;
+}
+.shared-info .shared-sec {
+    background-color: #fff7e1;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 15px;
+}
+.product-img-sec {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+.product-img-set {
+    position: relative;
+    margin: 0 auto;
+    height: 76px;
+    width: 75px;
+}
+.product-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    opacity: 1;
+    max-width: 100%;
+    max-height: 100%;
+}
+.product-info-sec {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.product-name {
+    box-shadow: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    color: #212121;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.product-name:hover{
+    color: #e80071;
+}
+.product-spacific-info {
+    color: #454545;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.info-space {
+    padding-right: 4px;
+    color: #333333;
+    font-weight: 500;
+}
+.set-size {
+    margin-right: 6px;
+}
+.product-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+    text-transform: uppercase;
+}
+.deli-info-date {
+    margin-right: 8px;
+     font-size: 14px;
+    font-weight: 500;
+}
+.refund-color {
+    color: #ff9f00;
+}
+.deliver-bg{
+ color: #26a541;
+}
+.Cancel-color{
+  color: #ff0000;  
+}
+.del-info{
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rating {
+    cursor: pointer;
+}
+.rating .icon {
+    font-size: 17px;
+    color: #ff4081;
+}
+.rating-text {
+    margin-left: 5px;
+    color: #494848;
+    font-size: 12px;
+    font-weight: 500;
+}
+/* refund css */
+.refund-sec {
+    margin-top: 16px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 10px 10px 6px;
+}
+.refund-heading {
+    color: #212121;
+    font-weight: 500;
+}
+.refund-heading1 {
+    font-weight: 500;
+    font-size: 14px;
+}
+.refunf-Cancel{
+    color: #ff0000;
+}
+.refund-completed{
+   color: #26a541;
+}
+.refund-id {
+    color: #878787;
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-right: 4px;
+}
+.refund-field {
+    font-size: 12px;
+    color: #212121;
+    font-weight: 400;
+    font-family: system-ui;
+}
+.refund-field-set {
+    list-style-type: disc;
+    margin: 5px 0 5px 15px;
+    font-size: 14px;
+}

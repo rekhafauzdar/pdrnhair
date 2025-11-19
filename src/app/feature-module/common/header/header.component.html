@@ -1,0 +1,344 @@
+<!-- Header -->
+<header class="header header-two">
+  <div class="header-two-top">
+    <div class="container-fluid ">
+      <div class="main-menu-wrapper">
+        <ul class="header-address">
+          <li><span><i class="bx bx-map"></i></span>
+            {{ 'HEADER.ADDRESS' | translate }}
+          </li>
+        </ul>
+        <div class="header-address me-3">
+          <div class="header-top-flag-drops d-flex align-items-center">
+
+            <div class="header-top-drpodowns">
+              <div class="dropdown header-dropdown country-flag">
+
+                <!-- SELECTED LANGUAGE SHOW HERE -->
+                <a class="dropdown-toggle nav-tog" data-bs-toggle="dropdown">
+                  <img [src]="selectedLanguage.flag" alt="Img">
+                  {{ selectedLanguage.label }}
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-end">
+
+                  <a class="dropdown-item" (click)="changeLanguage('en')">
+                    <img src="assets/img/flags/us.png" alt="Img"> English
+                  </a>
+
+                  <a class="dropdown-item" (click)="changeLanguage('cn')">
+                    <img src="assets/img/flags/cn.png" alt="Img"> Chinese
+                  </a>
+
+                  <a class="dropdown-item" (click)="changeLanguage('kr')">
+                    <img src="assets/img/flags/flag-koria.png" alt="Img"> Korean
+                  </a>
+
+                  <a class="dropdown-item" (click)="changeLanguage('jp')">
+                    <img src="assets/img/flags/jp.png" alt="Img"> Japanese
+                  </a>
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- <div class="header-top-drpodowns">
+						<div class="dropdown header-dropdown country-flag">
+							<a class="dropdown-toggle nav-tog" data-bs-toggle="dropdown" >
+								<i class="bx bx-globe me-2"></i>USD
+							</a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a  class="dropdown-item">
+									Euro
+								</a>
+								<a  class="dropdown-item">
+									INR
+								</a>
+								<a  class="dropdown-item">
+									Won
+								</a>
+							</div>
+						</div>
+					</div> -->
+          </div>
+          <div class="header-top-social-links">
+            <!-- <ul>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+           
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+            
+              <li>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- ------------------------------- end head two ----------------------------------------- -->
+  <div class="main-head">
+    <nav class="navbar navbar-expand-lg header-nav">
+      <div class="container-fluid w-100 header-respo">
+        <div class="navbar-header">
+          <a (click)="toggleSidebar()" id="mobile_btn">
+            <span class="bar-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </a>
+          <!-- for desktop -->
+          <a [routerLink]="routes.home" class="navbar-brand logo">
+            <img src="assets/img/Loche-India-Logo-PNG.png" class="img-fluid" width="70" alt="Logo" />
+          </a>
+          <!-- for mobile -->
+          <a [routerLink]="routes.home" class="navbar-brand logo-small">
+            <img src="assets/img/Loche-India-Logo-PNG.png" class="img-fluid smallest-hide" width="70px" alt="Logo" />
+            <!-- <img src="assets/img/bellaluna-circle.png" class="img-fluid" width="65px" alt="Logo" /> -->
+          </a>
+
+          <div class="main-menu-wrapper">
+            <div class="menu-header">
+              <!-- for sidebar -->
+              <a [routerLink]="routes.home" class="menu-logo">
+                <img src="assets/img/loche-logo-white-300x300.png" class="img-fluid" alt="Logo" />
+              </a>
+              <a (click)="hideSidebar()" id="menu_close" class="menu-close">
+                <i class="fas fa-times"></i></a>
+
+            </div>
+
+          </div>
+        </div>
+        <ul class="nav header-navbar-rht">
+          <li class="nav-item search-mo">
+            <a class="nav-link header-login">
+              <!-- <div class="input-group">
+              <input type="text" [(ngModel)]="searchterm" name="searchterm" class="form-control" placeholder="Search..."
+                aria-describedby="button-addon2" (keydown.enter)="searhProductData()">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="searhProductData()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div> -->
+
+              <div class="search-box position-relative" style="max-width: 350px;">
+                <input type="text" class="form-control pe-5" placeholder="Search here..."
+                  style="border-radius: 30px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <i class="fa-solid fa-magnifying-glass position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"
+                  style="cursor: pointer;"></i>
+              </div>
+            </a>
+          </li>
+
+          <li class="nav-item user-link" *ngIf="userLogin">
+            <div class="header-two-to">
+              <div class="container-fluid">
+                <div class="header-top-items">
+                  <div class="header-top-right d-flex justify-content-end">
+                    <ul class="header-address" *ngIf="!userLogin">
+                    </ul>
+                    <ul class="nav header-navbar-rht" *ngIf="userLogin">
+                      <li class="nav-item dropdown has-arrow logged-item">
+                        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="user-img">
+                            <img class="rounded-circle" src="assets/img/profiles/profile.png" alt="Profile">
+                          </span>
+                          <span class="user-text user-name">{{loggedUserName}}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" [routerLink]="routes.userDashboard">
+                            <i class="feather-user-check"></i> {{ 'HEADER.PROFILE' | translate }}
+                          </a>
+                          <a class="dropdown-item" [routerLink]="routes.userWishlist">
+                            <i class="feather-user-check"></i> {{ 'HEADER.WISHLIST' | translate }}
+                          </a>
+                          <a class="dropdown-item" [routerLink]="routes.order">
+                            <i class="feather-settings"></i> {{ 'HEADER.ORDERS' | translate }}
+                          </a>
+                          <a class="dropdown-item" (click)="logout()">
+                            <i class="feather-power"></i> {{ 'HEADER.LOGOUT' | translate }}
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item user-link" [routerLink]="routes.login" *ngIf="!userLogin">
+            <a class="nav-link header-user">
+              <i class="bx bx-user"></i>
+            </a>
+          </li>
+
+          <!-- <li class="nav-item" [routerLink]="routes.userWishlist">
+      <a class="nav-link header-login  notification"><span>
+          <img src="assets/img/icons/heart.png" alt="Logo" class="img-fluid" width="25px">
+        </span>
+        @if(wishlistCount>0){
+        <span class="badge">{{ wishlistCount }}</span>
+        }
+      </a>
+    </li> -->
+
+          <li class="nav-item" (click)="viewCart()">
+            <a class="nav-link header-login notification"><span>
+                <img src="assets/img/icons/shopping-cart.png" alt="Logo" class="img-fluid" width="25px">
+              </span>
+              @if(cartCount>0){
+              <span class="badge">{{ cartCount }}</span>
+              }
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- <div class="container-fluid navsection">
+
+       
+        <div class="main-menu-wrapper">
+          <div class="menu-header">
+            <a [routerLink]="routes.home" class="menu-logo">
+              <img src="assets/img/loche-logo-white-300x300.png" class="img-fluid" alt="Logo" />
+            </a>
+            <a (click)="hideSidebar()" id="menu_close" class="menu-close" >
+              <i class="fas fa-times"></i></a>
+          </div>
+          <ul class="main-nav justify-content-between">
+            @for (mainMenus of header; track mainMenus) {
+            @if (mainMenus.separateRoute === true) {
+            <li routerLinkActive="active">
+              <a [routerLink]="mainMenus.routes">{{ mainMenus.tittle | translate }}</a>
+            </li>
+            }
+            @if (mainMenus.separateRoute === false) {
+            <li class="has-submenu" routerLinkActive="active">
+              <a  (click)="mainMenus.showAsTab = !mainMenus.showAsTab">{{ mainMenus.tittle | translate }}
+                <i class="fas fa-chevron-down"></i></a>
+              <ul class="submenu" [ngClass]="{
+                    'd-block': mainMenus.showAsTab === true
+                  }">
+                @for (menu of mainMenus.menu; track menu) {
+                @if (menu.hasSubRoute === false) {
+                <li routerLinkActive="active">
+                  <a [routerLink]="menu.routes">{{ menu.menuValue }}</a>
+                </li>
+                }
+                @if (menu.hasSubRoute === true) {
+                <li class="has-submenu" routerLinkActive="active">
+                  <a (click)="menu.showSubRoute = !menu.showSubRoute" [routerLink]="menu.routes">{{ menu.menuValue | translate
+                    }}</a>
+                  <ul class="submenu" [ngClass]="{
+                            'd-block': menu.showSubRoute === true
+                          }">
+                    @for (subMenu of menu.subMenus; track subMenu) {
+                    <li routerLinkActive="active">
+                      <a [routerLink]="subMenu.routes">{{
+                        subMenu.menuValue
+                        }}</a>
+                    </li>
+                    }
+                  </ul>
+                </li>
+                }
+                }
+              </ul>
+            </li>
+            }
+            }
+          </ul>
+        </div>
+      </div> -->
+
+
+
+      <div class="container-fluid navsection">
+        <div class="main-menu-wrapper">
+          <div class="menu-header">
+            <a [routerLink]="routes.home" class="menu-logo">
+              <img src="assets/img/loche-logo-white-300x300.png" class="img-fluid" alt="Logo" />
+            </a>
+            <a (click)="hideSidebar()" id="menu_close" class="menu-close">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <ul class="main-nav">
+            @for (mainMenus of header; track mainMenus) {
+
+            @if (mainMenus.separateRoute === true) {
+            <li routerLinkActive="active">
+              <a [routerLink]="mainMenus.routes">{{ mainMenus.tittle | translate }}</a>
+            </li>
+            }
+
+            @if (mainMenus.separateRoute === false) {
+            <li class="has-submenu" routerLinkActive="active">
+              <a (click)="mainMenus.showAsTab = !mainMenus.showAsTab">
+                {{ mainMenus.tittle | translate }}
+                <i class="fas fa-chevron-down"></i>
+              </a>
+
+              <ul class="submenu" [ngClass]="{ 'd-block': mainMenus.showAsTab === true }">
+
+                @for (menu of mainMenus.menu; track menu) {
+
+                @if (menu.hasSubRoute === false) {
+                <li routerLinkActive="active">
+                  <a [routerLink]="menu.routes">{{ menu.menuValue | translate }}</a>
+                </li>
+                }
+
+                @if (menu.hasSubRoute === true) {
+                <li class="has-submenu" routerLinkActive="active">
+                  <a (click)="menu.showSubRoute = !menu.showSubRoute">
+                    {{ menu.menuValue | translate }}
+                  </a>
+
+                  <ul class="submenu" [ngClass]="{ 'd-block': menu.showSubRoute === true }">
+                    @for (subMenu of menu.subMenus; track subMenu) {
+                    <li routerLinkActive="active">
+                      <a [routerLink]="subMenu.routes">{{ subMenu.menuValue | translate }}</a>
+                    </li>
+                    }
+                  </ul>
+                </li>
+                }
+
+                }
+
+              </ul>
+            </li>
+            }
+
+            }
+          </ul>
+        </div>
+      </div>
+
+
+
+    </nav>
+  </div>
+
+</header>
+<!-- /Header -->

@@ -1,0 +1,241 @@
+<!-- Page Content -->
+<div class="content">
+  <!-- <div class="container">
+
+  
+
+    <div class="row">
+
+
+      <div class="col-lg-12 d-flex">
+        <div class="card book-card flex-fill mb-0">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col-md-5">
+                <h4>All Reviews <span>40</span></h4>
+              </div>
+              <div class="col-md-7 text-md-end">
+                <div class="table-search">
+                  <div id="tablefilter" class="me-0">
+                    <div class="dataTables_filter">
+                      <label>
+                        <input [(ngModel)]="searchDataValue"
+                          [ngModelOptions]="{standalone: true}"
+                          [ngModelOptions]="{standalone: true}"
+                          (ngModelChange)="searchData(searchDataValue)" type="search"
+                          class="form-control" placeholder="Search" />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive dashboard-table">
+                <table class="table datatable">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>
+                        <label class="custom_check w-100" (click)="selectAll(initChecked)">
+                          <input type="checkbox" name="username" [(ngModel)]="initChecked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </th>
+                      <th>Car Name</th>
+                      <th>Rental Type</th>
+                      <th>Review</th>
+                      <th>Ratings</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @for (data of tableData; track data) {
+                      <tr >
+                        <td>
+                          <label class="custom_check w-100">
+                            <input type="checkbox" name="username" [(ngModel)]="data.isSelected">
+                            <span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td>
+                          <div class="table-avatar">
+                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add_review"  class="avatar avatar-lg flex-shrink-0">
+                              <img class="avatar-img" [src]="data.img" alt="Booking">
+                            </a>
+                            <div class="table-head-name flex-grow-1">
+                              <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add_review" >{{data.carName}}</a>
+                              <p>{{data.feature}}</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>{{data.rentalType}}</p>
+                        </td>
+                        <td>
+                          <p>{{data.review}}</p>
+                        </td>
+                        <td>
+                          @if (data.rating) {
+                            <div class="review-rating">
+                              <i class="fas fa-star filled me-1"></i>
+                              <i class="fas fa-star filled me-1"></i>
+                              <i class="fas fa-star filled me-1"></i>
+                              <i class="fas fa-star filled me-1"></i>
+                              <i class="fas fa-star-half-stroke filled"></i>
+                              <span>{{ data.rating }}</span>
+                            </div>
+                          }
+                          @if (data.ratings) {
+                            <div class="review-rating">
+                              <i class="fas fa-star filled me-1"></i>
+                              <i class="fas fa-star filled me-1"></i>
+                              <i class="fas fa-star filled me-1"></i>
+                              <i class="fas fa-star filled me-1"></i>
+                              <i class="fas fa-star filled me-1"></i>
+                              <span>{{ data.ratings }}</span>
+                            </div>
+                          }
+                        </td>
+                        <td class="text-end">
+                          <div class="dropdown dropdown-action">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fas fa-ellipsis-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="javascript:void(0);">
+                                <i class="feather icon-eye me-2"></i> View
+                              </a>
+                              <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal_review">
+                                <i class="feather icon-trash-2 me-2"></i> Delete
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    }
+
+
+
+                  </tbody>
+                </table>
+              </div>
+
+              <app-custom-pagination></app-custom-pagination>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+
+    </div> -->
+  </div>
+ 
+  <!-- <div class="modal new-modal fade" id="custom_date" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Custom Date</h4>
+          <button type="button" class="close-btn" data-bs-dismiss="modal"><span>×</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="modal-form-group">
+              <label>From Date <span class="text-danger">*</span></label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="modal-form-group">
+              <label>To Date <span class="text-danger">*</span></label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="modal-btn modal-btn-item modal-btn-sm text-end">
+              <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary">
+                Cancel Booking
+              </a>
+              <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary">
+                Start Ride
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="modal new-modal multi-step fade" id="add_review" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Add New Review</h4>
+          <button type="button" class="close-btn" data-bs-dismiss="modal"><span>×</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="review-wrap">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="booking-img-wrap">
+                  <div class="book-img">
+                    <img src="" alt="img">
+                  </div>
+                  <div class="book-info">
+                    <h6>Chevrolet Camaro</h6>
+                    <p>Delivery</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8 col-md-12">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="booking-view">
+                      <h6>Rental Type</h6>
+                      <p>Hourly</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="booking-view">
+                      <h6>Total Amount</h6>
+                      <p>$3000</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="booking-view">
+                      <h6>Booked On</h6>
+                      <p>15 Sep 2023, 09:30 AM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form action="#">
+            <div class="rating-wrap">
+              <div class="modal-form-group">
+                <label>Overall Ratings <span class="text-danger">*</span></label>
+                <div class="rating">
+                  <a href="javascript:void(0);" class="fav-icon" [class.selected]="isStarSelected(1)" (click)="toggleStar(1)"><i class="fas fa-star"></i></a>
+                  <a href="javascript:void(0);" class="fav-icon" [class.selected]="isStarSelected(2)" (click)="toggleStar(2)"><i class="fas fa-star"></i></a>
+                  <a href="javascript:void(0);" class="fav-icon" [class.selected]="isStarSelected(3)" (click)="toggleStar(3)"><i class="fas fa-star"></i></a>
+                  <a href="javascript:void(0);" class="fav-icon" [class.selected]="isStarSelected(4)" (click)="toggleStar(4)"><i class="fas fa-star"></i></a>
+                  <a href="javascript:void(0);" class="fav-icon" [class.selected]="isStarSelected(5)" (click)="toggleStar(5)"><i class="fas fa-star"></i></a>
+                </div>
+              </div>
+              <div class="modal-form-group">
+                <label>Enter Review <span class="text-danger">*</span></label>
+                <textarea class="form-control" rows="4" placeholder="Enter Comments"></textarea>
+              </div>
+            </div>
+            <div class="modal-btn modal-btn-sm text-end">
+              <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary">
+                Go Back
+              </a>
+              <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary">
+                Submit
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- /Add Payment Modal -->

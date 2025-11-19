@@ -1,0 +1,289 @@
+<!-- View Cart -->
+<div class="modal fade show custom-modal" style="display: block;" tabindex="-1">
+    <div class="modal-dialog modal-dialog-slide modal-dialog-scrollable">
+        <div class="modal-content shadow">
+            <div class="modal-header">
+                <div class="head-cart d-flex">
+                    <span class="card-hicon" (click)="close()"><i class="fa-solid fa-arrow-left"></i></span>
+                    <h6>Cart </h6>
+                    <p class="count-items">{{cartData.quantity}} items</p>
+                </div>
+                <!-- <p class="btn-close close" (click)="wishlist()">
+                    View Wishlist
+                </p> -->
+            </div>
+
+            @if(cartItems.length>0){
+            <div class="modal-body">
+                <!-- <div class="get-started-card">
+                    <p class="mb-2"> Get Started &amp; grab best offers! </p>
+                    <a class="btn login-btn"> Login / Register</a>
+                </div> -->
+
+                <!-- <div class="booking-header">
+                    <div class="booking-img-wrap">
+                        <input type="radio" id="reward" name="reward" value="reward">
+                        <label for="reward" class="rewl2"> 1000 Reward Points (₹10)</label>
+                    </div>
+                    <div class="book-amount">
+                        <p class="apply01">Apply</p>
+                    </div>
+                </div> -->
+
+                <!-- <div class="product-info">
+                    <button data-test-id="product-remove" label="delete" aria-label="delete" class="prodeletsec">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </button>
+                    <div class="pro-desc">
+                        <div class="product-pic ">
+                            <img src="assets/img/product/product-7(1).avif" class="img-fluid">
+                        </div>
+                        <div class="proinfo1">
+                            <div class="css-tex1">
+                                <div class="piftx1">
+                                    <span color="#001325"> Mamaearth Beetroot Gentle Face Wash</span>
+                                </div>
+                                <div class="pro-desc">
+                                    <div class="css-que1">
+                                        <p color="#001325">175ml</p>
+                                    </div>
+                                    <div class="css-que2">
+                                        <p color="#001325">175ml</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quesec">
+                        <div class="css-quesec01">
+                            <button aria-label="Select Quantity" label="Select Quantity" class="qunty-1">
+                                <p data-test-id="select-quantity" color="#001325" class="qunty-text">
+                                    Quantity : 1</p>
+                              
+                            </button>
+                            <div class="propricesec">
+                                <div class="priceoff"><span color="#7692ad" class="css-1230yid e171rb9k3">₹375</span>
+                                </div>
+                                <p color="#001325" class="lastprice">₹311</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <button data-test-id="product-remove" label="delete" aria-label="delete" class="prodeletsec">
+                        <span class="delete-icon" >
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </button>
+                    <div class="pro-desc">
+                        <div class="product-pic ">
+                            <img src="assets/img/product/product-6(1).avif" class="img-fluid">
+                        </div>
+                        <div class="proinfo1">
+                            <div class="css-tex1">
+                                <div class="piftx1">
+                                    <span color="#001325">Jovees Herbal De-Tan Face Wash For Tan Removal All Skin</span>
+                                </div>
+                                <div class="pro-desc">
+                                    <div class="css-que1">
+                                        <p color="#001325">175ml</p>
+                                    </div>
+                                    <div class="css-que2">
+                                        <p color="#001325">175ml</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quesec">
+                        <div class="css-quesec01">
+                            <button aria-label="Select Quantity" label="Select Quantity" class="qunty-1">
+                                <p data-test-id="select-quantity" color="#001325" class="qunty-text">
+                                    Quantity : 1</p>
+                               
+                            </button>
+                            <div class="propricesec">
+                                <div class="priceoff"><span color="#7692ad" class="css-1230yid e171rb9k3">₹225</span>
+                                </div>
+                                <p color="#001325" class="lastprice">₹191</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+               
+                     @for(item of cartItems; track item; let i = $index) {
+                    <div class="product-info">
+                        <button data-test-id="product-remove" label="delete" aria-label="delete" class="prodeletsec">
+                            <span class="delete-icon" (click)="removeItem(item.productId)">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </span>
+                        </button>
+                        <div class="pro-desc" (click)="productProfile(item.productId)">
+                            <div class="product-pic ">
+                                <img *ngIf="item.imageUrl" [src]="item.imageUrl" class="img-fluid" alt="product"
+                                    (error)="item.imageURL = ''" />
+
+                            </div>
+                            <div class="proinfo1">
+                                <div class="css-tex1">
+                                    <div class="piftx1">
+                                        <span color="#001325"> {{item.productName}}</span>
+                                    </div>
+                                    <div class="pro-desc">
+                                        
+                                        <div class="css-que1">
+                                            <p color="#001325">{{item.category}} ({{item.subCategory}})</p>
+                                        </div>
+                                         <!-- <div class="css-que1">
+                                            <p color="#001325">{{item.subCategory}}</p>
+                                        </div> -->
+                                        <div class="css-que2">
+                                            <p color="#001325">Rate:- ₹ {{item.price}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quesec">
+                            <div class="css-quesec01">
+                                <button aria-label="Select Quantity" label="Select Quantity" class="qunty-1">
+                                    <p data-test-id="select-quantity" color="#001325" class="qunty-text">
+                                        Quantity : {{item.quantity}}</p>
+
+                                </button>
+                                <div class="propricesec">
+                                    <!-- <div class="priceoff"><span color="#7692ad"
+                                            class="css-1230yid e171rb9k3">₹375</span>
+                                    </div> -->
+                                    <p color="#001325" class="lastprice">₹ {{item.totalPrice}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+                    
+                
+                <!-- <ng-template #noItems>
+                    <p>No items in cart.</p>
+                </ng-template> -->
+
+
+      <div class="booking-header offer-apply" >
+                    <div class="booking-img-wrap">
+                        <span class="image-offer">
+                            <img src="assets/img/icons/3d-discount.png" width="30px" class="img-fluid">
+                        </span>
+                        <label for="reward" class="rewl2">
+                            <p class="offer01">Coupons</p>
+                            <p class="offer02">Apply now and save extra!</p>
+                        </label>
+                    </div>
+                    <div class="book-amount">
+                        <p class="apply01"><i class="fa-solid fa-chevron-right"></i></p>
+                    </div>
+                </div>
+
+              
+
+                 
+
+                <!----------------------------price- section -------------------------------------->
+                <div class="price-sec" *ngIf="cartData">
+                    <div class="price-head">
+                        <h6>Price Details</h6>
+                    </div>
+                    <div class="css-details">
+                        <div class="css-det01">
+                            <p class="css-dec-2o">Bag MRP ({{cartData.quantity}})</p>
+                        </div>
+                        <div class="css-det02">
+                            <p class="css-dec-2o dec1os">₹{{cartData.totalAmount}}</p>
+                        </div>
+                    </div>
+                    <div class="css-details">
+                        <div class="css-det01">
+                            <p class="css-dec-2o">Bag Discount</p>
+                        </div>
+                        <div class="css-det02">
+                            <p class="css-dec-2o dec1os">₹ 0</p>
+                        </div>
+                    </div>
+                    <div class="css-details">
+                        <div class="css-det01">
+                            <p class="css-dec-2o">Discount <i class="fa-solid fa-circle-info"></i></p>
+                        </div>
+                        <div class="css-det02">
+                            <p class="css-dec-2o dec1os">₹  0</p>
+                        </div>
+                    </div>
+                    <div class="css-details">
+                        <div class="css-det01">
+                            <p class="css-dec-2o">Shipping <i class="fa-solid fa-circle-info"></i></p>
+                        </div>
+                        <div class="css-det02">
+                            <p class="css-dec-2o dec1os "><span class="Discount-offer"> ₹70 </span><span
+                                    class="offers-green"> FREE</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="css-details d-flex justify-content-sm-between ">
+                        <h6>You Pay</h6>
+                        <h6>₹ {{cartData.totalAmount}}</h6>
+                    </div>
+                </div>
+                
+                <div class="price-sec" *ngIf="cartData">
+                    <div class="css-last13cb">
+                        <p>Redeem to get a discount on your next order</p>
+                        <div class="css-last13cb2">
+                            <p>Earn up to 2151 Reward Points <i class="fa-solid fa-circle-info"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <!---------------------------- end price- section -------------------------------------->
+                <div class="row modal-btn" >
+                    <div class="col-6">
+                        <div class="css-amountsec">
+                            <p class="tosopr1">₹ {{cartData.totalAmount}}</p>
+                            <p class="toprisetex">Grand Total <i class="fa-solid fa-circle-info"></i></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class=" modal-btn-sm text-end">
+                            <a class="btn btn-primary proceed-btn" (click)="proceedCart()">
+                                <p>Proceed</p> <span><i class="fa-solid fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }@else{
+
+            <div class="booking-header offer-apply" >
+                    <div class="booking-img-wrap">
+                        <span class="image-offer">
+                            <img src="assets/img/icons/3d-discount.png" width="30px" class="img-fluid">
+                        </span>
+                        <label for="reward" class="rewl2">
+                            <p class="offer01"></p>
+                            <p class="offer02">No items in your cart yet!</p>
+                        </label>
+                    </div>
+                    <div class="book-amount" (click)="close()">
+                        <p class="apply01" [routerLink]="routes.listingGrid">
+                            Add Items 
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </p>
+                    </div>
+                </div>
+
+        }
+           
+        </div>
+    </div>
+</div>

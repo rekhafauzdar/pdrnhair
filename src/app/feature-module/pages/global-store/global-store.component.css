@@ -1,0 +1,60 @@
+.global-store-page {
+  padding: 30px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.banner-img{
+  border-radius: 10px;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.alphabet-filter {
+    font-size: 12px;
+    line-height: 1.4;
+    padding-top: 70px;
+  }
+
+  .alphabet-letter {
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s;
+  }
+
+  .alphabet-letter:hover {
+    color: #000;
+    font-weight: bold;
+  }
+
+  #brandList li {
+    padding: 4px 0;
+    cursor: pointer;
+  }
+.brand-sec {
+  height: 429px;
+  overflow: auto;
+  scrollbar-width: thin;              /* For Firefox */
+  scrollbar-color: #ccc transparent;  /* For Firefox */
+}
+
+/* Chrome, Edge, Safari */
+.brand-sec::-webkit-scrollbar {
+  width: 6px; /* Slim width */
+}
+
+.brand-sec::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.brand-sec::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}

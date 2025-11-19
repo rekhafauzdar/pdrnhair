@@ -1,0 +1,404 @@
+<section class="whyus-alt-section py-5">
+  <div class="container">
+    <h2 class="text-center text-white fw-bold mb-5 text-uppercase">Why Choose Us as Partner</h2>
+    <div class="row justify-content-center gy-4">
+
+      <div class="col-md-6 col-lg-3 d-flex">
+        <div class="glass-card" data-aos="fade-right">
+          <div class="">
+             <img src="assets/img/icons1/24-7.png" class="icon-circle bg-gradient-green ">
+            
+          </div>
+          <h5 class="fw-bold">24/7 Access</h5>
+          <p class="text-muted">Track inventory and order status in real-time.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex">
+        <div class="glass-card" data-aos="fade-left">
+          <div class="">
+             <img src="assets/img/icons1/international-delivery.png"  class="icon-circle bg-gradient-yellow">
+            
+          </div>
+          <h5 class="fw-bold">Worldwide Shipping</h5>
+          <p class="text-muted">Distributing in 60+ countries with 500+ partners.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex">
+        <div class="glass-card" data-aos="fade-right" data-aos-delay="150">
+            <div class="">
+             <img src="assets/img/icons1/technical-support.png"  class="icon-circle bg-gradient-pink">
+          </div>
+          <h5 class="fw-bold">Marketing Support</h5>
+          <p class="text-muted">Work with 500+ influencers and partner brands.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex">
+        <div class="glass-card" data-aos="fade-left" data-aos-delay="150">
+          <div class="">
+             <img src="assets/img/icons1/translate.png"  class="icon-circle bg-gradient-purple">
+          </div>
+          <h5 class="fw-bold">9 Languages</h5>
+          <p class="text-muted">Support for 9 major languages including Korean,  Chainies, Spanish, and Arabic.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="Partnership-Processing py-5">
+<div class="container mb-5">
+
+  <h2 class="text-center mb-4 section-title">Partnership Processing With us</h2>
+  <div class="row g-4 text-center">
+    <!-- Step 1 -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow step-card border-0">
+        <div class="card-body cursor-pointer" [routerLink]="routes.B2B" ><!---->
+          <img src="assets/img/icons/login.png" alt="Place Order" class="mb-4 step-icon">
+          <h5 class="fw-bold">Click Hear to Register</h5>
+          <p class=" small">
+            Click here to register your business and access exclusive B2B pricing benefits.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Step 2 -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow step-card border-0">
+        <div class="card-body">
+          <img src="assets/img/icons/receiver.png" alt="Confirm" class="mb-4 step-icon">
+          <h5 class="fw-bold">Confirm</h5>
+          <p class=" small">
+            Our representative will review and contact you to confirm your order.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Step 3 -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow step-card border-0">
+        <div class="card-body" href="https://www.seller.loche.in/">
+          <img src="assets/img/icons/dashboard.png" alt="Payment" class="mb-4 step-icon">
+          <h5 class="fw-bold">Login to own Deshboard</h5>
+          <p class=" small">
+            Securely login to your personal dashboard for real-time updates.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Step 4 -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow step-card border-0">
+        <div class="card-body" href="https://www.seller.loche.in/">
+          <img src="assets/img/icons/checklist.png" alt="Shipping" class="mb-4 step-icon">
+          <h5 class="fw-bold">Listing your Products</h5>
+          <p class=" small">
+            Showcase products clearly with images, descriptions, and accurate pricing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="brant-sec">
+<div class="container mb-5">
+ <section class="new-launches-section text-center my-3">
+  <h2 class="section-title">Top Brands <span class="count">(28)</span></h2>
+  <!-- <button class="btn-gradient mt-3">See All New Launches</button> -->
+</section>
+<div class="brands-grid">
+  <div class="brand-card" *ngFor="let brand of brands">
+    <a [routerLink]="brand.link">
+      <img [src]="brand.logo" [alt]="brand.name" class="img-fluid" />
+      <!-- <p>{{ brand.name }}</p> -->
+    </a>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+
+<section class="section features-section top-brand-banners">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="second-slider nav-center">
+          <owl-carousel-o [options]="secondsection">
+            <ng-template carouselSlide>
+              <div class="item">
+                <div class="offer-sec-two">
+                  <a>
+                    <img src="assets/img/banner-section2/5 (1).webp" class="img-fluid" alt="img" />
+                  </a>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="item">
+                <div class="offer-sec-two">
+                  <a>
+                    <img src="assets/img/banner-section2/4 (1).webp" class="img-fluid" alt="img" />
+                  </a>
+                </div>
+              </div>
+            </ng-template>
+                  <ng-template carouselSlide>
+              <div class="item">
+                <div class="offer-sec-two">
+                  <a>
+                    <img src="assets/img/banner-section2/product.- replace1.jpeg" class="img-fluid" alt="img" />
+                  </a>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="item">
+                <div class="offer-sec-two">
+                  <a>
+                    <img src="assets/img/banner-section2/9.webp" class="img-fluid" alt="img" />
+                  </a>
+                </div>
+              </div>
+            </ng-template>
+      
+            <ng-template carouselSlide>
+              <div class="item">
+                <div class="offer-sec-two">
+                  <a>
+                    <img src="assets/img/banner-section2/product-replace.jpeg" class="img-fluid" alt="img" />
+                  </a>
+                </div>
+              </div>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature-bg">
+    <img src="assets/img/bg/destination-bg-01.png" class="img-fluid shape-01" alt="img" />
+    <img src="assets/img/bg/feature-bg.png" class="img-fluid shape-02" alt="img" />
+  </div>
+</section>
+
+<section class="section features-section our-Stores-product">
+  <div class="container">
+
+    <div class="brand-sec">
+      <div class="text-center mb-4 section-title" data-aos="fade-down">
+        <h2>Promotion</h2>
+      </div>
+      <div class="col-md-12 mt-4">
+        <div class="container-slider nav-center " data-aos="fade-down">
+          <owl-carousel-o [options]="PromotionProduct">
+            <ng-template carouselSlide>
+            <div class="listing-item">
+              <div class="listing-img">
+                <div class="img-slider">
+                   <div class="slide-images" >
+                    <a   >
+                      <img src="assets/img/product/ratplan-4.jpg" class="img-fluid" alt="product" />
+                    </a>
+                  </div>
+                </div>
+                <div class="fav-item justify-content-end">
+                  <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(3)" (keydown)="toggleClass(3)"
+                    tabindex="1" [ngClass]="{ selected: isClassAdded[3] }">
+                    <i class="feather icon-heart"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="listing-content">
+                <div class="listing-features d-flex align-items-end justify-content-between">
+                  <div class="list-rating">
+                    <h3 class="listing-title">
+                      <a  >Minari Calming Poreless Sunscreen 1+1</a>
+                    </h3>
+                    <div class="list-rating">
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star"></i>
+                      <span>(4.0) 138 Reviews</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="listing-location-details">
+                  <div class="listing-price">
+                    <h5>₹ 2,400 </h5>
+                  </div>
+                </div>
+                <!-- <div class="listing-button">
+                  <a class="btn btn-order">
+                    <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    Add To Cart
+                  </a>
+                </div> -->
+              </div>
+            </div>
+            </ng-template>
+            <ng-template carouselSlide>
+           <div class="listing-item">
+              <div class="listing-img">
+                <div class="img-slider">
+                  <div class="slide-images"  >
+                    <a   >
+                      <img src="assets/img/product/fab-you3.webp" class="img-fluid" alt="product" />
+                    </a>
+                  </div>
+                </div>
+                <div class="fav-item justify-content-end">
+                  <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(2)" (keydown)="toggleClass(2)"
+                    tabindex="1" [ngClass]="{ selected: isClassAdded[2] }">
+                    <i class="feather icon-heart"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="listing-content">
+                <div class="listing-features d-flex align-items-end justify-content-between">
+                  <div class="list-rating">
+                    <h3 class="listing-title">
+                      <a  >KRice Mask Cleanser</a>
+                    </h3>
+                    <div class="list-rating">
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star"></i>
+                      <span>(4.0) 138 Reviews</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="listing-location-details">
+                  <div class="listing-price">
+                    <h5> ₹ 1759</h5>
+                  </div>
+                </div>
+                <!-- <div class="listing-button">
+                  <a class="btn btn-order">
+                    <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    Add To Cart
+                  </a>
+                </div> -->
+              </div>
+              <div class="feature-text">
+                <span class="bg-seller">Best Seller</span>
+              </div>
+            </div>
+            </ng-template>
+            <ng-template carouselSlide>
+  <div class="listing-item">
+              <div class="listing-img">
+                <div class="img-slider">
+                  <div class="slide-images"  >
+                    <a   >
+                      <img src="assets/img/product/fab-you2.webp" class="img-fluid" alt="product" />
+                    </a>
+                  </div>
+                </div>
+                <div class="fav-item justify-content-end">
+                  <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(1)" (keydown)="toggleClass(1)"
+                    tabindex="1" [ngClass]="{ selected: isClassAdded[1] }">
+                    <i class="feather icon-heart"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="listing-content">
+                <div class="listing-features d-flex align-items-end justify-content-between">
+                  <div class="list-rating">
+                    <h3 class="listing-title">
+                      <a  >Rice Glow Foam Toner</a>
+                    </h3>
+                    <div class="list-rating">
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star"></i>
+                      <span>(4.0) 138 Reviews</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="listing-location-details">
+                  <div class="listing-price">
+                    <h5>₹ 1489 </h5>
+                  </div>
+                </div>
+                <!-- <div class="listing-button">
+                  <a class="btn btn-order">
+                    <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    Add To Cart
+                  </a>
+                </div> -->
+              </div>
+            </div>
+            </ng-template>
+            <ng-template carouselSlide>
+               <div class="listing-item">
+              <div class="listing-img">
+                <div class="img-slider">
+                  <div class="slide-images"   >
+                    <a  >
+                      <img src="assets/img/product/fab-you1.webp" class="img-fluid" alt="product" />
+                    </a>
+                  </div>
+                </div>
+                <div class="fav-item justify-content-end">
+                  <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)" (keydown)="toggleClass(0)"
+                    tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
+                    <i class="feather icon-heart"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="listing-content">
+                <div class="listing-features d-flex align-items-end justify-content-between">
+                  <div class="list-rating">
+                    <h3 class="listing-title">
+                      <a  >Retinol Peptide Youthful Serum</a>
+                    </h3>
+                    <div class="list-rating">
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star filled me-1"></i>
+                      <i class="fas fa-star"></i>
+                      <span>(4.0) 138 Reviews</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="listing-location-details">
+                  <div class="listing-price">
+                    <h5>₹  1296</h5>
+                  </div>
+                </div>
+                <!-- <div class="listing-button">
+                  <a class="btn btn-order">
+                    <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    Add To Cart
+                  </a>
+                </div> -->
+              </div>
+              <div class="feature-text">
+                <span class="bg-warning">Top Rated</span>
+              </div>
+            </div>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>

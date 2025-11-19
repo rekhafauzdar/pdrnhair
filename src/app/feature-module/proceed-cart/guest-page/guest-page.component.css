@@ -1,0 +1,132 @@
+.modal-body {
+    padding: 10px !important;
+}
+.head-cart {
+    align-items: center;
+}
+.card-hicon{
+    font-size: 18px;
+    color: black;
+    margin-right: 15px;
+}
+.head-cart h6 {
+    font-size: 22px;
+}
+
+/*------------ body container ----------------------*/
+.proceed-btn {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-container {
+  background: white;
+  border-radius: 0;
+  width: 100%;
+  box-shadow: none;
+}
+
+  .form-container h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+  }
+  p.cont-text {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+  .form-group {
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+ .form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 6px 12px 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 13px;
+    background: transparent;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    position: absolute;
+    top: 15px;
+    left: 6px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 4px;
+    color: #636363;
+    transition: 0.2s ease all;
+    pointer-events: none;
+  }
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: 0px;
+  left: 10px;
+  font-size: 12px;
+  color: #e80071;
+}
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label {
+    top: 0px;
+    left: 10px;
+    font-size: 12px;
+    color: #e80071;
+  }
+
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle-row label {
+    font-size: 15px;
+}
+.toggle-switch {
+  width: 40px;
+  height: 20px;
+  appearance: none;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-switch:checked {
+  background-color: #e80071;
+}
+
+.toggle-switch:checked::before {
+  left: 20px;
+}
+
+.toggle-switch::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* ----------footer btn ------------------------- */
+.modal-btn {
+    position: sticky;
+    bottom: 0;
+    padding: 6px 10px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}

@@ -1,0 +1,182 @@
+<div class="login-wrapper why-choose">
+  <div class="choose-left">
+    <img src="assets/img/bg/choose-left.png" class="img-fluid" alt="Why Choose Us">
+  </div>
+  <div class="container">
+    <div class="card-container">
+      <div class="form-section">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 col-xl-7 hide-for-mobile">
+            <div class="visual-section ">
+              <img src="assets/img/bg/sign-up.webp" class="img-fluid " alt="Access Card" />
+            </div>
+          </div>
+          <div class="col-md-9 col-lg-6 col-xl-5 form-sec">
+            <div class="loginbox">
+              <div class="login-auth">
+                <div class="login-auth-wrap">
+                  <h1>Sign Up</h1>
+                  <p class="account-subtitle">
+                    We'll send a confirmation code to your email.
+                  </p>
+                  <form [formGroup]="registerForm" (ngSubmit)="signup()">
+
+                    <div class="input-block">
+                      <label for="username" class="form-label">User Name <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" placeholder="" formControlName="Username" [ngClass]="{
+                       'is-invalid': f['Username'].touched && f['Username'].invalid}" />
+                      @if (f['Username'].touched && f['Username'].invalid) {
+                      <div class="invalid-feedback">
+                        @if (f['Username'].errors && f['Username'].errors['required']) {
+                        <div>
+                          UserName is Required.
+                        </div>
+                        }
+                      </div>
+                      }
+                      @if (CustomControler !== 0) {
+                      <div class="invalid-feedback">
+                        {{ CustomControler }}
+                      </div>
+                      }
+                    </div>
+
+                    <div class="input-block">
+                      <label for="mobileNo" class="form-label">Mobile No. <span class="text-danger">*</span></label>
+
+                      <input class="form-control" type="text" placeholder="Enter mobile number"
+                        formControlName="mobileNo" maxlength="10" (keypress)="onlyNumbers($event)"
+                        [ngClass]="{ 'is-invalid': f['mobileNo'].touched && f['mobileNo'].invalid }" />
+
+                      <!-- Validation messages -->
+                      @if (f['mobileNo'].touched && f['mobileNo'].invalid) {
+                      <div class="invalid-feedback d-block">
+                        @if (f['mobileNo'].errors?.['required']) {
+                        <div>Mobile number is required.</div>
+                        }
+                        @if (f['mobileNo'].errors?.['pattern']) {
+                        <div>Only numbers are allowed.</div>
+                        }
+                        @if (f['mobileNo'].errors?.['minlength'] || f['mobileNo'].errors?.['maxlength']) {
+                        <div>Mobile number must be 10 digits.</div>
+                        }
+                      </div>
+                      }
+
+                      @if (CustomControler !== 0) {
+                      <div class="invalid-feedback d-block">{{ CustomControler }}</div>
+                      }
+                    </div>
+
+                    <div class="input-block">
+                      <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                      <input class="form-control" type="email" placeholder="" formControlName="email" [ngClass]="{
+                      'is-invalid': f['email'].touched && f['email'].invalid}" />
+                      @if (f['email'].touched && f['email'].invalid) {
+                      <div class="invalid-feedback">
+                        @if (f['email'].errors && f['email'].errors['required']) {
+                        <div>
+                          User Email Is Required.
+                        </div>
+                        }
+                      </div>
+                      }
+                      @if (CustomControler !== 0) {
+                      <div class="invalid-feedback">
+                        {{ CustomControler }}
+                      </div>
+                      }
+                    </div>
+
+                    <div class="row g-2">
+                      <div class="col-12">
+                        <div class="input-block">
+                          <label for="password" class="form-label">
+                            Password <span class="text-danger">*</span>
+                          </label>
+
+                          <div class="position-relative">
+
+                            <input class="form-control pe-5" placeholder="Enter your password" maxlength="10"
+                              minlength="8" [type]="show_password ? 'password' : 'text'" formControlName="password"
+                              [ngClass]="{
+                            'is-invalid': f['password'].touched && f['password'].invalid}" />
+
+                            <span class="position-absolute top-50 end-0 translate-middle-y me-3"
+                              style="cursor: pointer;" (click)="togglePassword()" (keydown.enter)="togglePassword()"
+                              (keydown.space)="togglePassword()" tabindex="0" role="button">
+                              <i [ngClass]="show_password ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+                            </span>
+                          </div>
+
+                          <!-- Validation Message -->
+                          @if (f['password'].touched && f['password'].invalid) {
+                          <div class="invalid-feedback d-block">
+                            @if (f['password'].errors?.['required']) {
+                            <div>Password is required.</div>
+                            }
+                          </div>
+                          }
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="input-block">
+                          <label for="password" class="form-label">
+                            Confirm Password <span class="text-danger">*</span>
+                          </label>
+
+                          <div class="position-relative">
+
+                            <input class="form-control pe-5" placeholder="Enter your password" maxlength="10"
+                              minlength="8" [type]="show_confirmPassword ? 'password' : 'text'"
+                              formControlName="confirmPassword" [ngClass]="{
+                               'is-invalid': f['confirmPassword'].touched && f['confirmPassword'].invalid}" />
+
+                            <span class="position-absolute top-50 end-0 translate-middle-y me-3"
+                              style="cursor: pointer;" (click)="toggleConfirmPassword()"
+                              (keydown.enter)="toggleConfirmPassword()" (keydown.space)="toggleConfirmPassword()"
+                              tabindex="0" role="button">
+                              <i [ngClass]="show_confirmPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+                            </span>
+                          </div>
+
+                          <!-- Confirm Password Validation Message -->
+                          @if (
+                          (f['confirmPassword'].touched && f['confirmPassword'].invalid) ||
+                          registerForm.errors?.['passwordMismatch']
+                          ) {
+                          <div class="invalid-feedback d-block">
+                            @if (f['confirmPassword'].errors?.['required']) {
+                            <div>Confirm Password is required.</div>
+                            }
+                            @if (registerForm.errors?.['passwordMismatch']) {
+                            <div>Passwords do not match.</div>
+                            }
+                          </div>
+                          }
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <button class="btn btn-outline-light w-100 btn-size mt-1" type="submit"
+                      [disabled]="!registerForm.valid">
+                      Sign Up
+                    </button>
+
+
+
+                    <div class="text-center dont-have">
+                      Already have an Account? <a [routerLink]="routes.login">Sign In</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

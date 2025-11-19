@@ -1,0 +1,315 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5 col-lg-3">
+            <div class="review-sec listing-item">
+                <div class="listing-img">
+                    <div class="img-slider">
+                        <div class="slide-images">
+                            <a>
+                                <img src="assets/img/cars/product-1.avif" class="img-fluid" alt="product" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="listing-content">
+                    <div class="listing-features d-flex align-items-end justify-content-between">
+                        <div class="list-rating">
+                            <h3 class="listing-title">
+                                <a>Cetaphil Brightening Radiance Creamy Cleanser With</a>
+                            </h3>
+                            <div class="list-rating">
+                                <i class="fas fa-star filled me-1"></i>
+                                <i class="fas fa-star filled me-1"></i>
+                                <i class="fas fa-star filled me-1"></i>
+                                <i class="fas fa-star filled me-1"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(4.0) 138 Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listing-location-details">
+                        <div class="listing-price">
+                            <h5>₹651 </h5>
+                            <p>₹700</p><span>(7% Off)</span>
+                        </div>
+                    </div>
+                    <div class="listing-button">
+                        <a class="btn btn-order">
+                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            Add To Cart
+                        </a>
+                    </div>
+                </div>
+                <div class="feature-text">
+                    <span class="bg-warning">Top Rated</span>
+                </div>
+            </div>
+            <!--------------------------------- Gallery ---------------------------------------------------->
+            <div class="review-sec mb-0 pb-0">
+                <div class="review-header">
+                    <h4>Images uploaded by customers:
+                    </h4>
+                </div>
+                <div class="gallery-list">
+                    <ul>
+                        @for (image of gallery; track image; let i = $index) {
+                        @if (i < 4) { <li>
+                            <div class="gallery-widget">
+                                <a href="javascript:void(0);" data-fancybox="gallery1">
+                                    <img class="img-fluid" alt="Image" [src]="image.src" (click)="open(i, gallery)">
+                                </a>
+                            </div>
+                            </li>
+                            }}
+
+                    </ul>
+                </div>
+            </div>
+            <!------------------------------------ /Gallery ----------------------------------------------->
+        </div>
+        <div class="col-md-7 col-lg-9">
+            <div class="review-sec listing-review">
+                <div class="review-header">
+                    <h4>Ratings & reviews</h4>
+                    <div class="submit-btn text-end">
+                        <button class="btn btn-primary submit-review" type="submit" (click)="writereview()">
+                            Rate Product
+                        </button>
+                    </div>
+                </div>
+                <div class="rating-wrapper">
+                    <div class="rating-wraps">
+                        <h2>4.5<span>/5</span></h2>
+                        <p>Excellent</p>
+                        <h6>Overall 22334 <br><span>verified Ratings</span> </h6>
+                    </div>
+                    <div class="rating-progress">
+                        <div class="progress-info">
+                            <h6>5 <span class="review-star"><i class="fa-solid fa-star"></i></span> </h6>
+                            <div class="progress" role="progressbar">
+                                <div class="progress-bar bg-primary" style="width: 70%"></div>
+                            </div>
+                            <div class="progress-percent">900</div>
+                        </div>
+                        <div class="progress-info">
+                            <h6>4 <span class="review-star"><i class="fa-solid fa-star"></i></span> </h6>
+                            <div class="progress" role="progressbar">
+                                <div class="progress-bar bg-primary" style="width: 85%"></div>
+                            </div>
+                            <div class="progress-percent">600</div>
+                        </div>
+                        <div class="progress-info">
+                            <h6>3 <span class="review-star"><i class="fa-solid fa-star"></i></span> </h6>
+                            <div class="progress" role="progressbar">
+                                <div class="progress-bar bg-primary" style="width: 60%"></div>
+                            </div>
+                            <div class="progress-percent">234</div>
+                        </div>
+                        <div class="progress-info">
+                            <h6>2 <span class="review-star"><i class="fa-solid fa-star"></i></span></h6>
+                            <div class="progress" role="progressbar">
+                                <div class="progress-bar bg-primary" style="width: 65%"></div>
+                            </div>
+                            <div class="progress-percent">19</div>
+                        </div>
+                        <div class="progress-info">
+                            <h6>1 <span class="review-star"><i class="fa-solid fa-star"></i></span> </h6>
+                            <div class="progress" role="progressbar">
+                                <div class="progress-bar bg-primary" style="width: 90%"></div>
+                            </div>
+                            <div class="progress-percent">400</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+
+                <div class="review-head"></div>
+                    <ul>
+                        <li>
+                            <div class="review-wraps">
+                                <div class="review-header-group">
+                                    <div class="review-widget-header">
+                                        <span class="review-widget-img">
+                                            <img src="assets/img/profiles/profile.png" class="img-fluid" alt="User" />
+                                        </span>
+                                        <div class="review-design">
+                                            <h6>Muskan Singh</h6>
+                                            <p>02 Jan 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviewbox-list-rating">
+                                        <p>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <span> (5.0)</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="review-comment">
+                                    I thought the package will come as one 100ml pack but it came as two 50ml pack it
+                                    smells like
+                                    potatoes but it kinda reduced my acne
+                                </p>
+                                <div class="review-reply">
+                                    <div>
+                                        <div class="gallery-list">
+                                            <ul>
+                                                <li>
+                                                    <div class="gallery-widget">
+                                                        <a href="assets/img/gallery/gallery-big-01.jpg"
+                                                            data-fancybox="gallery1">
+                                                            <img class="img-fluid" alt="Image"
+                                                                src="assets/img/cars/product-8(1).avif">
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="gallery-widget">
+                                                        <a href="assets/img/gallery/gallery-big-02.jpg"
+                                                            data-fancybox="gallery1">
+                                                            <img class="img-fluid" alt="Image"
+                                                                src="assets/img/gallery/gallery-thumb-02.jpg">
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="gallery-widget">
+                                                        <a href="assets/img/gallery/gallery-big-03.jpg"
+                                                            data-fancybox="gallery1">
+                                                            <img class="img-fluid" alt="Image"
+                                                                src="assets/img/gallery/gallery-thumb-03.jpg">
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="gallery-widget">
+                                                        <a href="assets/img/gallery/gallery-big-04.jpg"
+                                                            data-fancybox="gallery1">
+                                                            <img class="img-fluid" alt="Image"
+                                                                src="assets/img/gallery/gallery-thumb-04.jpg">
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="gallery-widget">
+                                                        <a href="assets/img/gallery/gallery-big-03.jpg"
+                                                            data-fancybox="gallery1">
+                                                            <img class="img-fluid" alt="Image"
+                                                                src="assets/img/gallery/gallery-thumb-03.jpg">
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="gallery-widget">
+                                                        <a href="assets/img/gallery/gallery-big-04.jpg"
+                                                            data-fancybox="gallery1">
+                                                            <img class="img-fluid" alt="Image"
+                                                                src="assets/img/gallery/gallery-thumb-04.jpg">
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="gallery-widget position-relative">
+                                                        <img src="assets/img/cars/product-8(1).avif" class="img-fluid"
+                                                            alt="Gallery" />
+                                                        <div
+                                                            class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+                                                            <span class="count-img">+ 5768</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="review-action">
+                                        <a href="javascript:void(0);"><i class="fa-regular fa-thumbs-up"></i>10</a>
+                                        <a href="javascript:void(0);"><i class="fa-regular fa-thumbs-down"></i>12</a>
+                                        <a href="javascript:void(0);"><i class="fa-regular fa-heart"></i>15</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="review-wraps">
+                                        <div class="review-header-group">
+                                            <div class="review-widget-header">
+                                                <span class="review-widget-img">
+                                                    <img src="assets/img/profiles/profile.png" class="img-fluid"
+                                                        alt="User" />
+                                                </span>
+                                                <div class="review-design">
+                                                    <h6> bellaluna Customer</h6>
+                                                    <p>02 Jan 2023</p>
+                                                </div>
+                                            </div>
+                                            <div class="reviewbox-list-rating">
+                                                <p>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <span> (5.0)</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p class="review-comment">
+                                            This Product price was high
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="review-head"></div>
+                            <div class="review-wraps">
+                                <div class="review-header-group">
+                                    <div class="review-widget-header">
+                                        <span class="review-widget-img">
+                                            <img src="assets/img/profiles/profile.png" class="img-fluid" alt="User" />
+                                        </span>
+                                        <div class="review-design">
+                                            <h6>Muskan Singh</h6>
+                                            <p>Reviewed 25 March 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviewbox-list-rating">
+                                        <p>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <span> (5.0)</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="review-comment">
+                                    Local product.
+                                </p>
+                                <div class="review-reply">
+                                    <div></div>
+                                    <!-- <a class="btn" href="javascript:void(0);">
+                                        <i class="fa-solid fa-reply"></i>Reply
+                                    </a> -->
+                                    <div class="review-action">
+                                        <a href="javascript:void(0);"><i class="fa-regular fa-thumbs-up"></i>10</a>
+                                        <a href="javascript:void(0);"><i class="fa-regular fa-thumbs-down"></i>12</a>
+                                        <a href="javascript:void(0);"><i class="fa-regular fa-heart"></i>15</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="all-review">
+                            <a> <span class="all-review-btn">All 6219 reviews <i
+                                        class="fa-solid fa-chevron-right"></i></span></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

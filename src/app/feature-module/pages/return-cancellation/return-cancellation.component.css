@@ -1,0 +1,20 @@
+
+@media (max-width: 576px) {
+  .cancellation-returns h1 {
+    font-size: 1.5rem;
+  }
+  .return-info h4{
+    font-size: 16px;
+  }
+}
+strong{
+    font-weight: 500 !important;
+}
+.accordion-button:not(.collapsed) {
+    background-color: white;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}.accordion-body {
+    background: aliceblue;
+}

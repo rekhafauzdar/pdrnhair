@@ -1,0 +1,61 @@
+
+form.modal-form{
+    padding: 0px 12px;
+    height: 100%;
+    overflow: auto;
+}
+.modal-form label {
+  display: block;
+  font-size: 14px;
+  margin: 12px 0 4px;
+  color: #444;
+}
+
+.modal-form input[type="text"],
+.modal-form input[type="tel"],
+.modal-form select,
+.modal-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modal-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+.btn-primary.btn:first-child:active {
+    background: rgb(232, 0, 113);
+    color: white !important;
+    border-color: rgb(232, 0, 113);
+}
+/* .update-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #e6007e;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+  background-color: #cc006a;
+} */

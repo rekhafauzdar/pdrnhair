@@ -1,0 +1,558 @@
+<!-- Settings Details -->
+  <div class="settings-info">
+    <div class="settings-sub-heading">
+      <h4>Security</h4>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="security-grid flex-fill">
+          <div class="security-heading">
+            <h5>Google Authenticator</h5>
+            <div class="status-toggle">
+              <input id="google_authenticator" class="check" type="checkbox" checked />
+              <label for="google_authenticator" class="checktoggle">checkbox</label>
+            </div>
+          </div>
+          <div class="security-content">
+            <p>
+              Google Authenticator adds an extra layer of security to your
+              online accounts by adding a second step of verification when
+              you sign in.
+            </p>
+            <span class="badge badge-light-success">Connected</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="security-grid flex-fill">
+          <div class="security-heading">
+            <h5>Password</h5>
+          </div>
+          <div class="security-content">
+            <p>Last Changed 15 Oct 2023, 09:00 AM</p>
+          </div>
+          <div class="security-btn security-btn-info">
+            <a href="javascript:void(0)" class="btn btn-secondary" data-bs-toggle="modal"
+              data-bs-target="#change_password">
+              Change
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="security-grid flex-fill">
+          <div class="security-heading">
+            <h5>Two Factor</h5>
+            <div class="status-toggle">
+              <input id="two_factor" class="check" type="checkbox" checked />
+              <label for="two_factor" class="checktoggle">checkbox</label>
+            </div>
+          </div>
+          <div class="security-content">
+            <p>Receive codes via SMS or email every time you login</p>
+          </div>
+          <div class="security-btn security-btn-info">
+            <a href="javascript:void(0)" class="btn btn-danger" data-bs-toggle="modal"
+              data-bs-target="#delete_two_factor">Delete</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="security-grid flex-fill">
+          <div class="security-heading">
+            <h5>Phone Number Verification</h5>
+          </div>
+          <div class="security-content">
+            <p class="text-success-light">
+              Verified Mobile Number : 7261937185
+            </p>
+          </div>
+          <div class="security-btn">
+            <a href="javascript:void(0)" class="btn btn-secondary" data-bs-toggle="modal"
+              data-bs-target="#change_phone_number">Change</a>
+            <a href="javascript:void(0)" class="btn btn-remove">Remove</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="security-grid flex-fill">
+          <div class="security-heading">
+            <h5>Email Verification</h5>
+          </div>
+          <div class="security-content">
+            <p class="text-success-light">
+              Verified Email : info&#64;example.com
+            </p>
+          </div>
+          <div class="security-btn">
+            <a href="javascript:void(0)" class="btn btn-secondary" data-bs-toggle="modal"
+              data-bs-target="#change_email">Change</a>
+            <a href="javascript:void(0)" class="btn btn-remove">Remove</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="security-grid flex-fill">
+          <div class="security-heading">
+            <h5>Device Management</h5>
+          </div>
+          <div class="security-content">
+            <p>Last Changed 18 Oct 2023, 11:15 AM</p>
+          </div>
+          <div class="security-btn">
+            <a href="javascript:void(0)" class="btn btn-secondary">Manage</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="security-grid flex-fill">
+          <div class="security-heading">
+            <h5>Account Activity</h5>
+          </div>
+          <div class="security-content">
+            <p>Last Changed 04 Nov 2023, 04:30 PM</p>
+          </div>
+          <div class="security-btn">
+            <a href="javascript:void(0)" class="btn btn-secondary">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="security-grid flex-fill">
+          <div class="security-heading">
+            <h5>Deactive Account</h5>
+          </div>
+          <div class="security-content">
+            <p>Last Changed 16 Nov 2023, 02:00 PM</p>
+          </div>
+          <div class="security-btn">
+            <a href="javascript:void(0)" class="btn btn-secondary" data-bs-toggle="modal"
+              data-bs-target="#deactive_account">Deactive</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="security-grid flex-fill">
+          <div class="security-heading">
+            <h5>Delete Account</h5>
+          </div>
+          <div class="security-content">
+            <p>Last Changed 30 Dec 2023, 08:40 PM</p>
+          </div>
+          <div class="security-btn">
+            <a href="javascript:void(0)" class="btn btn-danger" data-bs-toggle="modal"
+              data-bs-target="#delete_account">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- /Settings Details -->
+<!-- Change Password Modal -->
+<div class="modal new-modal fade" id="change_password" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Change Password</h4>
+        <button type="button" class="close-btn" data-bs-dismiss="modal">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="modal-form-group">
+                <label>Old Password <span class="text-danger">*</span></label>
+                <div class="pass-group">
+                  <input [type]="password[1] ? 'text' : 'password'" class="form-control pass-input-three"
+                    placeholder="............." />
+                  <span class="feather icon-eye-off toggle-password-five" [ngClass]="{
+                      'icon-eye': password[1],
+                      'icon-eye-off': !password[1]
+                    }" (click)="togglePassword(1)"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="modal-form-group">
+                <label>New Password <span class="text-danger">*</span></label>
+                <div class="pass-group">
+                  <input [type]="password[2] ? 'text' : 'password'" class="form-control pass-input-four"
+                    placeholder="............." />
+                  <span class="feather icon-eye-off toggle-password-five" [ngClass]="{
+                      'icon-eye': password[2],
+                      'icon-eye-off': !password[2]
+                    }" (click)="togglePassword(2)"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="modal-form-group">
+                <label>Confirm Password <span class="text-danger">*</span></label>
+                <div class="pass-group">
+                  <input [type]="password[3] ? 'text' : 'password'" class="form-control pass-input-five"
+                    placeholder="............." />
+                  <span class="feather icon-eye-off toggle-password-five" [ngClass]="{
+                      'icon-eye': password[3],
+                      'icon-eye-off': !password[3]
+                    }" (click)="togglePassword(3)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-btn modal-btn-sm">
+            <button type="submit" class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Change Password Modal -->
+
+<!-- Change Phone Number Modal -->
+<div class="modal new-modal multi-step fade" id="change_phone_number" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Change Phone Number</h4>
+        <button type="button" class="close-btn" data-bs-dismiss="modal">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+          <div class="modal-form-group">
+            <label>Current Phone Number <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="modal-form-group">
+            <label>New Phone Number <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="modal-form-group">
+            <p>
+              <i class="feather icon-alert-circle"></i> New Phone Number Only
+              Updated Once You Verified
+            </p>
+          </div>
+        </form>
+        <div class="modal-btn modal-btn-sm">
+          <a href="javascript:void(0);" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </a>
+          <a href="javascript:void(0);" class="btn btn-primary" data-bs-target="#otp_verification"
+            data-bs-toggle="modal" data-bs-dismiss="modal">
+            Change Number
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Change Phone Number Modal -->
+
+<!-- OTP Verification Modal -->
+<div class="modal new-modal multi-step fade" id="otp_verification" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <h4 class="modal-title">OTP Verification</h4>
+        <button type="button" class="close-btn" data-bs-dismiss="modal">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="otp-number">
+          <p>
+            Enter OTP Send to your Mobile number <span>+1 454445 45544</span>
+          </p>
+        </div>
+        <form method="get" class="digit-group login-form-control" data-group-name="digits" data-autosubmit="false"
+          autocomplete="off" action="#">
+          <div class="otp-box">
+            <input type="text" [(ngModel)]="oneTimePassword.data1" maxlength="1" (keydown.backspace)="
+                tiggerBackspace(oneTimePassword.data1, 'digit-1')
+              " (input)="ValueChanged(oneTimePassword.data1, 'digit-1')" id="digit-1" name="digit-1"
+              data-next="digit-2" maxlength="1" />
+            <input type="text" [(ngModel)]="oneTimePassword.data2" maxlength="1" (keydown.backspace)="
+                tiggerBackspace(oneTimePassword.data2, 'digit-2')
+              " (input)="ValueChanged(oneTimePassword.data2, 'digit-2')" id="digit-2" name="digit-2"
+              data-next="digit-3" data-previous="digit-1" maxlength="1" />
+            <input type="text" [(ngModel)]="oneTimePassword.data3" maxlength="1" (keydown.backspace)="
+                tiggerBackspace(oneTimePassword.data3, 'digit-3')
+              " (input)="ValueChanged(oneTimePassword.data3, 'digit-3')" id="digit-3" name="digit-3"
+              data-next="digit-4" data-previous="digit-2" maxlength="1" />
+            <input type="text" [(ngModel)]="oneTimePassword.data3" maxlength="1" (keydown.backspace)="
+                tiggerBackspace(oneTimePassword.data4, 'digit-3')
+              " (input)="ValueChanged(oneTimePassword.data4, 'digit-4')" id="digit-4" name="digit-4"
+              data-next="digit-5" data-previous="digit-3" maxlength="1" />
+          </div>
+          <div class="otp-resend">
+            <a href="javascript:void(0);">Resend Again</a>
+            <p>Remaining 00:30s</p>
+          </div>
+        </form>
+        <div class="modal-btn modal-btn-group">
+          <div class="row">
+            <div class="col-6">
+              <a href="javascript:void(0);" class="btn btn-secondary w-100" data-bs-dismiss="modal">
+                Cancel
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="javascript:void(0);" class="btn btn-primary w-100" data-bs-dismiss="modal"
+                data-bs-target="#verification_success" data-bs-toggle="modal">
+                Verify
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="verified-box">
+          <p>
+            <i class="feather icon-check"></i> Your Phone Number has been
+            Successfully Verified
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /OTP Verification Modal -->
+
+<!-- Verification Success Modal -->
+<div class="modal new-modal verification-success-modal fade" id="verification_success" data-keyboard="false"
+  data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="order-success-info">
+          <span class="order-success-icon">
+            <img src="assets/img/icons/check-icon.svg" alt="Icon" />
+          </span>
+          <h4>Successful</h4>
+          <p>You Phone number has been successfully Verified.</p>
+          <div class="modal-btn">
+            <a href="javascript:void(0);" class="btn btn-secondary">
+              Back to Settings <i class="feather icon-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Verification Success Modal -->
+
+<!-- Change Email Modal -->
+<div class="modal new-modal multi-step fade" id="change_email" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Change Email Address</h4>
+        <button type="button" class="close-btn" data-bs-dismiss="modal">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+          <div class="modal-form-group">
+            <label>Current Email Address <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="modal-form-group">
+            <label>New Email Address <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="modal-form-group">
+            <p>
+              <i class="feather icon-alert-circle"></i> New Email Address Only
+              Updated Once You Verified
+            </p>
+          </div>
+        </form>
+        <div class="modal-btn modal-btn-sm">
+          <a href="javascript:void(0);" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </a>
+          <a href="javascript:void(0);" class="btn btn-primary" data-bs-target="#email_verification"
+            data-bs-toggle="modal" data-bs-dismiss="modal">
+            Change Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Change Email Modal -->
+
+<!-- Email Verification Modal -->
+<div class="modal new-modal multi-step fade" id="email_verification" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <h4 class="modal-title">Email Verification</h4>
+        <button type="button" class="close-btn" data-bs-dismiss="modal">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="otp-number">
+          <p>
+            Please click the verification link send to your email address
+            <span>Triddse3w&#64;example.com</span>
+          </p>
+        </div>
+        <div class="otp-resend">
+          <a href="javascript:void(0);">Resend Again</a>
+        </div>
+        <div class="modal-btn">
+          <div class="row">
+            <div class="col-6">
+              <a href="javascript:void(0);" class="btn btn-secondary w-100" data-bs-dismiss="modal">
+                Close
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="javascript:void(0);" class="btn btn-primary w-100" data-bs-dismiss="modal"
+                data-bs-target="#email_verification_success" data-bs-toggle="modal">
+                Verify
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Email Verification Modal -->
+
+<!-- Email Verification Success Modal -->
+<div class="modal new-modal verification-success-modal fade" id="email_verification_success" data-keyboard="false"
+  data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="order-success-info">
+          <span class="order-success-icon">
+            <img src="assets/img/icons/check-icon.svg" alt="Icon" />
+          </span>
+          <h4>Successful</h4>
+          <p>You Email has been successfully Verified.</p>
+          <div class="modal-btn">
+            <a href="javascript:void(0);" class="btn btn-secondary">
+              Back to Settings <i class="feather icon-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Email Verification Success Modal -->
+
+<!-- Deactive Account Modal -->
+<div class="modal new-modal fade" id="deactive_account" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Deactivate Account</h4>
+        <button type="button" class="close-btn" data-bs-dismiss="modal">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="deactive-content">
+          <p>
+            Are you sureyou want to delete This Account? To delete your account,
+            Type your password.
+          </p>
+        </div>
+        <form action="#">
+          <div class="modal-form-group">
+            <label>Password <span class="text-danger">*</span></label>
+            <div class="pass-group">
+              <input [type]="password[4] ? 'text' : 'password'" class="form-control pass-input-six"
+                placeholder="............." />
+              <span class="feather icon-eye-off toggle-password-six" [ngClass]="{
+                  'icon-eye': password[4],
+                  'icon-eye-off': !password[4]
+                }" (click)="togglePassword(4)"></span>
+            </div>
+          </div>
+          <div class="modal-btn modal-btn-sm">
+            <button type="submit" class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">
+              Delete Account
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Deactive Account Modal -->
+
+<!-- Delete Modal -->
+<div class="modal new-modal fade" id="delete_two_factor" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="delete-action">
+          <div class="delete-header">
+            <h4>Delete Two Factor</h4>
+            <p>Are you sure want to delete?</p>
+          </div>
+          <div class="modal-btn">
+            <div class="row">
+              <div class="col-6">
+                <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary w-100">
+                  Delete
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary w-100">
+                  Cancel
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Delete Modal -->
+
+<!-- Delete Modal -->
+<div class="modal new-modal fade" id="delete_account" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="delete-action">
+          <div class="delete-header">
+            <h4>Delete Account</h4>
+            <p>Are you sure want to delete?</p>
+          </div>
+          <div class="modal-btn">
+            <div class="row">
+              <div class="col-6">
+                <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary w-100">
+                  Delete
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary w-100">
+                  Cancel
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Delete Modal -->

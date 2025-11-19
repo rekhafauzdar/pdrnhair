@@ -1,0 +1,175 @@
+<div class="container-fluid">
+
+    <div class="card book-card flex-fill mb-0">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <h1 class="profile-title">Account Information</h1>
+                    <p class="profile-subtitle">Manage your account settings and personal information</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="profile-container">
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="profile-card mb-4 text-center">
+                            <div class="profile-header">
+                                <!-- Profile Image -->
+                                <img [src]="profileImage" alt="Profile Image" class="profile-img mb-3"
+                                     style="cursor: pointer;" />
+
+                                <h3>Abhi Pandey</h3>
+                                <p class="mb-0">Registered User</p>
+                            </div>
+
+                            <div class="profile-info">
+                                <!-- Hidden File Input -->
+                                <input type="file" accept="image/*" #fileInput (change)="onImageSelected($event)"
+                                    style="display: none;" />
+
+                                <div class="text-center mb-4">
+                                    <button class="btn btn-edit" (click)="fileInput.click()">
+                                        <i class="fas fa-camera me-2"></i>Change Profile Photo
+                                    </button>
+                                </div>
+
+                                <div class="social-connect">
+                                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-icon google"><i class="fab fa-google"></i></a>
+                                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile-card">
+                            <div class="profile-info">
+                                <h5 class="mb-4">Account Security</h5>
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="two-factor">
+                                        <i class="fas fa-shield-alt text-success me-2"></i>
+                                        <span>Two-Factor Authentication</span>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="twoFactorSwitch">
+                                        <label class="form-check-label" for="twoFactorSwitch"></label>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                        data-bs-target="#changePasswordModal">
+                                        <i class="fas fa-key me-2"></i>Change Password
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <!-- Personal Information Section -->
+                        <h2 class="section-title">Personal Information</h2>
+                        <div class="info-card">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="info-group">
+                                        <label class="info-label">First Name</label>
+                                        <p class="info-value">Abhi</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-group">
+                                        <label class="info-label">Last Name</label>
+                                        <p class="info-value">Pandey</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-group">
+                                <label class="info-label">Email Address</label>
+                                <div class="d-flex align-items-center">
+                                    <p class="info-value me-2">abhishekpandeymail.com</p>
+                                    <span class="verified-badge"><i class="fas fa-check-circle"></i>verified</span>
+                                </div>
+                            </div>
+
+                            <div class="info-group">
+                                <label class="info-label">Mobile Number</label>
+                                <p class="info-value">+91 756767576</p>
+                            </div>
+
+                            <div class="info-group">
+                                <label class="info-label">WhatsApp Number</label>
+                                <p class="info-value">+91 756767576</p>
+                            </div>
+
+                            <div class="info-group">
+                                <label class="info-label">Adhar Number</label>
+                                 <div class="d-flex align-items-center">
+                                    <p class="info-value me-2">76576476476</p>
+                                    <span class="verified-badge"><i class="fas fa-check-circle"></i>verified</span>
+                                </div>
+                            </div>
+                            <div class="text-end mt-4">
+                                <button class="btn btn-edit" (click)="openModal()">
+                                    <i class="fas fa-edit me-2"></i>Edit Profile
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-5"></div>
+                    <div class="col-xl-7">
+                         <h2 class="section-title">Account Settings</h2>
+                        <div class="info-card">
+                            <div class="settings-option">
+                                <div>
+                                    <h6 class="mb-0">Receive special events and promotional information</h6>
+                                    <p class="text-muted small mb-0">Get updates about upcoming events and special
+                                        offers</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="settings-option">
+                                <div>
+                                    <h6 class="mb-0">Make profile private</h6>
+                                    <p class="text-muted small mb-0">Only you can see your profile information</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="delete-option">
+                                <h6 class="mb-0">Delete Account Permanently</h6>
+                                <p class="small mb-0">This action cannot be undone</p>
+                            </div>
+                            <!-- <button class="btn btn-outline-danger btn-sm">
+                        <i class="fas fa-trash-alt me-1"></i>Delete
+                    </button> -->
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+
+                                <button class="btn btn-outline-danger">
+                                    <i class="fas fa-trash-alt me-2"></i>Delete Account Permanently
+                                </button>
+                                <button class="btn btn-outline-secondary" >
+                                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,412 @@
+<!-- Page Content -->
+<div class="content">
+  <div class="container">
+    <!-- <div class="content-header">
+      <h4>My Orders</h4>
+    </div> -->
+    <div class="sorting-info">
+      <div class="row d-flex align-items-center">
+        <div class="col-xl-7 col-lg-8 col-sm-7 col-9">
+          <div class="search-section">
+            <div id="tablefilter">
+
+              <div class="dataTables_filter">
+                <label>
+                  <input [(ngModel)]="searchDataValue" [ngModelOptions]="{standalone: true}"
+                    [ngModelOptions]="{standalone: true}" (ngModelChange)="searchData(searchDataValue)" type="search"
+                    class="form-control" placeholder="Search Your Order here" />
+                </label>
+              </div>
+            </div>
+             </div>
+        </div>
+        <!-- pc-filter option -->
+        <div class="col-xl-5 col-lg-4 col-sm-5 col-12 pc-filter-hide">
+          <div class="filter-group">
+            <div class="sort-week sort">
+              <div class="dropdown dropdown-action">
+                <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Order Time <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <div id="checkBoxes1">
+                    <div class="selectBox-cont">
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username"><span class="checkmark"></span> This Month
+                      </label>
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username"><span class="checkmark"></span> 2024
+                      </label>
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username"><span class="checkmark"></span> 2023
+                      </label>
+                      <label class="custom_check w-100">
+                        <input type="checkbox" name="username"><span class="checkmark"></span> 2022
+                      </label>
+
+                    </div>
+                  </div>
+                  <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"
+                    data-bs-target="#custom_date">
+                    Custom
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="sort-relevance sort">
+              <div class="dropdown dropdown-action">
+                <a href="javascript:void(0);" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Order Status <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="javascript:void(0);">
+                    On the way
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0);">
+                    Delivered
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0);">
+                    Cancelled
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0);">
+                    Returned
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Filter Button -->
+        <div class="col-3 mobile-filter">
+          <a class="mobile-filter-btn d-block d-sm-none" (click)="openMobileFilter()">
+            <i class="fa-solid fa-filter"></i> Filter</a>
+
+          <div class="col-xl-5 col-lg-4 col-sm-5 col-12">
+            <!-- Filter Panel -->
+            <div class="mobile-filter-panel" [class.show]="mobileFilterVisible">
+
+              <!-- Close Button -->
+              <div class="row">
+                <div class="col-6 d-flex flex-wrap align-content-center"><a class="filter-heading">
+                    <p>Filters</p>
+                  </a></div>
+                <div class="col-6">
+                  <div class="mobile-filter-close d-block d-sm-none">
+                    <button (click)="closeMobileFilter()">&times;</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Order Time -->
+              <div class="filter-section mb-3">
+                <h6 class="filter-label">Order Time</h6>
+                <label class="custom_check w-50"><input type="checkbox" name="orderTime" /> <span
+                    class="checkmark"></span> This Month</label>
+                <label class="custom_check w-50"><input type="checkbox" name="orderTime" /> <span
+                    class="checkmark"></span> 2024</label>
+                <label class="custom_check w-50"><input type="checkbox" name="orderTime" /> <span
+                    class="checkmark"></span> 2023</label>
+                <label class="custom_check w-50"><input type="checkbox" name="orderTime" /> <span
+                    class="checkmark"></span> 2022</label>
+                <a class="d-block mt-2 text-primary" data-bs-toggle="modal" data-bs-target="#custom_date">Custom</a>
+              </div>
+
+              <!-- Order Status -->
+              <div class="filter-section">
+                <h6 class="filter-label">Order Status</h6>
+                <label class="custom_check w-50"><input type="checkbox" name="orderTime" /> <span
+                    class="checkmark"></span> On the way</label>
+                <label class="custom_check w-50"><input type="checkbox" name="orderTime" /> <span
+                    class="checkmark"></span> Delivered</label>
+                <label class="custom_check w-50"><input type="checkbox" name="orderTime" /> <span
+                    class="checkmark"></span> Cancelled</label>
+                <label class="custom_check w-50"><input type="checkbox" name="orderTime" /> <span
+                    class="checkmark"></span> Returned</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="order-list" *ngIf="allOredersData!=''">
+      <div class="card">
+        <div class="shared-info hide-for-mobil">
+          <div class="shared-sec">
+            <!-- <span> Shruti singh shared this order with you.</span> -->
+          </div>
+        </div>
+        <div class="row"  >
+          <!-- <div class="col-3 col-sm-2" [routerLink]="routes.trackingOrder"> -->
+             <div class="col-3 col-sm-2">
+            <div class="product-img-sec">
+              <div class="product-img-set">
+                <img class="product-img" alt="" src="assets/img/product/product-3(1).avif">
+              </div>
+            </div>
+          </div>
+          <div class="col-9 col-sm-10">
+            <div class="row">
+              <div class="col-sm-5" [routerLink]="routes.trackingOrder">
+                <div class="product-info-sec">
+                  <span class=" product-name">Simple Kind to Skin Refreshing Facewash Mild Face Wash for Sensitive Skin
+                    (150ml)</span>
+                  <div class=" product-spacific-info">
+                    <div class="d-flex hide-for-mobil">
+                      <span class="info-space">Color: </span><span class="set-size">White</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 hide-for-mobil">
+                <div class="product-price">
+                  ₹6,439
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div>
+                  <div class="deli-info-sec">
+                    <span class="deli-info-date deliver-bg">Delivered on May 16</span>
+                    <div class="del-info">Your item has been delivered</div>
+                  </div>
+                  <div class="rating" (click)="writereview()">
+                    <span class="icon"><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span class="rating-text">( Rate & Review Product)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="order-list" *ngIf="!allOredersData ||  allOredersData==''">
+      <div class="card">
+        <div class="row">
+          <div class="col-3 col-sm-2">
+            <div class="product-img-sec">
+              <div class="product-img-set">
+                <!-- <img class="product-img" alt="" src="assets/img/product/product-3(1).avif"> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-9 col-sm-10">
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="product-info-sec">
+                  <span class=" product-name">
+                    <h3>There is no Orders yet.</h3>
+                   </span>
+                  <div class=" product-spacific-info">
+                    <div class="d-flex hide-for-mobil">
+                      <span class="info-space"> </span><span class="set-size"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 hide-for-mobil">
+                <div class="product-price">
+                 
+                </div>
+              </div>
+              <!-- <div class="col-sm-5">
+                <div>
+                  <div class="deli-info-sec">
+                    <span class="deli-info-date refund-color">Refund Completed</span>
+                    <div class="del-info">You returned this order because you did not like the fit. </div>
+                  </div>
+                  <div class="rating" (click)="writereview()">
+                    <span class="icon"><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span class="rating-text">( Rate & Review Product)</span>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+        </div>
+        <!-- <div class="refund-sec">
+          <div class="refund-heading">
+            <span class="refund-heading1 refund-completed">Refund Completed</span>
+            <span class="refund-id"> (<span>Refund ID: </span><span>12203254780699205354</span>)</span>
+            <div class="refund-field">
+              <ul>
+                <div>
+                  <li class="refund-field-set">
+                    Your refund is being processed. It is taking longer than expected and
+                    should reflect in your UPI linked bank account within 1 business day(Bank holidays not
+                    included). For any questions, please contact your bank with reference number 428525089319. For
+                    any questions, please contact your bank with reference number 428525089319.
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="refund-sec">
+          <div class="refund-heading">
+            <span class="refund-heading1 refunf-Cancel">Refund Cancelled</span>
+            <span class="refund-id"> (<span>Refund ID: </span><span>122032547806992057687</span>)</span>
+            <div class="refund-field">
+              <ul>
+                <div>
+                  <li class="refund-field-set">
+                    We're sorry. We are unable to process your refund request. Please refer to seller return policy.
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+
+    <!--<div class="order-list">
+      <div class="card">
+        <div class="row">
+          <div class="col-3 col-sm-2">
+            <div class="product-img-sec">
+              <div class="product-img-set">
+                <img class="product-img" alt="" src="assets/img/product/product-3(1).avif">
+              </div>
+            </div>
+          </div>
+          <div class="col-9 col-sm-10">
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="product-info-sec">
+                  <span class=" product-name">Simple Kind to Skin Refreshing Facewash Mild Face Wash for Sensitive Skin
+                    (150ml)</span>
+                  <div class=" product-spacific-info">
+                    <div class="d-flex hide-for-mobil">
+                      <span class="info-space">Color: </span><span class="set-size">White</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 hide-for-mobil">
+                <div class="product-price">
+                  ₹6,439
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div>
+                  <div class="deli-info-sec">
+                    <span class="deli-info-date Cancel-color">Cancelled on Oct 09, 2024</span>
+                    
+                  </div>
+                  <div class="rating">
+                    <span class="icon"><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span class="rating-text">( Rate & Review Product)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-list">
+      <div class="card">
+        <div class="shared-info hide-for-mobil">
+          <div class="shared-sec"><span> Shruti singh shared this order with you.</span></div>
+        </div>
+        <div class="row">
+          <div class="col-3 col-sm-2">
+            <div class="product-img-sec">
+              <div class="product-img-set">
+                <img class="product-img" alt="" src="assets/img/product/product-1.avif">
+              </div>
+            </div>
+          </div>
+          <div class="col-9 col-sm-10">
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="product-info-sec">
+                  <span class="product-name">Cetaphil Brightening Radiance Creamy Cleanser With</span>
+                  <div class="product-spacific-info">
+                    <div class="d-flex hide-for-mobil">
+                      <span class="info-space">Color: </span><span class="set-size">White</span>
+                      <span class="info-space">Size: </span><span class="set-size">80g</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 hide-for-mobil">
+                <div class="product-price">
+                  ₹6,439
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div>
+                  <div class="deli-info-sec">
+                    <span class="deli-info-date deliver-bg">Delivered on May 16</span>
+                    <div class="del-info">Your item has been delivered</div>
+                  </div>
+                  <div class="rating" (click)="writereview()">
+                    <span class="icon"><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span class="rating-text">( Rate & Review Product)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="add-more"></div>
+        <div class="row">
+          <div class="col-3 col-sm-2">
+            <div class="product-img-sec">
+              <div class="product-img-set">
+                <img class="product-img" alt="" src="assets/img/product/product-5(1).avif">
+              </div>
+            </div>
+          </div>
+          <div class="col-9 col-sm-10">
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="product-info-sec">
+                  <span class="product-name">Minimalist 7% ALA & AHA Brightening Face Wash With</span>
+                  <div class="product-spacific-info">
+                    <div class="d-flex hide-for-mobil">
+                      <span class="info-space">Color: </span><span class="set-size">White</span>
+                      <span class="info-space">Size: </span><span class="set-size">80g</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 hide-for-mobil">
+                <div class="product-price">
+                  ₹6,439
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div>
+                  <div class="deli-info-sec">
+                    <span class="deli-info-date deliver-bg">Delivered on May 16</span>
+                    <div class="del-info">Your item has been delivered</div>
+                  </div>
+                  <div class="rating" (click)="writereview()">
+                    <span class="icon"><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span class="rating-text">( Rate & Review Product)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+  </div>
+</div>
+<!-- /Page Content -->

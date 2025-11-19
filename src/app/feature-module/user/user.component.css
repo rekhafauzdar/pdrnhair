@@ -1,0 +1,145 @@
+.sidebar.--fixed {
+  min-width: 230px;
+  max-width: 278px;
+  top: 150px;
+  z-index: 200;
+}
+.sidebar__body {
+  padding: 12px;
+  overflow: auto;
+      height: 91vh;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.card-white {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0px 1px 4px rgba(26, 32, 36, 0.1);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  padding: 13px 15px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.sidebar__link:hover {
+  background-color: #fff0f5;
+  font-weight: 500;
+}
+.sidebar__link i {
+  margin-right: 10px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+.sidebar__link.active {
+  background: #ffeaf0;
+  color: #ff5894;
+  font-weight: 600;
+}
+.sidebar__link.active i {
+  color: #ff5894;
+}
+.sidebar__open-btn {
+  position: absolute;
+  right: -50px;
+  top: 0;
+  background: #ff4f81;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sidebar__open-btn:hover {
+  background: #e93c6e;
+}
+
+/* Sidebar */
+.sidebar {
+
+  background: #fff;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  @media (max-width: 991px) {
+    width: 260px;
+    transform: translateX(-100%);
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  @media (min-width: 992px) {
+    transform: translateX(0);
+    position: static;
+    height: auto;
+  }
+}
+
+.sidebar-logo {
+  justify-content: center;
+  display: flex;
+  padding: 8px 0px;
+  border-bottom: 1px solid #dadada;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.filter-btn {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateX(0) translateY(-50%);
+  transition: transform 0.3s ease;
+  color: #fff;
+  background-color: #fd82af;
+  border: none;
+  padding: 3px 5px;
+  border-radius: 0px 20px 20px 0px;
+  z-index: 1100;
+  cursor: pointer;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.sidebar.active~.filter-btn {
+  transform: translateX(260px) translateY(-50%);
+}
+
+.sidebar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+.sidebar__title{
+  padding-bottom: 10px;
+}
+  @media (max-width: 992px) {
+    .sidebar__item{
+  padding-top: 10px;
+  border-top: 1px solid #cacaca;
+}
+
+  }

@@ -1,0 +1,74 @@
+<div class="modal fade show custom-modal" style="display: block;" tabindex="-1">
+    <div class="modal-dialog modal-dialog-slide modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="card-hicon" (click)="close()"><i class="fa-solid fa-chevron-left"></i></span>
+                <h6 class="modal-title">Edit Profile</h6>
+            </div>
+            <div class="modal-body">
+           <div class="edit-profile-container">
+  <form>
+    <div class="row g-3 form-scroll">
+
+      <!-- First Name -->
+      <div class="col-sm-6 col-md-12">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" id="firstName" class="form-control form-control-sm" placeholder="Enter first name">
+      </div>
+
+      <!-- Last Name -->
+      <div class="col-sm-6 col-md-12">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" id="lastName" class="form-control form-control-sm" placeholder="Enter last name">
+      </div>
+
+      <!-- Email -->
+      <div class="col-sm-6 col-md-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control form-control-sm" placeholder="Enter email">
+      </div>
+
+      <!-- WhatsApp Number -->
+      <div class="col-sm-6 col-md-12">
+        <label for="whatsapp" class="form-label">WhatsApp Number</label>
+        <input type="text" id="whatsapp" class="form-control form-control-sm" placeholder="Enter WhatsApp number">
+      </div>
+
+      <!-- Call Number -->
+      <div class="col-sm-6 col-md-12">
+        <label for="callNumber" class="form-label">Call Number</label>
+        <input type="text" id="callNumber" class="form-control form-control-sm" placeholder="Enter call number">
+      </div>
+      <!-- Tax/VAT Number -->
+      <div class="col-sm-6 col-md-12">
+        <label for="tax" class="form-label">Tax/VAT Number</label>
+        <input type="text" id="tax" class="form-control form-control-sm" placeholder="Enter Tax/VAT number">
+      </div>
+      <h6 class="password-class">Change Password</h6>
+       <div class="col-sm-6 col-md-12">
+        <label for="password" class="form-label">Old Password</label>
+        <input type="password" id="password" class="form-control form-control-sm" placeholder="Enter old password">
+      </div>
+       <div class="col-sm-6 col-md-12">
+        <label for="password" class="form-label">New Password</label>
+        <input type="password" id="password" class="form-control form-control-sm" placeholder="Enter new password">
+      </div>
+        <!-- New Password -->
+      <div class="col-sm-6 col-md-12">
+        <label for="password" class="form-label">Confirmed Password</label>
+        <input type="password" id="password" class="form-control form-control-sm" placeholder="Enter Confirmed  password">
+      </div>
+    </div>
+
+    <!-- Fixed Buttons -->
+    <div class="form-footer">
+      <button type="reset" class="btn btn-outline-secondary btn-sm me-2">Cancel</button>
+      <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
+    </div>
+  </form>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>

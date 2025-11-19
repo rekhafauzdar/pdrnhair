@@ -1,0 +1,11 @@
+.image-setup img{
+    max-height: 100%;
+}
+.image-setup{
+    background-color: #aeaca8;
+}
+@media only screen and (max-width: 767px) {
+    .image-setup{
+        display: none;
+    }
+  }

@@ -1,0 +1,89 @@
+<div class="modal fade show custom-modal" style="display: block;" tabindex="-1">
+  <div class="modal-dialog modal-dialog-slide modal-dialog-scrollable">
+    <div class="modal-content shadow">
+      <div class="modal-header">
+        <h5 class="head-text"><span (click)="close()"><i class="fa-solid fa-chevron-left"></i></span> Edit
+          Profile</h5>
+      </div>
+      <form>
+        <div class="custom-image-wrapper">
+          <label for="profileImageInput" class="img-set">
+            <img id="profileImage" src="assets/img/profiles/profile (1).png" class="rounded-circle" alt="Profile" />
+            <div class="profile-image-edit-icon">
+              <i class="fa fa-camera"></i>
+            </div>
+          </label>
+          <input type="file" id="profileImageInput" accept="image/*" style="display: none;"
+            (change)="onImageSelected($event)" />
+        </div>
+
+
+        <div class="gender-sec">
+          <label class="form-label me-2">Gender:</label>
+          <div class="btn-group" role="group">
+            <input type="radio" class="btn-check" [(ngModel)]="gender" name="gender" id="male" checked />
+            <label class="btn btn-outline-dark" for="male">♂ Male</label>
+            <input type="radio" class="btn-check" [(ngModel)]="gender" name="gender" id="female" />
+            <label class="btn btn-outline-dark" for="female">♀ Female</label>
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" [(ngModel)]="userName" name="userName" placeholder="Full Name"
+            value="{{userProfileData?.userName}}" />
+          <label for="fullName">User Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" maxlength="10" minlength="10" class="form-control" [(ngModel)]="mobile" name="mobile"
+            placeholder="Phone Number" value="{{userProfileData?.phoneNumber}}" />
+          <label for="phone-number">Phone Number</label>
+        </div>
+
+        <!-- <div class="form-floating mb-3 position-relative">
+                    <input type="email" class="form-control pe-5" id="email" placeholder="Email Address"
+                        value="{{loggedUserEmail}}" readonly />
+                    <label for="email">E-Mail Address</label>
+                    <span class="custom-position">Verified</span>
+                </div> -->
+
+        <!-- <div class="form-floating mb-4">
+                    <input type="date" class="form-control" id="dob" value="{{loggedUserData.dob}}" />
+                    <label for="dob">DOB</label>
+                </div> -->
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" maxlength="16" minlength="12" [(ngModel)]="aadharNumber" name="aadharNumber" placeholder="Full Name"
+            value="{{userProfileData?.aadharNumber}}" />
+          <label for="fullName">Aadhar Number</label>
+        </div>
+
+        <!-- <div class="form-floating mb-3">
+          <input type="text" class="form-control" [(ngModel)]="state" name="state" placeholder="Full Name"
+            value="{{state}}" />
+          <label for="fullName">State</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" [(ngModel)]="city" name="city" placeholder="Full Name"
+            value="{{city}}" />
+          <label for="fullName">City</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" [(ngModel)]="pincode" name="pincode" placeholder="Full Name"
+            value="{{pincode}}" />
+          <label for="fullName">Pincode</label>
+        </div> -->
+
+        <div class="sidebar-section">
+          <button type="submit" class="btn w-100 btn-primary submit-btn" (click)="saveUserProfile()">
+            Save
+          </button>
+        </div>
+
+        <!-- <button type="submit" class="btn btn-fuchsia w-100 fw-bold" (click)="close()">DONE</button> -->
+      </form>
+    </div>
+  </div>
+</div>

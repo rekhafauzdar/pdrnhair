@@ -1,0 +1,21 @@
+<section class="timeline-section">
+  <div class="container">
+      <div class="timeline-header text-center">
+      <h2>🏢 {{ 'COMPANY.HISTORY' | translate }}: <span class="text-dark">{{ 'COMPANY.TIMELINE' | translate }}</span></h2>
+      <p class="text-muted">{{ 'COMPANY.DESCRIPTION' | translate }}</p>
+    </div>
+
+
+    <div class="timeline">
+      <div *ngFor="let item of timelineData" 
+           class="timeline-item" 
+           [ngClass]="item.position" 
+           [attr.data-year]="item.year">
+        <div class="timeline-content">
+          <h4>{{ item.title | translate }}</h4>
+          <p>{{ item.description | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

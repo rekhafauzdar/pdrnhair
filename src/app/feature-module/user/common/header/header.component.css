@@ -1,0 +1,31 @@
+.navbar-header {
+    height: inherit;
+}
+
+.logo-small img {
+    margin-left: 45%;
+}
+
+a.menu-logo {
+    height: 60px;
+    width: 65px;
+    margin-left: 30%;
+}
+
+@media (max-width: 991.98px) {
+    .header .main-menu-wrapper .main-nav {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .header .navbar-header {
+        width: 30%;
+    }
+}
+
+@media (min-width: 991.98px) {
+    a.navbar-brand.logo img {
+        margin-top: 3px;
+    }
+}

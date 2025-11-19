@@ -1,0 +1,131 @@
+<!-- <app-header></app-header> -->
+<!-- Breadscrumb Section -->
+<!-- <div class="breadcrumb-bar">
+    <div class="container">
+        <div class="row align-items-center text-center">
+            <div class="col-md-12 col-12">
+                <h2 class="breadcrumb-title">{{page | titlecase}}</h2>
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="routes.home">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page"
+                            [class.active]="page === 'User Bookings' || page === 'User Settings' || page === 'user dashboard' || page === 'user review' || page === 'user wishlist' || page === 'user messages' || page === 'user wallet' || page === 'user payment'">
+                            {{page | titlecase}}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- /Breadscrumb Section -->
+
+<!-- Dashboard Menu -->
+<div class="dashboard-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-xl-3 col-xxl-2 g-1">
+
+                <aside class="sidebar" [class.active]="isSidebarOpen">
+                    <div class="sidebar__container h-full">
+                        <div class="sidebar-logo">
+                            <img src="assets/img/Loche-India-Logo-PNG.png" width="55px" alt="Logo" class="img-fluid">
+                        </div>
+                        <div class="card-white h-full">
+                            <div class="sidebar__body">
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__list-item">
+                                        <a [routerLink]="routes.userDashboard" routerLinkActive="active"
+                                            class="sidebar__link">
+                                            <i class="fa-solid fa-gauge"></i>
+                                            <span>User Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar__list-item">
+                                        <a class="sidebar__link" [routerLink]="routes.userWishlist"
+                                            routerLinkActive="active">
+                                            <i class="fa-solid fa-heart"></i>
+                                            <span>Wishlist</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar__list-item">
+                                        <a class="sidebar__link" [routerLink]="routes.myOrders"
+                                            routerLinkActive="active">
+                                            <i class="fa-solid fa-box"></i>
+                                            <span>My Orders</span>
+                                        </a>
+                                    </li>
+                                    <!-- Account Settings -->
+                                    <!-- <div class="sidebar__item mt-3">
+                                        <div class="sidebar__title">Account Settings</div>
+                                        <ul class="sidebar__list">
+                                            <li class="sidebar__list-item">
+                                                <a class="sidebar__link" [routerLink]="routes.accountinfo"
+                                                    routerLinkActive="active">
+                                                    <i class="fa-solid fa-user"></i>
+                                                    <span>Account Info</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <div class="sidebar__item mt-3">
+                                        <div class="sidebar__title">Help</div>
+                                        <ul class="sidebar__list">
+                                            <li class="sidebar__list-item" >
+                                            <a class="sidebar__link" [routerLink]="routes.faquestions" routerLinkActive="active">
+                                                <i class="fa-solid fa-circle-question"></i>
+                                                <span>Get Started</span>
+                                            </a>
+                                        </li>
+                                            <li  class="sidebar__list-item" (click)="logout()">
+                                                <a class="sidebar__link"  [ngClass]="{'active': customRouteSettings == true}">
+                                                    <i class="fa-solid fa-power-off"></i>
+                                                    <span>Log Out</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- <li class="sidebar__list-item">
+                                        <a class="sidebar__link" [routerLink]="routes.myCoupons" routerLinkActive="active">
+                                            <i class="fa-solid fa-ticket"></i>
+                                            <span>My Coupons</span>
+                                        </a>
+                                    </li> -->
+
+                                    <!-- <li class="sidebar__list-item">
+                                        <a class="sidebar__link" [routerLink]="routes.userWallet" routerLinkActive="active">
+                                            <i class="fa-solid fa-wallet"></i>
+                                            <span>My Wallet</span>
+                                        </a>
+                                    </li>
+                                       <li class="sidebar__list-item">
+                                        <a class="sidebar__link" [routerLink]="routes.userPayment" routerLinkActive="active">
+                                            <i class="fa-solid fa-money-bill-wave"></i>
+                                            <span>My Payments</span>
+                                        </a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Toggle Button -->
+                <div class="filter-btn">
+                    <a class="btn " (click)="toggleSidebar()">
+                        <i class="fa-solid fa-filter"></i>
+                    </a>
+                </div>
+
+                <!-- Overlay -->
+                <div class="sidebar__overlay" *ngIf="isSidebarOpen" (click)="closeSidebar()"></div>
+
+
+            </div>
+
+            <div class="col-lg-9 col-xl-9 col-xxl-10 g-1">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Dashboard Menu -->

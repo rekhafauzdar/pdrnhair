@@ -1,0 +1,274 @@
+/* 🌟 Product Banner */
+.product-banner {
+  background: linear-gradient(135deg, #f57c9b, #a46ef1);
+  padding: 100px 0 70px;
+  color: #fff;
+  text-align: center;
+}
+
+.product-banner h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.product-banner p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* 🌈 Filter Button */
+.filterbutton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-filter {
+  background: linear-gradient(90deg, #a855f7, #6d28d9);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(109, 40, 217, 0.3);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.btn-filter:hover {
+  background: linear-gradient(90deg, #9333ea, #5b21b6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(109, 40, 217, 0.4);
+}
+
+.btn-filter:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(109, 40, 217, 0.2);
+}
+
+@media (max-width: 768px) {
+  .btn-filter {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* ⚙️ Tabs Section */
+.tabs-wrap {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+  gap: 12px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.tab-scroll {
+  flex: 1 1 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.tab-scroll:active {
+  cursor: grabbing;
+}
+
+/* 🧭 Tab Nav */
+.tab-nav {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  margin: 0;
+  white-space: nowrap;
+  align-items: center;
+  padding: 6px 8px;
+}
+
+.tab-nav .nav-item {
+  flex: 0 0 auto;
+  display: inline-block;
+  margin: 6px 10px;
+}
+
+.tab-nav .nav-link {
+  border: 0.5px solid #c1c1c1;
+  border-radius: 50px;
+  padding: 10px 25px;
+  color: #444;
+  background: #f5f5f5;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tab-nav .nav-link.active,
+.tab-nav .nav-link:hover {
+  background: linear-gradient(135deg, #ff7ea5, #a46ef1);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(164, 110, 241, 0.3);
+}
+
+/* 🌐 Scrollbar Style */
+.tab-scroll::-webkit-scrollbar {
+  height: 3px;
+}
+.tab-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+.tab-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.12) transparent;
+}
+
+/* 🛍️ Product Card */
+.product-image {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 🧩 Responsive Product Image Height */
+@media (min-width: 1200px) {
+  .product-image {
+    height: 300px;
+  }
+}
+@media (max-width: 1199px) and (min-width: 768px) {
+  .product-image {
+    height: 250px;
+  }
+}
+@media (max-width: 767px) {
+  .product-image {
+    height: 200px;
+  }
+    .product-banner {
+    padding: 15px 0 15px;
+}
+.tabs-wrap {
+    gap: 6px;
+    padding: 6px;
+}
+.tab-nav .nav-item {
+    flex: 0 0 auto;
+    display: inline-block;
+    margin: 1px 3px;
+}
+.tab-nav .nav-link {
+    padding: 5px 13px;
+    font-size: 14px;
+}
+}
+@media (max-width: 480px) {
+  .product-image {
+    height: 180px;
+  }
+  .product-banner {display: none;
+}
+.tabs-wrap {
+    gap: 6px;
+    padding: 6px;
+}
+}
+
+/* 📄 Pagination (used at bottom) */
+.blog-pagination {
+  border-top: 1px solid #b4b4b4;
+  padding: 12px;
+}
+
+.paginationarrow {
+  padding: 5px;
+  color: black;
+}
+
+
+/* Sidebar styling */
+.sidebar-header {
+    border-bottom: 1px solid #c5c5c5;
+    padding-bottom: 15px;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* hidden by default */
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.sidebar.open {
+  left: 0; /* show sidebar */
+}
+
+/* Overlay behind sidebar */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+}
+.btn-close {
+  background: #f61d1d; 
+      opacity: 1;         /* light background */
+  border: none;                  /* no border */
+      width: 15px;
+    height: 15px;
+  border-radius: 50%; 
+  font-size: 17px;           /* circular button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.btn-close span {
+  display: inline-block;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.btn-close:hover {
+  background: #ff4d4f;           /* red on hover */
+  color: #fff;                   /* white × */
+  transform: rotate(90deg);      /* fun rotation effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+

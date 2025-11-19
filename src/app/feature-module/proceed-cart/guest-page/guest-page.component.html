@@ -1,0 +1,91 @@
+<div class="modal fade show custom-modal" style="display: block;" tabindex="-1">
+    <div class="modal-dialog modal-dialog-slide modal-dialog-scrollable">
+        <div class="modal-content shadow">
+            <div class="modal-header">
+                <div class="head-cart d-flex">
+                    <span class="card-hicon" (click)="close()"><i class="fa-solid fa-arrow-left"></i></span>
+                    <h6>Add New Address</h6>
+                </div>
+                <!-- <p class="btn-close close" (click)="wishlist()"> -->
+                <!-- View Wishlist -->
+                <!-- </p> -->
+            </div>
+              <form class="form-container"  [formGroup]="addForm">
+    <div class="modal-body">
+
+  
+    <!-- Address Section -->
+    <h2 class="section-title">Address</h2>
+
+    <div class="form-group">
+
+    <input type="text" id="pincode" name="pincode" minlength="6" maxlength="6" formControlName="pincode" required placeholder=" ">
+       <label for="pincode">Pincode <span style="color: red;">*</span></label>
+                       
+    </div>
+    <div class="d-flex justify-content-between">
+        <div class="w-50 me-2">
+             <div class="form-group">
+    <input type="text" id="pincode" name="city" formControlName="city" required  placeholder="city ">
+       <label for="city">City <span style="color: red;">*</span></label>               
+    </div>
+        </div>
+         <div class="w-50">
+              <div class="form-group">
+    <input type="text" id="pincode" name="State"  formControlName="state" required  placeholder="state">
+       <label for="State">State <span style="color: red;">*</span></label>               
+    </div>
+         </div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="houseNumber" formControlName="houseNo" placeholder=" " required>
+       <label for="houseNumber">House/ Flat/ Office No.</label>
+    </div>
+
+    <div class="form-group mb-1">
+     <textarea name="areaColony" formControlName="address" rows="3" placeholder=" " required></textarea>
+       <label for="areaColony"> <span style="color: red;">*</span>Road Name/ Area /Colony</label>
+    </div>
+
+    <!-- Default Address Toggle -->
+    <div class="mb-3 toggle-row">
+      <label for="defaultAddress">Use as default address</label>
+      <input type="checkbox" id="defaultAddress" class="toggle-switch">
+    </div>
+
+    <!-- Contact Section -->
+    <h2 class="section-title">Contact</h2>
+    <p class="cont-text">We’ll use this information to keep you updated about your delivery</p>
+
+    <div class="form-group">
+      <input type="text" name="fullName" formControlName="contactPerson"  placeholder=" " required>
+       <label for="fullName">Name <span style="color: red;">*</span></label>
+    </div>
+
+    <div class="form-group">
+      <input type="tel" name="phoneNumber" maxlength="10" minlength="10" placeholder="+91 XXXXX XXXXX" formControlName="mobileNo"  pattern="[0-9]{10}" required >
+       <label for="phoneNumber">Phone <span style="color: red;">*</span></label>
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="email" placeholder=" " formControlName="email">
+      <label for="email">Email ID (Optional)</label>
+    </div>
+
+
+</div>
+
+
+            <div class="modal-btn">
+                <div class="">
+                    <a class="btn btn-primary proceed-btn" (click)="addAddress()">
+                        <p>Add Address</p>
+                        <!-- <span><i class="fa-solid fa-arrow-right"></i></span> -->
+                    </a>
+                </div>
+            </div>
+              </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,342 @@
+<div class="booking-new-module">
+  <div class="container">
+    <div class="booking-wizard-head mobile-hide">
+      <div class="row align-items-center">
+        <div class="col-xl-4 col-lg-3">
+          <div class="booking-head-title">
+            <h4>Bellaluna</h4>
+            <p>Complete the following steps</p>
+          </div>
+        </div>
+        <div class="col-xl-8 col-lg-9">
+          <div class="booking-wizard-lists">
+            <ul>
+              <li class="active">
+                <span><img src="assets/img/icons/booking-head-icon-03.svg" alt="Booking Icon"></span>
+                <h6>SignUp</h6>
+              </li>
+              <li class="active">
+                <span><img src="assets/img/icons/booking-head-icon-01.svg" alt="Booking Icon"></span>
+                <h6>Address</h6>
+              </li>
+              <li>
+                <span><img src="assets/img/icons/booking-head-icon-05.svg" alt="Booking Icon"></span>
+                <h6>Payment</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------- signin-section ------------->
+    <div class="process-head02 mobile-hide">
+      <div class="head02-textsec">
+        <p class="subtital-head02">Select Address to shipment </p>
+        <div class="bundle-textWrapper">
+          <p class="head-text02">To place your order now, log into your existing account or signup</p>
+        </div>
+      </div>
+      <div class="head-sec02w">
+        <span class="authan-imgset02">
+          <img src="assets/img/bg/2.png" alt="Image" class="img-fluid">
+        </span>
+      </div>
+    </div>
+    <!---------------- end signin-section------------------------>
+    <div class="process-head02 mobile-hide  d-none">
+      <div class="head02-textsec">
+        <p class="subtital-head02">Choose Address</p>
+        <div class="bundle-textWrapper">
+          <p class="head-text02">Detailed address will help our delivery partner
+            reach your doorstep quickly</p>
+        </div>
+      </div>
+      <div class="head-sec02w">
+        <span class="authan-imgset02">
+          <img src="assets/img/bg/2.png" alt="Image" class="img-fluid">
+        </span>
+      </div>
+    </div>
+    <!-- end copy as Nykaa -->
+    <div class="row">
+      <div class="col-md-7 col-lg-8">
+        <!---------- signin-section ------------->
+        <!-- <div class="signin-section">
+          <div class="row">
+            <div class="col-6 col-md-6 col-lg-4">
+              <div class="card-box">
+                <span class="imag-box">
+                  <img src="assets/img/bg/Already have an account.jpeg" alt="Image" class="img-fluid">
+                </span>
+                <div class="login-text-box">
+                  <p class="sign-text1">Have an account?</p>
+                  <p class="sign-text2">Reward points on every order you place</p>
+                  <div class="view-all-btn text-center">
+                    <a class="btn btn-secondary">Log In</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-4">
+              <div class="card-box">
+                <span class="imag-box">
+                  <img src="assets/img/bg/New at bellaluna.jpeg" alt="Image" class="img-fluid">
+                </span>
+                <div class="login-text-box">
+                  <p class="sign-text1">New to Bellaluna ?</p>
+                  <p class="sign-text2">Get ₹300 off* on your 1st App Order. Use code BlP300</p>
+                  <div class="view-all-btn text-center">
+                    <a class="btn btn-secondary">Register</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-4">
+              <div class="card-box">
+                <span class="imag-box">
+                  <img src="assets/img/bg/Guest account.jpeg" alt="Image"
+                    class="img-fluid">
+                </span>
+                <div class="login-text-box"  (click)="address()">
+                  <p class="sign-text1">Checkout as guest?</p>
+                  <p class="sign-text2">Offers & Discounts not available for guest user.</p>
+                  <div class="view-all-btn text-center">
+                    <a class="btn btn-secondary">Continue as guest</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div> -->
+
+        <!---------- end signin-section ----------- -->
+        <div class="row ">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="new_address" (click)="addNewAddress()">
+              <span class="add-plus">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+              <div class="add-text-sec">
+                <p color="#e80071" class="add-newtext">Add New Address</p>
+              </div>
+            </div>
+          </div>
+          @for(address of useraddressData; track address; let i = $index) {
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="address-box">
+              <div class="location-info">
+                <div class="d-flex name-def">
+                  <p class="user-name-info set-name">{{address.userProfile.userName}}</p>
+                  <div class="defu-pad def-set">
+                    <div class="defau-contr"><span class="defalt-taxe">DEFAULT</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="address-sec">
+                  <p class="address-1">{{address.address}}, {{address.city}}</p>
+                  <p class="address-2">{{address.state}}-{{address.pincode}}</p>
+                  <p class="address-2">{{address.mobileNo}}</p>
+                </div>
+              </div>
+              <div class="btn-sec">
+                <!-- <div class="edit-btn-pd"  (click)="addNewAddress()">
+                  <button color="rgba(0,19,37,0.64)" data-testid="address_edit_btn" class="edit-btn">Edit</button>
+                </div> -->
+                <div class="delivery-btn-set btn-2">
+                  <button color="#ffffff" class="deliver-btn" (click)="placeOrder(address.id)">Deliver here</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          }
+
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <div class=" theiaStickySidebar">
+          <div class="stickybar">
+            <form action="#" autocomplete="off" class="sidebar-form">
+              <div class="accord-list">
+                <div class="accordion" id="accordionMain2">
+                  <div class="card-header-new" id="headingTwo">
+                    <h6 class="filter-title">
+                      <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Total Items in Cart
+                        <span class="float-end">
+                          <span class="count-item"> {{cartData.quantity}} </span>
+                          <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                      </a>
+                    </h6>
+                  </div>
+                  @for(item of cartItems; track item; let i = $index) {
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample2">
+                    <div class="card-body-chat">
+                      <div id="checkBoxes2">
+                        <!-- copy nykaa 2 -->
+                        <div class="product-sec">
+                          <div class="d-flex">
+                            <div class="image-sec">
+                              <img *ngIf="item.imageUrl" [src]="item.imageUrl" class="img-fluid" alt="product" />
+                              <!-- <img
+                                src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/0/0/0060d70LAKME00000332-new_1.jpg"
+                                alt="Image" class="img-fluid"> -->
+                            </div>
+                            <div class="product-info">
+                              <div class="info-text">
+
+
+
+                                <button class="prodeletsec">
+                                  <span class="edit-icon" title="Delete" (click)="removeItem(item.productId)">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                  </span>
+                                </button>
+
+                                <div class="product-info-text">
+                                  <span color="#001325" class="product-text">
+                                    {{item.productName}} &amp;
+                                    {{item.category}}</span>
+                                </div>
+                                <div class="d-flex">
+                                  <div class="product-qut">
+                                    <p class="quanty">{{item.packageWeight}} gm</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="qut-pric-sec">
+                            <div class="qut-pric-sec02">
+                              <div class="d-flex">
+                                <p class="quty-text">Quantity : {{item.quantity}}</p>
+                              </div>
+                              <div class="pro-pric-sec">
+                                <!-- <div class="pro-pric-off">
+                                  <span class="price-001">₹ {{item.price}}</span>
+                                </div> -->
+                                <p color="#001325" class="price-002">₹ {{item.price}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  }
+                </div>
+                <div class="accordion" id="accordionMain04">
+                  <div class="card-header-new" id="headingfuel">
+                    <h6 class="filter-title">
+                      <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapsefuel" aria-expanded="true" aria-controls="collapsefuel">
+                        Total Price
+                        <span class="float-end"> <span class="count-item">₹ {{cartData.totalAmount}}</span><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                      </a>
+                    </h6>
+                  </div>
+                  <div id="collapsefuel" class="collapse" aria-labelledby="headingfuel"
+                    data-bs-parent="#accordionExample2">
+                    <div class="card-body-chat">
+                      <div id="checkBoxes2">
+                        <div class="selectBox-cont">
+                          <div class="justy">
+                            <div class="paytext1">
+                              <div class="paytextsec01">
+                                <p class="payditail01">Bag MRP ({{cartData.quantity}})</p>
+                              </div>
+                            </div>
+                            <div class="paytext02">
+                              <p class="payditail02">₹ {{cartData.totalAmount}}</p>
+                            </div>
+                          </div>
+                          <div class="justy">
+                            <div class="paytext1">
+                              <div class="paytextsec01">
+                                <p class="payditail01">Bag Discount</p>
+                              </div>
+                            </div>
+                            <div class="paytext02">
+                              <p class="pric-offsec">-₹ 0</p>
+                            </div>
+                          </div>
+                          <div class="justy">
+                            <div class="paytext1 ">
+                              <div class="paytextsec01">
+                                <p class="payditail01">Discount </p>
+                              </div>
+                              <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                            <div class="paytext02">
+                              <p class="pric-offsec" color="#068743">-₹ 0</p>
+                            </div>
+                          </div>
+                          <div class="justy">
+                            <div class="paytext1 ">
+                              <div class="paytextsec01">
+                                <p class="payditail01">Shipping</p>
+                              </div>
+                              <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                            <div class="paytext1">
+                              <span class="countoff">₹ 70</span>
+                              <p class="pric-offsec" color="#068743">Free</p>
+                            </div>
+                          </div>
+
+                          <div class="justy">
+                            <div class="paytext1 ">
+                              <div class="last-cout">
+                                <p class="youpay">You Pay</p>
+                              </div>
+                            </div>
+                            <div class="paytext1"><span class="countoff"></span>
+                              <p class="last-amout">₹ {{cartData.totalAmount}}</p>
+                            </div>
+                          </div>
+                          <div class="reward-point">
+                            <div class="rewardpoint1">
+                              <p class="subtital-amount">
+                                Yay! You will earn 400 Reward points
+                              </p>
+                              <p class="subtital-amount1">
+                                Get a discount on your next order
+                              </p>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="saveamo">
+                    <span color="#068743" class="save-amtex">You are saving ₹270
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="authentic-text">
+                <div class="first-sec">
+                  <p class="first-sectext">Buy authentic products. Pay securely. Easy returns and exchange</p>
+                </div>
+                <div class="authan-imgset">
+                  <span class="authan-imgset02">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/BuyerAssurance.svg"
+                      alt="Image" class="css-0 ek8d9s80">
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

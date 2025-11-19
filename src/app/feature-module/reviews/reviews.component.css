@@ -1,0 +1,12 @@
+.review-comment{
+    padding-left: 60px;
+}
+.count-img{
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+.overlay {
+    border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}

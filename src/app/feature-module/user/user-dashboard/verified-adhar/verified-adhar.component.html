@@ -1,0 +1,40 @@
+<div class="modal fade show custom-modal" style="display: block;" tabindex="-1">
+  <div class="modal-dialog modal-dialog-slide modal-dialog-scrollable">
+    <div class="modal-content shadow">
+      <div class="modal-header">
+        <h5 class="head-text"><span (click)="close()"><i class="fa-solid fa-chevron-left"></i></span> Veryfy Adhar Number</h5>
+  </div>
+  <div class="modal-body">
+        <p class=" small mb-3">
+          <strong>Note:</strong> If you order cross-border products (directly imported from Korea), Aadhaar-based identity verification (KYC) will be mandatory as per customs regulations.
+        </p>
+
+        <form>
+          <!-- Aadhaar Name -->
+          <div class="mb-3">
+            <label for="aadhaarName" class="form-label">Aadhaar Name</label>
+            <input type="text" class="form-control" id="aadhaarName" placeholder="Enter your Aadhaar Name">
+          </div>
+
+          <!-- Aadhaar Number -->
+          <div class="mb-3">
+            <label for="aadhaarNumber" class="form-label">Aadhaar Number</label>
+            <input type="text" class="form-control" id="aadhaarNumber" maxlength="12" placeholder="Enter 12-digit Aadhaar Number">
+          </div>
+
+          <!-- Aadhaar PDF Upload -->
+          <div class="mb-3">
+            <label for="aadhaarFile" class="form-label">Upload Aadhaar PDF</label>
+            <input class="form-control" type="file" id="aadhaarFile" accept="application/pdf">
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success">Verify</button>
+      </div>
+</div>
+  </div>
+</div>

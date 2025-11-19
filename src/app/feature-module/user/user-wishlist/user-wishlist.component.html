@@ -1,0 +1,65 @@
+<div class="content dashboard-content">
+    <div class="details-grid">
+      <header class="css-wn6jwz">
+        <span class="css-1gjbxyh">Total  Items
+           @if(wishlistData?.length){
+          <span class="css-1ylarvv"> ( {{wishlistData?.length}} )</span>
+           }
+        </span>
+      </header>
+      <div class="rental-deal-slider details-car ">
+        <div class="row">
+           @if(wishlistData?.length){
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" *ngFor="let item of wishlistData">
+            <div class="rental-car-item">
+              <div class="listing-item pb-0">
+                <div class="listing-img" (click)="productProfile(item)">
+                  <a>
+                    <img *ngIf="item?.imageUrl" [src]="item?.imageUrl" class="img-fluid" alt="img" />
+                  </a>
+                  <div class="fav-item justify-content-end" (click)="removeFromTheWishList(item.productId)">
+                    <a href="javascript:void(0)" class="fav-icon">
+                      <i class="feather icon-heart"></i>
+                    </a>
+                  </div>
+                  <!-- <span class="featured-text">{{item?.productName}}</span> -->
+                </div>
+                <div class="listing-content">
+                  <div class="listing-features d-flex align-items-end justify-content-between" (click)="productProfile(item)">
+                    <div class="list-rating">
+                      <!-- <a href="javascript:void(0)" class="author-img">
+                        <img src="assets/img/profiles/avatar-03.jpg" alt="author">
+                      </a> -->
+                      <h3 class="listing-title">
+                        <a>{{item?.productName}}</a>
+                      </h3>
+                      <div class="list-rating">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.0) 150 Reviews</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-location-details" (click)="productProfile(item.productId)">
+                    <div class="listing-price">
+                      <h5>₹ {{item?.price}} </h5>
+                      <!-- <p>₹700</p><span>(7% Off)</span> -->
+                    </div>
+                  </div>
+                  <div class="listing-button" (click)="addToCart(item.id)">
+                    <a class="btn btn-order"><span><i class="fa-solid fa-bag-shopping"></i></span>Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }@else{
+          There is no items yet!
+        }
+        </div>
+      </div>
+    </div>
+  </div>

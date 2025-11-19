@@ -1,0 +1,68 @@
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-card">
+            <span class="edit-icon" (click)="openModal()" >
+                <a class="edit-link"><i class="fa-solid fa-pen-to-square"></i></a> Edit
+            </span>
+            <img src="assets/img/profiles/profile (1).png" alt="user" class="profile-avatar">
+            <div class="profile-info">
+                <strong class="user-name">{{loggedUserName}}</strong>
+                <div class="info-row">
+                    <span class="label">Email: </span>
+                    <span class="user-email">{{loggedUserEmail}}</span>
+                      <span class="mobile-hide">
+                         <img src="assets/img/profiles/check.png" alt="user" class="mobile-hide">
+                        </span>
+                    <!-- <span class="verified">Verified</span> -->
+                </div>
+                <div class="info-row"></div>
+                <div class="info-row" (click)="VerifiedAdhar()">
+                    <span class="label">Aadhar Number:</span>
+                    <span class="user-dob">{{userProfileData?.aadharNumber}} || 697897980979</span>
+                    <span class="mobile-hide">
+                         <img src="assets/img/profiles/check.png" alt="user" class="mobile-hide">
+                        </span>
+                     <!-- <span class="verified">* Aadhar card is mandatory for Cross-Border Products</span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="address-section">
+        <div class="address-header">
+            <div class="address-title">
+                <span class="home-icon">
+                    <a width="20" height="19"><i class="fa-solid fa-house"></i></a>
+                </span>MY ADDRESSES
+            </div>
+            <div class="add-address" (click)="editaddress()" >
+                <a class="add-icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>ADD NEW ADDRESS
+            </div>
+        </div>
+        <div class="address-list">
+            <!-- Address Block 1 -->
+            <div class="address-card"  *ngFor="let add of useraddressData">
+                <div class="address-tag">{{add.address}}</div>
+                <div class="address-name">{{loggedUserName}} </div>
+                <div>{{add.city}}, {{add.pincode}}, {{add.state}}</div>
+                <div class="contact-info">
+                    <div class="phone-number">{{loggedMobile}} {{add.mobileNo}}</div>
+                </div>
+                <!-- <div class="address-actions">
+                    <div class="action-button">
+                        <a class="action-icon">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>Edit
+                    </div>
+                    <div class="action-button">
+                        <a class="action-icon">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </a>Remove
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

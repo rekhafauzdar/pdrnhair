@@ -1,0 +1,112 @@
+/* Base Section */
+.press-section {
+  background: linear-gradient(180deg, #fff 0%, #fbe9f0 50%, #f3f0fc 100%);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/* Gradient Title */
+.press-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f57c9b, #a46ef1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.press-subtitle {
+  color: #555;
+  font-size: 1rem;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Card Styling */
+.press-card {
+  background: #ffffff;
+      padding: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(164, 110, 241, 0.08);
+  border: 1px solid rgba(164, 110, 241, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.press-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(245, 124, 155, 0.25);
+}
+
+/* Image - fixed height */
+.press-img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 260px; /* fixed consistent height */
+  border-radius: 16px 16px 0 0;
+}
+
+.press-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures consistent crop */
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.press-card:hover .press-img img {
+  transform: scale(1.05);
+}
+
+/* Caption Text */
+.press-caption {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  padding: 18px 16px;
+  transition: color 0.3s ease;
+}
+
+.press-caption strong {
+  color: #a46ef1;
+}
+
+/* Link Styling */
+.press-link {
+  text-decoration: none;
+}
+
+.press-link:hover .press-caption {
+  color: #f57c9b;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .press-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .press-title {
+    font-size: 1.8rem;
+  }
+
+  .press-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .press-caption {
+    font-size: 0.9rem;
+  }
+
+  .press-img {
+    height: 200px;
+  }
+}

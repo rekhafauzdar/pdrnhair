@@ -1,0 +1,117 @@
+<div class="login-wrapper why-choose">
+  <div class="choose-left">
+    <img src="assets/img/bg/choose-left.png" class="img-fluid" alt="Why Choose Us">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-xl-7 hide-for-mobile">
+        <div class="visual-section ">
+          <img src="assets/img/bg/log-in.webp" class="img-fluid " alt="Access Card" />
+        </div>
+      </div>
+      <div class="col-11 col-sm-10 col-md-6 col-lg-5 col-xl-4 form-sec">
+
+        <div class="loginbox">
+          <div class="login-auth">
+            <div class="login-auth-wrap">
+              <h1>Sign In</h1>
+              <form [formGroup]="form" (ngSubmit)="login()">
+
+                <!-- Email & Password Login -->
+                <div *ngIf="!loginWithOtp">
+                  <!-- Email -->
+                  <div class="input-block">
+                    <label>Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" formControlName="email"
+                      [ngClass]="{'is-invalid': f['email'].touched && f['email'].invalid}" />
+                    <div class="invalid-feedback" *ngIf="f['email'].touched && f['email'].invalid">
+                      <div *ngIf="f['email'].errors?.['required']">Email is required.</div>
+                      <div *ngIf="f['email'].errors?.['email']">Please enter valid email.</div>
+                    </div>
+                  </div>
+
+                  <!-- Password -->
+                  <div class="input-block">
+                    <label>Password <span class="text-danger">*</span></label>
+                    <div class="position-relative">
+                      <input class="form-control pe-5" placeholder="Enter your password"
+                        [type]="show_password ? 'password' : 'text'" formControlName="password"
+                        [ngClass]="{'is-invalid': f['password'].touched && f['password'].invalid}" />
+                      <span class="position-absolute top-50 end-0 translate-middle-y me-3" (click)="togglePassword()"
+                        style="cursor: pointer;">
+                        <i [ngClass]="show_password ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+                      </span>
+                    </div>
+                    <div class="invalid-feedback d-block" *ngIf="f['password'].touched && f['password'].invalid">
+                      <div *ngIf="f['password'].errors?.['required']">Password is required.</div>
+                    </div>
+                  </div>
+                  <div class="input-block">
+                    <a class="forgot-link" [routerLink]="routes.forgotPassword">Forgot Password ?</a>
+                  </div>
+                </div>
+
+                <!-- Mobile + OTP Login -->
+                <div *ngIf="loginWithOtp">
+                  <!-- Mobile Number -->
+                  <div class="input-block">
+                    <label>Mobile Number <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <input type="text" maxlength="10" class="form-control" placeholder="Enter 10 digit mobile number"
+                        formControlName="mobileNo"
+                        [ngClass]="{'is-invalid': f['mobileNo'].touched && f['mobileNo'].invalid}" />
+
+                      <button type="button" class="btn btn-primary" (click)="sendOtp()">Get OTP</button>
+                    </div>
+
+                    <div class="invalid-feedback d-block" *ngIf="f['mobileNo'].touched && f['mobileNo'].invalid">
+                      <div *ngIf="f['mobileNo'].errors?.['required']">Mobile number is required.</div>
+                      <div *ngIf="f['mobileNo'].errors?.['pattern']">Enter a valid 10-digit mobile number.</div>
+                    </div>
+                  </div>
+
+                  <!-- OTP Field -->
+                  <div class="input-block" *ngIf="otpSent">
+                    <label>Enter OTP <span class="text-danger">*</span></label>
+                    <input type="text" maxlength="6" class="form-control" placeholder="Enter OTP" formControlName="otp"
+                      [ngClass]="{'is-invalid': f['otp'].touched && f['otp'].invalid}" />
+                    <div class="invalid-feedback d-block" *ngIf="f['otp'].touched && f['otp'].invalid">
+                      <div *ngIf="f['otp'].errors?.['required']">OTP is required.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Toggle Login Method -->
+                <!-- <div class="input-block mt-3">
+                  <label class="custom_check d-inline-flex">
+                    <span>Login with OTP instead of Password</span>
+                    <input type="checkbox" (change)="loginWithOtp = !loginWithOtp" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div> -->
+
+
+                <!-- Submit Button -->
+                <button class="btn btn-outline-light w-100 btn-size mt-1" type="submit">Sign In</button>
+                <!-- <div class="login-or">
+                  <span class="or-line"></span>
+                  <span class="span-or-log">Or, log in with your email</span>
+                </div>
+                <div class="social-login">
+                  <a href=javascript:void(0);
+                    class="d-flex align-items-center justify-content-center input-block btn google-login w-100"><span><img
+                        src="assets/img/icons/google.svg" class="img-fluid" alt="Google" /></span>Log in with Google</a>
+                </div> -->
+                <div class="text-center dont-have">
+                  Don't have an account yet?
+                  <a [routerLink]="routes.register">Register</a>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,426 @@
+<div class="main-wrapper">
+	<!-- Breadscrumb Section -->
+	<div class="breadcrumb-bar">
+		<!-- <div class="container">
+            <h2 class="breadcrumb-title">Beauty-Book</h2>
+      </div> -->
+		<nav aria-label="breadcrumb" class="page-breadcrumb">
+			<div class="container">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a [routerLink]="routes.home">Home</a>
+					</li>
+					<li class="breadcrumb-item">
+						<a href="javascript:void(0);">Pages</a>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page">
+						Beauty-Book
+					</li>
+				</ol>
+			</div>
+		</nav>
+	</div>
+	<!-- /Breadscrumb Section -->
+	<div class="blog-section">
+		<section class="beauty-banner">
+			<div class="position-relative text-center text-white">
+				<img src="assets/img/banners/bloge-2.jpeg" class="img-fluid w-100" alt="Banner Image" style="max-height: 500px; object-fit: cover;">
+				<div class="position-absolute top-50 start-50 translate-middle">
+					<h1 class="fw-bold display-4">BEAUTY <span style="color:#ff4d88;">BOOK</span><br>BY <span
+							style="color:#ff4d88;">BELLALUNA</span></h1>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Search and Nav -->
+		<div class="container search-bar mb-3">
+			<div class="row justify-content-center border-search">
+				<div class="col-12 col-md-7">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="What would you like to explore today?">
+						<button class="btn btn-darkviewlink btn btn-primary" type="button">Search</button>
+					</div>
+				</div>
+			</div>
+
+			<ul class="nav justify-content-center mt-2 nav-tabs-custom flex-wrap">
+				<!-- Example Dropdown -->
+				<li class="nav-item dropdown mx-1">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Makeup</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item">Lips</a></li>
+						<li><a class="dropdown-item">Makeup Looks</a></li>
+						<li><a class="dropdown-item">Bridal Mackup</a></li>
+						<li><a class="dropdown-item">Eyes</a></li>
+						<li><a class="dropdown-item">Face</a></li>
+						<li><a class="dropdown-item">Nails</a></li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown mx-1">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Skin</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item">Skin Types & Acne</a></li>
+						<li><a class="dropdown-item">Anti Ageing</a></li>
+						<li><a class="dropdown-item">Sun Protection</a></li>
+						<li><a class="dropdown-item">Bridal Skin</a></li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown mx-1">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hair</a>
+					<!-- <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Shampoo</a></li>
+          <li><a class="dropdown-item" href="#">Conditioner</a></li>
+          <li><a class="dropdown-item" href="#">Hair Masks</a></li>
+        </ul> -->
+				</li>
+				<li class="nav-item dropdown mx-1">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Personal Care</a>
+					<!-- <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Bath & Body</a></li>
+          <li><a class="dropdown-item" href="#">Intimate Care</a></li>
+        </ul> -->
+				</li>
+				<li class="nav-item dropdown mx-1">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Wellness</a>
+					<!-- <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Supplements</a></li>
+          <li><a class="dropdown-item" href="#">Aromatherapy</a></li>
+        </ul> -->
+				</li>
+				<li class="nav-item dropdown mx-1">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Product Reviews</a>
+					<!-- <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Top Rated</a></li>
+          <li><a class="dropdown-item" href="#">New Launches</a></li>
+        </ul> -->
+				</li>
+				<li class="nav-item dropdown mx-1">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Men</a>
+					<!-- <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Beard Care</a></li>
+          <li><a class="dropdown-item" href="#">Fragrances</a></li>
+        </ul> -->
+				</li>
+				<li class="nav-item dropdown mx-1">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Celebrity</a>
+					<!-- <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Get The Look</a></li>
+          <li><a class="dropdown-item" href="#">Red Carpet</a></li>
+        </ul> -->
+				</li>
+				<li class="nav-item dropdown mx-1">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Luxe</a>
+					<!-- <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Luxury Skincare</a></li>
+          <li><a class="dropdown-item" href="#">Designer Makeup</a></li>
+        </ul> -->
+				</li>
+
+			</ul>
+		</div>
+
+		<!-- Top Stories Section -->
+		<!-- <div class="container top-stories">
+    <h2>THIS WEEK'S TOP STORIES</h2>
+  </div>	 -->
+		<div class="container mb-3">
+			<!-- <div class="row">
+			        <div class="col-md-8 col-lg-9"> -->
+			<div class="row">
+				<div class=" col-lg-4 col-md-6 d-lg-flex">
+					<div class="blog grid-blog">
+						<div class="blog-image">
+							
+							<a [routerLink]="routes.blogDetails"><img class="img-fluid" src="assets/img/blog/makeup.webp" alt="Post Image"></a>
+						</div>
+						<div class="blog-content">
+							<p class="blog-category">
+								<a href="javascript:void(0)"><span>Makeup Looks</span></a>
+							</p>
+							<h3 class="blog-title"><a>How To Ace The Soft Glam Look This Spring</a></h3>
+							<!-- <p class="blog-description">Everyone has the right to freedom of thought, conscience and religion; this right includes freedom to change his religion or belief, and freedom, either alone...</p> -->
+							<ul class="meta-item">
+								<li>
+									<div class="post-author">
+										<div class="post-author-img">
+											<img src="assets/img/profiles/woman.png" alt="author">
+										</div>
+										<a href="javascript:void(0)"> <span> Heena Khan </span></a>
+									</div>
+								</li>
+								<li class="date-icon"><i class="fa-solid fa-calendar-days"></i> <span>Jan 6, 2024</span>
+								</li>
+							</ul>
+							<div class="viewlink btn btn-primary"  [routerLink]="routes.blogDetails">Read More <i class="feather icon-arrow-right ms-2"></i></div>
+						</div>
+					</div>
+				</div>
+				<div class=" col-lg-4 col-md-6 d-lg-flex">
+					<div class="blog grid-blog">
+						<div class="blog-image">
+							<a><img class="img-fluid" src="assets/img/blog/lips 2.webp" alt="Post Image"></a>
+						</div>
+						<div class="blog-content">
+							<p class="blog-category">
+								<a href="javascript:void(0)"><span>Lips</span></a>
+							</p>
+							<h3 class="blog-title"><a>I Tried YSL’s The Inks And It’s the Lipstick Every Beauty Lover
+									Needs Now</a></h3>
+							<!-- <p class="blog-description">I Tried YSL’s The Inks And It’s the Lipstick Every Beauty Lover Needs Now</p> -->
+							<ul class="meta-item">
+								<li>
+									<div class="post-author">
+										<div class="post-author-img">
+											<img src="assets/img/profiles/woman.png" alt="author">
+										</div>
+										<a href="javascript:void(0)"> <span> Neha </span></a>
+									</div>
+								</li>
+								<li class="date-icon"><i class="fa-solid fa-calendar-days"></i> <span>Feb 6, 2024</span>
+								</li>
+							</ul>
+							<a class="viewlink btn btn-primary">Read More <i
+									class="feather icon-arrow-right ms-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class=" col-lg-4 col-md-6 d-lg-flex">
+					<div class="blog grid-blog">
+						<div class="blog-image">
+							<a><img class="img-fluid" src="assets/img/blog/face 3.webp" alt="Post Image"></a>
+						</div>
+						<div class="blog-content">
+							<p class="blog-category">
+								<a href="javascript:void(0)"><span>Face</span></a>
+							</p>
+							<h3 class="blog-title"><a>Elevate Everyday Office Looks With Lakmē’s New Hya Matte Range</a>
+							</h3>
+							<!-- <p class="blog-description">Everyone has the right to freedom of thought, conscience and religion; this right includes freedom to change his religion or belief, and freedom, either alone...</p> -->
+							<ul class="meta-item">
+								<li>
+									<div class="post-author">
+										<div class="post-author-img">
+											<img src="assets/img/profiles/woman.png" alt="author">
+										</div>
+										<a href="javascript:void(0)"> <span> Rekha </span></a>
+									</div>
+								</li>
+								<li class="date-icon"><i class="fa-solid fa-calendar-days"></i> <span>March 6,
+										2024</span></li>
+							</ul>
+							<a class="viewlink btn btn-primary">Read More <i
+									class="feather icon-arrow-right ms-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class=" col-lg-4 col-md-6 d-lg-flex">
+					<div class="blog grid-blog">
+						<div class="blog-image">
+							<a><img class="img-fluid" src="assets/img/blog/nails.webp" alt="Post Image"></a>
+						</div>
+						<div class="blog-content">
+							<p class="blog-category">
+								<a href="javascript:void(0)"><span>Nails</span></a>
+							</p>
+							<h3 class="blog-title"><a>Just In: The Glossy, Barely-There Soap Nail Manicure Might Be
+									Taking Over 2025</a></h3>
+							<!-- <p class="blog-description">Just In: The Glossy, Barely-There Soap Nail Manicure Might Be Taking Over 2025</p> -->
+							<ul class="meta-item">
+								<li>
+									<div class="post-author">
+										<div class="post-author-img">
+											<img src="assets/img/profiles/woman.png" alt="author">
+										</div>
+										<a href="javascript:void(0)"> <span> Neha </span></a>
+									</div>
+								</li>
+								<li class="date-icon"><i class="fa-solid fa-calendar-days"></i> <span>March 28,
+										2025</span></li>
+							</ul>
+							<a class="viewlink btn btn-primary">Read More <i
+									class="feather icon-arrow-right ms-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class=" col-lg-4 col-md-6 d-lg-flex">
+					<div class="blog grid-blog">
+						<div class="blog-image">
+							<a><img class="img-fluid" src="assets/img/blog/lip 12.webp" alt="Post Image"></a>
+						</div>
+						<div class="blog-content">
+							<p class="blog-category">
+								<a href="javascript:void(0)"><span>Lips</span></a>
+							</p>
+							<h3 class="blog-title"><a> Buff, Smooth, Slay: The Ultimate Lip Scrub Guide</a></h3>
+							<!-- <p class="blog-description"> Buff, Smooth, Slay: The Ultimate Lip Scrub Guide</p> -->
+							<ul class="meta-item">
+								<li>
+									<div class="post-author">
+										<div class="post-author-img">
+											<img src="assets/img/profiles/woman.png" alt="author">
+										</div>
+										<a href="javascript:void(0)"> <span> Simran </span></a>
+									</div>
+								</li>
+								<li class="date-icon"><i class="fa-solid fa-calendar-days"></i> <span>March 30,
+										2024</span></li>
+							</ul>
+							<a class="viewlink btn btn-primary">Read More <i
+									class="feather icon-arrow-right ms-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class=" col-lg-4 col-md-6 d-lg-flex">
+					<div class="blog grid-blog">
+						<div class="blog-image">
+							<a><img class="img-fluid" src="assets/img/blog/nails 2.webp" alt="Post Image"></a>
+						</div>
+						<div class="blog-content">
+							<p class="blog-category">
+								<a href="javascript:void(0)"><span>Nails</span></a>
+							</p>
+							<h3 class="blog-title"><a>30 Designs Proving Almond Nails Are Uber Chic</a></h3>
+							<!-- <p class="blog-description">30 Designs Proving Almond Nails Are Uber Chic</p> -->
+							<ul class="meta-item">
+								<li>
+									<div class="post-author">
+										<div class="post-author-img">
+											<img src="assets/img/profiles/woman.png" alt="author">
+										</div>
+										<a href="javascript:void(0)"> <span> Shruti </span></a>
+									</div>
+								</li>
+								<li class="date-icon"><i class="fa-solid fa-calendar-days"></i> <span>March 31,
+										2024</span></li>
+							</ul>
+							<a class="viewlink btn btn-primary">Read More <i
+									class="feather icon-arrow-right ms-2"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Pagination-->
+			<div class="pagination">
+				<nav>
+					<ul class="pagination">
+						<li class="previtem">
+							<a class="page-link" href="javascript:void(0);"><i
+									class="fas fa-regular fa-arrow-left me-2"></i> Prev</a>
+						</li>
+						<li class="justify-content-center pagination-center">
+							<div class="page-group">
+								<ul>
+									<li class="page-item">
+										<a class="page-link" href="javascript:void(0);">1</a>
+									</li>
+									<li class="page-item">
+										<a class="active page-link" href="javascript:void(0);">2 <span
+												class="visually-hidden">(current)</span></a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="javascript:void(0);">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="javascript:void(0);">4</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="javascript:void(0);">5</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nextlink">
+							<a class="page-link" href="javascript:void(0);">Next <i
+									class="fas fa-regular fa-arrow-right ms-2"></i></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!--/Pagination-->
+			<!-- </div> -->
+			<!-- <div class="col-md-4 col-lg-3 theiaStickySidebar">
+						<div class="stickybar">
+				        <div class="rightsidebar">
+						    <div class="card">
+						      <h4><img src="assets/img/icons/details-icon.svg" alt="details-icon"> Filter</h4>
+						      <div class="filter-content looking-input input-block mb-0">
+								  <input type="text" class="form-control" placeholder="To Search type and hit enter">
+							  </div>
+							</div>
+							<div class="card">
+							    <h4><img src="assets/img/icons/category-icon.svg" alt="details-icon"> Categories</h4>
+							    <ul class="blogcategories-list">
+							      <li><a href="javascript:void(0)">Makeup</a></li>
+							      <li><a href="javascript:void(0)">Skin</a></li>
+							      <li><a href="javascript:void(0)">Hair</a></li>
+							      <li><a href="javascript:void(0)">Personal Care</a></li>
+							      <li><a href="javascript:void(0)">Product Reviews</a></li>
+							      <li><a href="javascript:void(0)">Men</a></li>									   
+							    </ul>
+							</div>
+							<div class="card tags-widget">
+							    <h4><i class="feather icon-tag"></i> Tags</h4>
+								<ul class="tags">
+								   <li>#eyeshadow</li>
+								   <li>#lipstick</li>
+								   <li>#foundation</li>
+								   <li>#makeupbrushes</li>
+								   <li>#makeupaddict </li>
+								   <li>#makeuptutorial</li>
+								   <li>#makeuplook</li>						
+								</ul>
+							</div>
+							<div class="card">
+							    <h4><i class="feather icon-tag"></i>Top Article</h4>
+								<div class="article">
+									<div class="article-blog">
+										<a  >
+											<img class="img-fluid" src="assets/img/blog/bloge-img2.avif" alt="Blog">
+										</a>
+									</div>
+									<div class="article-content">
+										<h5><a  >Lipstick Every Beauty Lover Needs Now</a></h5>
+										<div class="article-date">
+											<i class="fa-solid fa-calendar-days"></i>
+											<span>Jan 6, 2023</span>
+										</div>
+									</div>
+								</div>	
+								<div class="article">
+									<div class="article-blog">
+										<a  >
+											<img class="img-fluid" src="assets/img/blog/bloge-img1.avif" alt="Blog">
+										</a>
+									</div>
+									<div class="article-content">
+										<h5><a  >How To Ace The Soft Glam Look This Spring</a></h5>
+										<div class="article-date">
+											<i class="fa-solid fa-calendar-days"></i>
+											<span>Feb 10, 2023</span>
+										</div>
+									</div>
+								</div>	
+								<div class="article">
+									<div class="article-blog">
+										<a  >
+											<img class="img-fluid" src="assets/img/blog/bloge-img3.avif" alt="Blog">
+										</a>
+									</div>
+									<div class="article-content">
+										<h5><a  >Elevate Everyday Office Looks With Lakmē’s New Hya Matte Range</a></h5>
+										<div class="article-date">
+											<i class="fa-solid fa-calendar-days"></i>
+											<span>March 18, 2024</span>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+					</div> -->
+			<!-- </div> -->
+		</div>
+	</div>
+</div>

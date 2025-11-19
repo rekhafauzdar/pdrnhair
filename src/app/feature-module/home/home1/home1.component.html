@@ -1,0 +1,373 @@
+<!-- for tab banners -->
+  <section class="slider-for-ta">
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active" [routerLink]="routes.listingGrid">
+      <img src="assets/img/banners/11.jpg" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item" [routerLink]="routes.listingGrid">
+      <img src="assets/img/banners/9.jpg" class="d-block w-100" alt="Slide 6">
+    </div>
+    <div class="carousel-item" [routerLink]="routes.listingGrid">
+      <img src="assets/img/banners/4.jpg" class="d-block w-100" alt="Slide 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+      aria-current="true"></button>
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+  </div>
+</div>
+ </section>
+
+
+<!-- /for tab banners -->
+<!-- <div class="menu-section">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-6 col-md-3 mb-1 menu-item" [routerLink]="routes.CeoGreeting">
+        <i class="fa-solid fa-cloud"></i>
+        <span>{{ 'HOME.ABOUTUS' | translate }}</span>
+      </div>
+      <div class="col-6 col-md-3 mb-1 menu-item" [routerLink]="routes.listingGrid">
+        <i class="fa-solid fa-award"></i>
+        <span>{{ 'HOME.BRAND' | translate }}</span>
+      </div>
+      <div class="col-6 col-md-3 mb-1 menu-item" [routerLink]="routes.LocheNews">
+        <i class="fa-solid fa-globe"></i>
+        <span>{{ 'HOME.CHANNEL' | translate }}</span>
+      </div>
+      <div class="col-6 col-md-3 mb-1 menu-item" [routerLink]="routes.contactUs">
+        <i class="fa-solid fa-user-group"></i>
+        <span>{{ 'HOME.CONTACT' | translate }}</span>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- /Banner -->
+
+
+<!-- section2  -->
+ <section class="business-section py-5">
+  <div class="container text-center">
+    <h2 class="section-title mb-3">{{ 'HOME.BUSINESS' | translate }}</h2>
+    <p class="section-subtitle mb-5">{{ 'HOME.BUSINESS_SUBTITLE' | translate }}</p>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="business-card">
+          <div class="img-wrap">
+            <img src="assets/img/videos/Skin-Tightening-Laxity_.jpg" alt="Skin Tightening" class="img-fluid rounded-4">
+            <div class="overlay">
+              <span>{{ 'HOME.ADVANCED_TECHNOLOGY' | translate }}</span>
+            </div>
+          </div>
+          <h5 class="mt-3">{{ 'HOME.SKIN_TIGHTENING_LAXITY' | translate }}</h5>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="business-card">
+          <div class="img-wrap">
+            <img src="assets/img/videos/Acne-Scar-Pores_-1.jpg" alt="Acne Scar" class="img-fluid rounded-4">
+            <div class="overlay">
+              <span>{{ 'HOME.VISIBLE_RESULTS' | translate }}</span>
+            </div>
+          </div>
+          <h5 class="mt-3">{{ 'HOME.ACNE_SCAR_PORES' | translate }}</h5>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="business-card">
+          <div class="img-wrap">
+            <img src="assets/img/videos/Pigmentation_.jpg" alt="Pigmentation" class="img-fluid rounded-4">
+            <div class="overlay">
+              <span>{{ 'HOME.FLAWLESS_GLOW' | translate }}</span>
+            </div>
+          </div>
+          <h5 class="mt-3">{{ 'HOME.PIGMENTATION' | translate }}</h5>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="business-card">
+          <div class="img-wrap">
+            <img src="assets/img/videos/Multiple-Modality_.jpg" alt="Multiple Modality" class="img-fluid rounded-4">
+            <div class="overlay">
+              <span>{{ 'HOME.PERSONALIZED_SOLUTIONS' | translate }}</span>
+            </div>
+          </div>
+          <h5 class="mt-3">{{ 'HOME.MULTIPLE_MODALITY' | translate }}</h5>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="business-card">
+          <div class="img-wrap">
+            <img src="assets/img/videos/Skin-Rejuvenation_.jpg" alt="Skin Rejuvenation" class="img-fluid rounded-4">
+            <div class="overlay">
+              <span>{{ 'HOME.RENEWED_RADIANCE' | translate }}</span>
+            </div>
+          </div>
+          <h5 class="mt-3">{{ 'HOME.SKIN_REJUVENATION' | translate }}</h5>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="business-card">
+          <div class="img-wrap">
+            <img src="assets/img/videos/Body_.jpg" alt="Body" class="img-fluid rounded-4">
+            <div class="overlay">
+              <span>{{ 'HOME.CONFIDENCE_REDEFINED' | translate }}</span>
+            </div>
+          </div>
+          <h5 class="mt-3">{{ 'HOME.BODY' | translate }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /section2  -->
+
+
+
+
+<!-- Lenisna Section -->
+
+<div class="lenisna-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT IMAGES (Zinzap Grid) -->
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="lenisna-grid">
+          <img src="assets/img/banners/PDRNelle.jpg" class="grid-img">
+          <img src="assets/img/banners/section two 3.jpg" class="grid-img">
+          <img src="assets/img/banners/Loche Tox 200Unit.jpg" class="grid-img">
+        </div>
+      </div>
+
+      <!-- RIGHT TEXT -->
+      <div class="col-lg-4 ps-lg-5" [routerLink]="routes.listingGrid">
+        <h2 class="lenisna-title">{{ 'HOME.RESTORE_YOUR' | translate }}<br> {{ 'HOME.NATURAL_VOLUME' | translate }}</h2>
+        <p class="lenisna-tagline">{{ 'HOME.FULLNESS_NATURALLY_RESTORED' | translate }}</p>
+        <button class="lenisna-button">{{ 'HOME.LEARN_MORE' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Lenisna Section -->
+
+
+<section class="about-section py-5">
+  <div class="container-fluid position-relative">
+    <div class="section-header text-center mb-5">
+      <h2 class="fw-bold">{{ 'HOME.ABOUT' | translate }} <span class="text-gradient">{{ 'HOME.PDRN_HAIR' | translate }}</span></h2>
+      <p class="subtext">{{ 'HOME.INNOVATING_K_BEAUTY' | translate }}</p>
+      <div class="header-underline mx-auto mt-3"></div>
+    </div>
+
+    <div class="row align-items-stretch text-center gx-4 gy-4">
+      <!-- K-Skin Section -->
+  <div class="col-lg-4 col-md-6">
+        <div class="about-card text-center p-4 rounded-4 shadow-sm position-relative">
+         <div class="icon-glow mb-3">
+  <div class="icon-circle">
+    <span class="icon-font">&#x2728;</span> <!-- Sparkle symbol -->
+  </div>
+</div>
+
+          <h4 class="fw-bold mb-2">{{ 'HOME.KOREAN_INNOVATION_IN_SKIN_CARE' | translate }}</h4>
+          <p class="">
+           {{ 'HOME.PDRNHAIR_SKIN_CARE_RANGE' | translate }}
+          </p>
+          <ul class="list-unstyled ">
+            <li><i class="bi bi-droplet-half text-gradient me-2"></i>{{ 'HOME.HYDRATING_PEPTIDE_COMPLEXES' | translate }}</li>
+            <li><i class="bi bi-shield-check text-gradient me-2"></i>{{ 'HOME.DERMATOLOGIST_TESTED_SAFETY' | translate }}</li>
+            <li><i class="bi bi-flower3 text-gradient me-2"></i>{{ 'HOME.INFUSED_WITH_KOREAN_BOTANICAL_EXTRACTS' | translate }}</li>
+          </ul>
+          <a href="#" class="btn btn-gradient mt-3 px-4">{{ 'HOME.EXPLORE_SKIN' | translate }}</a>
+        </div>
+      </div>
+
+      <!-- Hair Care Section -->
+      <div class="col-lg-4 col-md-6">
+        <div class="about-card text-center p-4 rounded-4 shadow-sm position-relative">
+     <div class="icon-glow mb-3">
+  <div class="icon-circle">
+    <span class="icon-symbol">💆‍♀️</span>
+  </div>
+</div>
+
+
+          <h4 class="fw-bold mb-2">{{ 'HOME.PROFESSIONAL_HAIR_RESTORATION' | translate }}</h4>
+          <p class="">
+            {{ 'HOME.PDRNHAIR_HAIR_CARE_SOLUTIONS' | translate }}
+          </p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-lightning-charge text-gradient me-2"></i>{{ 'HOME.PDRN_PEPTIDE_INFUSION' | translate }}</li>
+            <li><i class="bi bi-heart-pulse text-gradient me-2"></i>{{ 'HOME.IMPROVES_SCALP_MICROCIRCULATION' | translate }}</li>
+            <li><i class="bi bi-stars text-gradient me-2"></i>{{ 'HOME.RESTORES_HAIR_SHINE_DENSITY' | translate }}</li>
+          </ul>
+          <a href="#" class="btn btn-gradient mt-3 px-4">{{ 'HOME.DISCOVER_HAIR' | translate }}</a>
+        </div>
+      </div>
+
+      <!-- Video Section -->
+      <div class="col-lg-4 col-md-12">
+        <div class="about-card p-0 rounded-4 overflow-hidden video-card">
+          <video autoplay muted loop playsinline class="about-video">
+            <source src="assets/img/videos/KakaoTalk_20251110_082852303.mp4" type="video/mp4" />
+            {{ 'Your browser does not support video playback.' | translate }}
+          </video>
+          <div class="video-overlay">
+            <div class="video-text">
+              <h4 class="fw-bold">{{ 'HOME.SCIENCE_MEETS_BEAUTY' | translate }}</h4>
+              <p>{{ 'HOME.PDRNHAIR_LOCHE_REDEFINES_MEDICAL_AESTHETICS' | translate }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated Background -->
+  <div class="bg-circle circle-1"></div>
+  <div class="bg-circle circle-2"></div>
+  <div class="bg-circle circle-3"></div>
+</section>
+
+
+
+<section class="NewArrival-section our-Stores-product">
+  <div class="container mb-5">
+    <h2 class="text-left section-title mb-5 pt-4 animate__animated animate__fadeInDown"> {{ 'HOME.LOCHE_PRODUCTS' | translate }}
+      <span [routerLink]="routes.listingGrid">{{ 'HOME.SEE_ALL_PRODUCTS' | translate }}</span> <i class="fa-solid fa-chevron-right"></i>
+    </h2>
+    <owl-carousel-o [options]="pramotionsec">
+      <ng-container *ngFor="let pramotion of promotionProducts">
+        <ng-template carouselSlide>
+          <div class="product-sec" [routerLink]="routes.listingGrid">
+            <div class="listing-item product-list">
+              <div class="listing-img">
+                <a class="product-image">
+                  <img [src]="pramotion.image" class="img-fluid" alt="product" />
+                </a>
+                 <!-- <span class="featured-text">{{pramotion.brandname}}</span> -->
+              </div>
+              <div class="listing-content">
+                <div class="listing-features d-flex align-items-end justify-content-between">
+                  <div class="list-rating">
+
+                    <h3 class="listing-title">
+                      <a>{{ pramotion.title | translate }}</a>
+                    </h3>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</section>
+
+
+
+
+<!-- Affiliates Section -->
+<div class="affiliates-section container">
+  <h2 class="affiliates-title">{{ 'HOME.EMPOWERING_GLOBAL_SYNERGIES' | translate }}</h2>
+
+  <div class="affiliates-wrapper container">
+
+    <!-- GLASSMORPHISM -->
+     <a target="_blank" rel="noopener noreferrer"
+          href="https://wholesale.stylekorean.com/?utm_source=stylekorean&utm_medium=referral&utm_campaign=stylekorean_gl_bt_pc">
+
+    <div class="affiliate-card glass">
+      <div class="top mt-4">
+        <a target="_blank" rel="noopener noreferrer"
+          href="https://wholesale.stylekorean.com/?utm_source=stylekorean&utm_medium=referral&utm_campaign=stylekorean_gl_bt_pc">
+
+          <img src="assets/img/banners/stylekorean_logo.png" class="logo">
+        </a>
+
+        <h4 class="mt-4">{{ 'HOME.STYLE_KOREAN' | translate }}</h4>
+        <p>{{ 'HOME.AESTHETIC_COSMETICS_MANUFACTURING' | translate }}</p>
+
+      </div>
+
+      <div class="bottom-circle">
+        <img src="assets/img/banners/2148963960.jpg">
+      </div>
+    </div>
+    </a>
+
+    <!-- GRADIENT -->
+         <a href="https://myindia.co.kr/" target="_blank" rel="noopener noreferrer">
+    <div class="affiliate-card gradient">
+      <div class="top">
+        <a href="https://myindia.co.kr/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/loche-logo-white-300x300.png" style="width:70px;" class="logo">
+        </a>
+        <h4>{{ 'HOME.MYINDIA' | translate }}</h4>
+        <p>{{ 'HOME.CDSCO_CERTIFICATION' | translate }}</p>
+      </div>
+      <div class="bottom-circle">
+        <img src="assets/img/banners/b2bimg.png">
+      </div>
+    </div>
+    </a>
+
+    <!-- NEUMORPHISM -->
+      <a href="https://bellaluna.in/" target="_blank" rel="noopener noreferrer">
+    <div class="affiliate-card neu">
+      <div class="top">
+        <a href="https://bellaluna.in/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/bellaluna-logo.webp" class="logo">
+        </a>
+        <h4 class="mt-2">{{ 'HOME.BELLALUNA' | translate }}</h4>
+        <p>{{ 'HOME.COSMETICS_OEM_MANUFACTURING' | translate }}</p>
+      </div>
+      <div class="bottom-circle">
+        <img src="assets/img/header-bg.png">
+      </div>
+    </div>
+</a>
+
+    <!-- SPLIT CARD -->
+      <a href="https://loche.in/" target="_blank" rel="noopener noreferrer">
+    <div class="affiliate-card split">
+      <div class="top">
+        <a href="https://loche.in/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/Loche-India-Logo-PNG.png" style="width:70px; " class="logo">
+        </a>
+        <h4>{{ 'HOME.LOCHE_LOGISTICS' | translate }}</h4>
+        <p>{{ 'HOME.INTERNATIONAL_LOGISTICS' | translate }}</p>
+      </div>
+      <div class="bottom-circle">
+        <img src="assets/img/banners/transport.png" class="thumb">
+      </div>
+    </div>
+</a>
+  </div>
+</div>

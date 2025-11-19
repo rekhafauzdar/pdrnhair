@@ -1,0 +1,107 @@
+.listing-item .listing-content .listing-location-details .listing-price {
+    font-size: 14px;
+    display: flex;
+    align-items: baseline;
+}
+
+.listing-item .listing-content .listing-features .listing-title a {
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.listing-item:hover {
+    transition: none;
+}
+
+.listing-item .listing-img .fav-item .fav-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 19px;
+}
+
+.listing-price h5 {
+    color: black;
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+.listing-price p {
+    font-size: 13px;
+    text-decoration: line-through;
+    margin-right: 4px;
+}
+
+.listing-price span {
+    font-size: 13px;
+    color: green;
+}
+
+/* -----------------------css for body-------------------------- */
+.details-grid {
+    background: #ffffff;
+}
+.rental-deal-slider.details-car {
+    padding: 20px;
+}
+.listing-item {
+    position: relative;
+    border: 1px solid #c3c3c3;
+    background: #ffffff;
+    border-radius: 3px;
+    margin: 0 0 15px 0;
+    padding: 15px;
+    padding-bottom: 15px !important;
+}
+/* ---------head---------------------- */
+.css-wn6jwz {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 19, 37, 0.16);
+    padding: 1.25rem 2rem;
+}
+.css-1gjbxyh {
+    color: rgb(0, 19, 37);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.3px;
+}
+.css-1ylarvv {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36px;
+    color: rgb(232, 0, 113);
+}
+@media (max-width: 676.98px) {
+    .col-6 {
+        padding: 0px;
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .listing-item{
+        position: relative;
+        border: 1px solid #c3c3c3;
+        background: #ffffff;
+        border-radius: 0px;
+        margin: 0 0 0px 0;
+        padding: 5px;
+        padding-bottom: 5px !important;
+    }
+    .css-1gjbxyh{
+        font-size: 17px;
+    }
+    .css-wn6jwz{
+        padding: .5rem 1rem;
+    }
+    .css-1ylarvv{
+        font-size: 15px;
+    }
+}
+.content {
+    padding: 0px 0;
+}

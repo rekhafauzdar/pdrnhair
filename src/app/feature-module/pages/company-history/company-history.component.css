@@ -1,0 +1,130 @@
+body {
+  background-color: #f9fafc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.timeline-section {
+  position: relative;
+  padding: 60px 0;
+}
+
+.timeline-header h2 {
+  font-weight: 700;
+  color: #004aad;
+  font-size: 2.2rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #004aad;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: attr(data-year);
+  position: absolute;
+  top: 15px;
+  width: 80px;
+  height: 80px;
+  background-color: #004aad;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.timeline-item.left::before {
+  right: -40px;
+}
+
+.timeline-item.right::before {
+  left: -40px;
+}
+
+.timeline-content {
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-content h4 {
+  color: #004aad;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 80px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-item::before {
+    top: 0;
+    left: 10px;
+    right: auto;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+  .timeline-item.right::before {
+    left: -15px;
+}
+.timeline-header h2 {
+    font-weight: 700;
+    color: #004aad;
+    font-size: 1.5rem;
+}
+}

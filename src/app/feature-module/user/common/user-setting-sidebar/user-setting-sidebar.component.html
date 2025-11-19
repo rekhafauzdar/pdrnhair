@@ -1,0 +1,31 @@
+    <div class="settings-widget">
+        <div class="settings-menu">
+            <ul>
+                <li>
+                    <a routerLinkActive="active" [routerLink]="routes.userSettings">
+                        <i class="feather icon-user"></i> Profile
+                    </a>
+                </li>
+                <li>
+                    <a routerLinkActive="active" [routerLink] = "routes.userSecurity">
+                        <i class="feather icon-shield"></i> Security
+                    </a>
+                </li>
+                <li>
+                    <a routerLinkActive="active" [routerLink] = "routes.userPreferences">
+                        <i class="feather icon-star"></i> Preferences
+                    </a>
+                </li>
+                <li>
+                    <a routerLinkActive="active" [routerLink] = "routes.userNotification">
+                        <i class="feather icon-bell"></i> Notifications
+                    </a>
+                </li>
+                <li>
+                    <a routerLinkActive="active" [routerLink] = "routes.userIntegration">
+                        <i class="feather icon-git-merge"></i> Integration
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>

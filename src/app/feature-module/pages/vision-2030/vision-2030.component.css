@@ -1,0 +1,95 @@
+.vision2030-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 20px;
+}
+
+.vision-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* filter: brightness(0.3); */
+  z-index: -2;
+}
+
+.vision-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 38, 56, 0.9), rgba(10, 20, 40, 0.8));
+  z-index: -1;
+}
+
+.vision-title {
+  font-size: 2.8rem;
+      color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.vision-subtitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #00d9ff;
+}
+
+.vision-intro {
+  color: #dcdcdc;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.vision-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 25px 20px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vision-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 217, 255, 0.2);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d9ff, #007bff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.vision-card h5 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.vision-card p {
+  color: #d9d9d9;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vision2030-section {
+    padding: 60px 15px;
+  }
+  .vision-title {
+    font-size: 2rem;
+  }
+  .vision-card {
+    margin-bottom: 15px;
+  }
+}

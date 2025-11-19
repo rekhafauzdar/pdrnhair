@@ -1,0 +1,64 @@
+<section class="inquiry-section container">
+  <div class="inquiry-header text-center mb-4">
+    <h2>{{'INQUIRY.INQUIRY_TITLE' | translate}}</h2>
+    <p>
+      {{'INQUIRY.INQUIRY_DESCRIPTION' | translate}}
+    </p>
+  </div>
+
+  <form>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">{{'INQUIRY.NAME_LABEL' | translate}} * </label>
+        <input type="text" class="form-control" placeholder="{{'INQUIRY.NAME_PLACEHOLDER' | translate}}">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{'INQUIRY.COMPANY_NAME_LABEL' | translate}}</label>
+        <input type="text" class="form-control" placeholder="{{'INQUIRY.COMPANY_NAME_PLACEHOLDER' | translate}}">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">{{'INQUIRY.DEPARTMENT_NAME_LABEL' | translate}}</label>
+        <input type="text" class="form-control" placeholder="{{'INQUIRY.DEPARTMENT_NAME_PLACEHOLDER' | translate}}">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{'INQUIRY.CONTACT_LABEL' | translate}} * </label>
+        <div class="d-flex">
+          <select class="form-select me-2" style="max-width: 100px;">
+            <option>+91</option>
+            <option>+82</option>
+            <option>+1</option>
+          </select>
+          <input type="text" class="form-control" placeholder="1234567890">
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">{{'INQUIRY.EMAIL_LABEL' | translate}} * </label>
+        <input type="email" class="form-control" placeholder="{{'INQUIRY.EMAIL_PLACEHOLDER' | translate}}">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{'INQUIRY.TITLE_LABEL' | translate}}</label>
+        <input type="text" class="form-control" placeholder="{{'INQUIRY.TITLE_PLACEHOLDER' | translate}}">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">{{'INQUIRY.CONTENT_LABEL' | translate}}</label>
+      <textarea rows="4" class="form-control" placeholder="{{'INQUIRY.CONTENT_PLACEHOLDER' | translate}}"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">{{'INQUIRY.FILE_ATTACHMENTS_LABEL' | translate}}</label>
+      <input type="file" class="form-control" accept=".pdf">
+    </div>
+
+    <div class="text-end">
+      <button type="submit" class="btn-submit">{{'INQUIRY.SUBMIT_BUTTON' | translate}}</button>
+    </div>
+  </form>
+</section>

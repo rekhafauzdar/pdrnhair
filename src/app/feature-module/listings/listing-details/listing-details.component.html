@@ -1,0 +1,893 @@
+<section class="section product-detail">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-lg-5 col-xl-4 theiaStickySidebar">
+        <div class="stickybar">
+          <!-- for the small screen only -->
+          <div class="detail-product ">
+            <div class="pro-info">
+              <div class="pro-badge">
+                <a class="fav-icon" (click)="toggleClass(productData.id)" tabindex="1"
+                  [ngClass]="{ selected: isClassAdded[productData.id] }">
+                  <i class="feather icon-heart" (click)="addToWishlist(productData.id)"></i>
+                </a>
+
+              </div>
+            </div>
+
+            <!-- Main Slider (Large images) -->
+            <div class="slider show-main-img">
+              <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig" data-sizes="50vw"
+                class="detail-bigimg">
+
+                <!-- Main Image -->
+                <div ngxSlickItem class="product-img show-img" *ngIf="productData?.imageInfo?.imageUrl">
+                  <img [src]="productData?.imageInfo?.imageUrl" alt="Main Product" class="zoom-img" />
+                </div>
+
+                <!-- Additional Images -->
+                @for (data of productData?.imageInfo?.additionalImages; track data.id) {
+                <div ngxSlickItem class="product-img show-img">
+                  <img [src]="data.additionalImageUrl" alt="Additional Product" class="zoom-img" />
+                </div>
+                }
+
+              </ngx-slick-carousel>
+            </div>
+
+
+            <!-- Thumbnail Slider -->
+            <div class="slider slide-multyimg">
+              <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig2" data-sizes="30vw"
+                class="slider-nav-thumbnails">
+
+                <!-- Main Thumbnail -->
+                <div ngxSlickItem *ngIf="productData?.imageInfo?.imageUrl">
+                  <img [src]="productData?.imageInfo?.imageUrl" alt="skinCareProduct" />
+                </div>
+
+                <!-- Additional Thumbnails -->
+                @for (data of productData?.imageInfo?.additionalImages; track data) {
+                <div ngxSlickItem>
+                  <img [src]="data.additionalImageUrl" alt="Thumbnail" />
+                </div>
+                }
+              </ngx-slick-carousel>
+            </div>
+
+
+
+
+            <!-- 
+            <div class="slider show-main-img">
+              <ngx-slick-carousel [config]="slideConfig" class="detail-bigimg">
+
+              
+                <div ngxSlickItem *ngIf="productData?.imageInfo?.imageUrl">
+                  <ngx-image-zoom [thumbImage]="productData?.imageInfo?.imageUrl"
+                    [fullImage]="productData?.imageInfo?.imageUrl" [zoomMode]="'hover'" [enableScrollZoom]="true"
+                    [lensWidth]="200" [lensHeight]="200" [enableLens]="true">
+                  </ngx-image-zoom>
+                </div>
+
+               
+                <div ngxSlickItem *ngFor="let data of productData?.imageInfo?.additionalImages">
+                  <ngx-image-zoom [thumbImage]="data.additionalImageUrl" [fullImage]="data.additionalImageUrl"
+                    [zoomMode]="'hover'" [enableScrollZoom]="true" [lensWidth]="200" [lensHeight]="200"
+                    [enableLens]="true">
+                  </ngx-image-zoom>
+                </div>
+
+              </ngx-slick-carousel>
+            </div>
+
+            <div class="slider slide-multyimg">
+              <ngx-slick-carousel [config]="slideConfig2" class="slider-nav-thumbnails">
+
+             
+                <div ngxSlickItem *ngIf="productData?.imageInfo?.imageUrl">
+                  <img [src]="productData?.imageInfo?.imageUrl" alt="Main Thumbnail" />
+                </div>
+
+              
+                <div ngxSlickItem *ngFor="let data of productData?.imageInfo?.additionalImages">
+                  <img [src]="data.additionalImageUrl" alt="Thumbnail" />
+                </div>
+
+              </ngx-slick-carousel>
+            </div> -->
+
+
+          </div>
+
+          <!---------------------- button section -->
+          <div class="row">
+            <div class="button-setup">
+              <ul class="row">
+                @if(productData?.mrp){
+                <li class="col-6" (click)="addToCart()">
+                  <button class="btn-setup btn-width buy-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to cart
+                  </button>
+                </li>
+
+                <li class="col-6" (click)="addToWishlist(productData?.id)">
+                  <button class="btn-setup btn-width Add-btn " type="button">
+                    <i class="feather icon-heart"></i> Add to Wishlist </button>
+                </li>
+                }
+              </ul>
+            </div>
+          </div>
+          <!---------------------- end btn section -->
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-7 col-xl-8" *ngIf="productData">
+        <div class="producttop-sec">
+          <div class="review-sec extra-service">
+            <div class="review-header" >
+              {{ productData?.brandName }}
+              <!-- <h6 class="share-product"><i class="fa-solid fa-share"></i>Share</h6> -->
+            </div>
+            <div class="lisiting-service">
+              <div class="product-name">
+                <p>
+                  <span >{{ productData?.productName }} </span>
+                  <br>
+                  <strong>
+   @if(productData?.netWeight){
+                  ({{productData?.netWeight}} {{productData?.weightUnit}})
+                  }
+                  </strong>
+               
+                </p>
+              </div>
+              <div class="reviewbox-list-rating">
+                <p>
+                  <i class="fas fa-star filled"></i>
+                  <i class="fas fa-star filled"></i>
+                  <i class="fas fa-star filled"></i>
+                  <i class="fas fa-star filled"></i>
+                  <i class="fas fa-star filled"></i>
+                  <span> (5.0)</span> | <span class="rating"> 421 Ratings & 220 Reviews </span>
+                </p>
+              </div>
+              <div class="price-sec">
+                <div class="listing-price">
+                  @if(productData.mrp){
+                  <h5> ₹ {{ productData?.mrp }}</h5>
+                  <li class=" only-for-large-wirth" (click)="addToCart()">
+                    <button class="btn-setup btn-width buy-btn" style="border-radius: 60px !important ; margin-left: 30px;">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      Add to cart
+                    </button>
+                  </li>
+                  }@else{
+                  <h5 style="color: red;"> OUT OF STOCK</h5>
+                  }
+                  <!-- <p>₹ 399</p><span>(10% Off)</span> -->
+                </div>
+                <p>
+                  Inclusive of all taxes
+                </p>
+              </div>
+
+              <div class="select-size-sec">
+                <!-- <p class="sec-head">Select size</p> -->
+                <!-- <button class="btn btn-primary">
+  <i class="fa-solid fa-cart-plus me-2"></i> Add to Cart
+</button> -->
+                <!-- <div class="fuel-list">
+                  <ul>
+                    <li>all size fit</li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <div class="input-selection">
+                        <input type="radio" name="mileage" id="all" checked="">
+                        <label for="all">180</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input-selection">
+                        <input type="radio" name="mileage" id="Normal" checked="">
+                        <label for="Normal">300</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input-selection">
+                        <input type="radio" name="mileage" id="limited" checked="">
+                        <label for="limited">500</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div> -->
+              </div>
+              <!-- <div class="Delivery-sec">
+                <div class="col-md-6">
+                  <label class="sec-head">Delivery</label>
+                  <div class="group-img">
+                    <div class="form-wrap col-xs-2">
+                      <input type="text" class="form-control" placeholder="Enter Delivery Pincode.." />
+                      <span class="form-icon">
+                        <i class="fa-solid fa-location-crosshairs"></i> Check
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+              </div> -->
+              <div class="servic-sec d-flex">
+                <div class="sec-head highlight-head">Services</div>
+                <ul>
+                  <li class="servic-box">
+                    <i class="fa-solid fa-indian-rupee-sign"></i> Cash on Delivery (Cross-Border) only
+                    <br>
+                    <p>Delivery with in 7-10 Days</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="highlight-sec">
+                <div class="col-lg-12">
+                  <div class="sec-head highlight-head">Highlights</div>
+                  <div class="highlight-box">
+                    <ul>
+                      <li class="highlight-info">{{productData?.idealFor}} <p *ngIf="productData?.idealFor==''">
+                          Women and Men (Both) </p>
+                      </li>
+                      <li class="highlight-info">{{productData?.productType}}</li>
+                      <li class="highlight-info">{{productData?.skinType}}</li>
+                      <li class="highlight-info">Applied For: {{productData?.concern}} </li>
+                      <li class="highlight-info">Comes in :{{productData?.containerType}} <span
+                          *ngIf="productData?.containerType==''">Comes in Bottle</span></li>
+                      <li class="highlight-info"  *ngIf="productData?.countryOrigin=='Korea'">Note:- Aadhar is mandatory for cross-border product</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--------------------------- Specifications product  ------------------------------>
+        <div class="product-more-info review-sec extra-service">
+          <div class="review-header">
+            <h4>Product Description</h4>
+          </div>
+          <div class="lisiting-service">
+            <div class="description-sec">
+              <!-- Tab Navigation -->
+              <div class="tab-width">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#spacific"
+                      type="button" role="tab">Specifications</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="description-tab" data-bs-toggle="tab" data-bs-target="#description"
+                      type="button" role="tab">Description</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                      type="button" role="tab">Ingredients</button>
+                  </li>
+
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#howtouse"
+                      type="button" role="tab">How To Use</button>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Tab Content -->
+              <div class="tab-content mt-3" id="myTab">
+                <div class="tab-pane fade show active" id="spacific" role="tabpanel">
+                  <div class="row">
+                    <table>
+                      <tbody>
+                        <tr class="spfcspc row">
+                          <td class=" spfcone firstext">Pack of</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.minimumOrderQuantity}}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Brand Name / Category</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.brandName}} / {{productData?.category}}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext"> Product Name </td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.productName}}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Quantity</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">1</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Ideal For</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.idealFor}} <p *ngIf="productData?.idealFor==''">
+                                  Women and Men (Both) </p>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Product Type</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.productType}}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Ingredient Type</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">Natural</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Maximum Shelf Life</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.shelfLife}} </li>
+                            </ul>
+                          </td>
+                        </tr>
+                         <tr class="spfcspc row">
+                          <td class="spfcone firstext">How To Save</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option"> Store at 2 ~ 8°C (refrigerated)</li>
+                            </ul>
+                          </td>
+                        </tr>
+                       
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Applied For</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.concern}} </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Skin Type</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.skinType}}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Container Type</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.containerType}}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Other Traits</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">For smooth &amp; fresh and glassy skin</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <!-- <tr class="spfcspc row">
+                          <td class="spfcone firstext">Sales Package</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">One Face Wash</li>
+                            </ul>
+                          </td>
+                        </tr> -->
+                        <tr class="spfcspc row">
+                          <td class="spfcone firstext">Manufacture</td>
+                          <td class="spfctwo secondtext">
+                            <ul>
+                              <li class="specif-option">{{productData?.countryOrigin}}</li>
+                            </ul>
+                            <!-- <ul>
+                              <li class="specif-option">{{productData?.netWeight}} {{productData?.weightUnit}}</li>
+                            </ul> -->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="description" role="tabpanel">
+                  <div class="col-lg-12">
+                    <div class="sec-head">
+                      {{productData?.shortDescription}}
+                    </div>
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel">
+                  <div class="col-lg-12">
+                    <div class="sec-head highlight-head">Ingredients</div>
+                    <div class="highlight-box">
+                      <ul>
+                        <li class="highlight-info">
+                          {{productData?.keyIngredients}}
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="howtouse" role="tabpanel">
+                  <div class="col-lg-12">
+                    <div class="sec-head highlight-head">How To Use</div>
+                    <div class="highlight-box">
+                      <ul>
+                        <li class="highlight-info"> {{productData?.usageInstructions}}.</li>
+                        <!-- <li class="highlight-info">Moisten face.</li>
+                        <li class="highlight-info">Squeeze out a small amount on your palm.</li>
+                        <li class="highlight-info">Massage gently on the face and neck.</li>
+                        <li class="highlight-info">Rinse well and pat dry.</li> -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!---------------------------end Specifications product  ------------------------------>
+
+        <div class="review-sec faq-feature">
+          <div class="review-header">
+            <h4>FAQ’s</h4>
+          </div>
+          <div class="faq-info">
+            <div class="faq-card">
+              <h4 class="faq-title">
+                <a class="collapsed" data-bs-toggle="collapse" href="#faqOne" aria-expanded="false">Q: Is suitable for
+                  dry skin?</a>
+              </h4>
+              <div id="faqOne" class="card-collapse collapse">
+                <p>
+                  A: Yess .. just not for dry skin .. it is suitable for all skin types
+                </p>
+              </div>
+            </div>
+            <div class="faq-card">
+              <h4 class="faq-title">
+                <a class="collapsed" data-bs-toggle="collapse" href="#faqTwo" aria-expanded="false">Q: Is good for dry
+                  skin</a>
+              </h4>
+              <div id="faqTwo" class="card-collapse collapse">
+                <p>
+                  A: Yes
+                </p>
+              </div>
+            </div>
+            <div class="faq-card">
+              <h4 class="faq-title">
+                <a class="collapsed" data-bs-toggle="collapse" href="#faqThree" aria-expanded="false">Q: Can this
+                  product
+                  be used for oily combination skin type?</a>
+              </h4>
+              <div id="faqThree" class="card-collapse collapse">
+                <p>
+                  A: No
+                </p>
+              </div>
+            </div>
+            <div class="faq-card">
+              <h4 class="faq-title">
+                <a class="collapsed" data-bs-toggle="collapse" href="#faqFour" aria-expanded="false">Q: Dry skin types
+                  can use this?</a>
+              </h4>
+              <div id="faqFour" class="card-collapse collapse">
+                <p>
+                  A: Yup this is gentle cleanser works well on dry skin
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------------------------------- /FAQ -------------------------------------------------->
+
+
+        <!------------------------------------ Policies ----------------------------------------------->
+        <!-- <div class="review-sec">
+          <div class="review-header">
+            <h4>Policies</h4>
+          </div>
+          <div class="policy-list">
+            <div class="policy-item">
+              <div class="policy-info">
+                <h6>Cancellation Charges</h6>
+                <p>Cancellation charges will be applied as per the policy</p>
+              </div>
+              <a [routerLink]="routes.privacyPolicy">Know More</a>
+            </div>
+            <div class="policy-item">
+              <div class="policy-info">
+                <h6>Policy</h6>
+                <p>
+                  I hereby agree to the terms and conditions of the Lease
+                  Agreement with Host
+                </p>
+              </div>
+              <a [routerLink]="routes.privacyPolicy">View Details</a>
+            </div>
+          </div>
+        </div> -->
+        <!----------------------------------- /Policies ----------------------------------------------->
+
+
+        <!---------------------------------- Reviews ---------------------------------------------------->
+        <div class="review-sec listing-review">
+          <div class="review-header">
+            <h4>Ratings & reviews</h4>
+            <div class="submit-btn text-end">
+              <button class="btn btn-primary submit-review" type="submit" (click)="writereview()">
+                Rate Product
+              </button>
+            </div>
+          </div>
+
+          <div class="rating-wrapper">
+            <div class="rating-wraps">
+              <h2>4.5<span>/5</span></h2>
+              <p>Excellent</p>
+              <h6>Overall 22334 <br><span>verified Ratings</span> </h6>
+            </div>
+            <div class="rating-progress">
+              <div class="progress-info">
+                <h6>Services</h6>
+                <div class="progress" role="progressbar">
+                  <div class="progress-bar bg-primary" style="width: 70%"></div>
+                </div>
+                <div class="progress-percent">4.6</div>
+              </div>
+              <div class="progress-info">
+                <h6>Easy of use</h6>
+                <div class="progress" role="progressbar">
+                  <div class="progress-bar bg-primary" style="width: 85%"></div>
+                </div>
+                <div class="progress-percent">4.8</div>
+              </div>
+              <div class="progress-info">
+                <h6>Value for Money</h6>
+                <div class="progress" role="progressbar">
+                  <div class="progress-bar bg-primary" style="width: 60%"></div>
+                </div>
+                <div class="progress-percent">3.0</div>
+              </div>
+              <!-- <div class="progress-info">
+                <h6>Features</h6>
+                <div class="progress" role="progressbar">
+                  <div class="progress-bar bg-primary" style="width: 65%"></div>
+                </div>
+                <div class="progress-percent">4.5</div>
+              </div> -->
+              <div class="progress-info">
+                <h6>Customer Support</h6>
+                <div class="progress" role="progressbar">
+                  <div class="progress-bar bg-primary" style="width: 90%"></div>
+                </div>
+                <div class="progress-percent">4.8</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+
+            <!--------------------------------- Gallery ---------------------------------------------------->
+            <div class="review-sec mb-0 pb-0">
+              <div class="review-header">
+                <h4>Images uploaded by customers:
+                </h4>
+              </div>
+              <div class="gallery-list">
+                <ul>
+                  @for (image of productData?.imageInfo?.additionalImages; track image; let i = $index) {
+                  @if (i < 4) { <li>
+                    <div class="gallery-widget">
+                      <a href="javascript:void(0);" data-fancybox="gallery1">
+                        <img class="img-fluid" alt="Image" [src]="image.additionalImageUrl"
+                          (click)="open(i, productData?.imageInfo?.additionalImages)">
+                      </a>
+                    </div>
+                    </li>
+                    }}
+
+                </ul>
+              </div>
+            </div>
+            <!------------------------------------ /Gallery ----------------------------------------------->
+            <div class="review-head" *ngIf="reviewsData.length > 0">
+              <h6>Showing {{reviewsData?.length}} reviews</h6>
+            </div>
+            <ul>
+              @for (review of reviewsData; track review; let i = $index) {
+              <li>
+                <div class="review-wraps">
+                  <div class="review-header-group">
+                    <div class="review-widget-header">
+                      <span class="review-widget-img">
+                        <img src="assets/img/profiles/profile.png" class="img-fluid" alt="User" />
+                      </span>
+                      <div class="review-design">
+                        <h6>{{review.user}}</h6>
+                        <p>02 Jan 2023</p>
+                      </div>
+                    </div>
+                    <div class="reviewbox-list-rating">
+                      <p>
+                        <!-- filled stars -->
+                        @for (star of [].constructor(review.rating); track star; let s = $index) {
+                        <i class="fas fa-star filled"></i>
+                        }
+                        <!-- empty stars -->
+                        @for (star of [].constructor(5 - review.rating); track star; let s = $index) {
+                        <i class="fas fa-star"></i>
+                        }
+                        <span> ({{review.rating}}.0)</span>
+                      </p>
+                    </div>
+                  </div>
+                  <p>
+                    {{review.comment}}
+                  </p>
+                  <div class="review-reply">
+                    <!-- <div class="gallery-list">
+                      <ul>
+
+                         @for (image of productData?.imageInfo?.additionalImages; track image; let i = $index) {
+                  @if (i < 4) { 
+                    <li>
+                    <div class="gallery-widget">
+                      <a href="javascript:void(0);" data-fancybox="gallery1">
+                        <img class="img-fluid" alt="Image" [src]="image.additionalImageUrl" (click)="open(i, productData?.imageInfo?.additionalImages)">
+                      </a>
+                    </div>
+                    </li>
+                    }}
+                    
+                      </ul>
+                    </div> -->
+                    <div class="review-action">
+                      <a href="javascript:void(0);"><i class="fa-regular fa-thumbs-up"></i>10</a>
+                      <a href="javascript:void(0);"><i class="fa-regular fa-thumbs-down"></i>12</a>
+                      <a href="javascript:void(0);"><i class="fa-regular fa-heart"></i>15</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              }
+
+              <div class="review-head"></div>
+              <div class="all-review">
+                <!-- <a [routerLink]="'/review-section'"> <span class="all-review-btn">All 6219 reviews <i
+                      class="fa-solid fa-chevron-right"></i></span></a> -->
+              </div>
+            </ul>
+          </div>
+        </div>
+        <!-- /Reviews -->
+
+        <!---------------------------------- Leave a Reply ---------------------------------------->
+        <!-- <div class="review-sec leave-reply-form mb-0">
+          <div class="review-header">
+            <h4>Leave a Reply</h4>
+          </div>
+          <div class="review-list-rating">
+            <div class="row">
+              <div class="col-xl-6 col-md-6">
+                <div class="set-rating">
+                  <p>Service</p>
+                  <div class="rating-selection">
+                    <input type="checkbox" id="service1" value="1" />
+                    <label for="service1"></label>
+                    <input type="checkbox" id="service2" value="2" />
+                    <label for="service2"></label>
+                    <input type="checkbox" id="service3" value="3" />
+                    <label for="service3"></label>
+                    <input type="checkbox" id="service4" value="4" />
+                    <label for="service4"></label>
+                    <input type="checkbox" id="service5" value="5" />
+                    <label for="service5"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <div class="set-rating">
+                  <p>Easy of use</p>
+                  <div class="rating-selection">
+                    <input type="checkbox" id="loc1" value="1" />
+                    <label for="loc1"></label>
+                    <input type="checkbox" id="loc2" value="2" />
+                    <label for="loc2"></label>
+                    <input type="checkbox" id="loc3" value="3" />
+                    <label for="loc3"></label>
+                    <input type="checkbox" id="loc4" value="4" />
+                    <label for="loc4"></label>
+                    <input type="checkbox" id="loc5" value="5" />
+                    <label for="loc5"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <div class="set-rating">
+                  <p>Value for Money</p>
+                  <div class="rating-selection">
+                    <input type="checkbox" id="fac1" value="1" />
+                    <label for="fac1"></label>
+                    <input type="checkbox" id="fac2" value="2" />
+                    <label for="fac2"></label>
+                    <input type="checkbox" id="fac3" value="3" />
+                    <label for="fac3"></label>
+                    <input type="checkbox" id="fac4" value="4" />
+                    <label for="fac4"></label>
+                    <input type="checkbox" id="fac5" value="5" />
+                    <label for="fac5"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <div class="set-rating">
+                  <p>Customer Support</p>
+                  <div class="rating-selection">
+                    <input type="checkbox" id="clean1" value="1" />
+                    <label for="clean1"></label>
+                    <input type="checkbox" id="clean2" value="2" />
+                    <label for="clean2"></label>
+                    <input type="checkbox" id="clean3" value="3" />
+                    <label for="clean3"></label>
+                    <input type="checkbox" id="clean4" value="4" />
+                    <label for="clean4"></label>
+                    <input type="checkbox" id="clean5" value="5" />
+                    <label for="clean5"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="review-list">
+              <ul>
+                <li class="review-box feedbackbox mb-0">
+                  <div class="review-details">
+                    <form class="#">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="input-block">
+                            <label>Full Name
+                              <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="input-block">
+                            <label>Email Address
+                              <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="input-block">
+                            <label>Comments </label>
+                            <textarea rows="4" class="form-control"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="submit-btn text-end">
+                        <button class="btn btn-primary submit-review" type="submit">
+                          Submit Review
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+        <!---------------------------------- /Leave a Reply ---------------------------------------->
+      </div>
+
+
+
+
+    </div>
+
+
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <div class="details-car-grid">
+          <div class="details-slider-heading">
+            <h3>You May be Interested in</h3>
+          </div>
+          @if(similarProductData){
+          <div class="rental-deal-slider details-car">
+            <owl-carousel-o [options]="interestedCarsOptions">
+              <ng-template carouselSlide *ngFor="let item of similarProductData; trackBy: trackByProductId">
+                <div class="rental-car-item">
+                  <div class="listing-item pb-0">
+                    <div class="listing-img">
+                      <a class="product-img" (click)="getAllProductDataByID(item.id)">
+                        <img *ngIf="item?.productImageId" [src]="item?.productImageId" class="img-fluid"
+                          alt="product" />
+                      </a>
+                      <div class="fav-item justify-content-end">
+                        <a class="fav-icon" (click)="toggleClass(item.id)" tabindex="1"
+                          [ngClass]="{ selected: isClassAdded[item.id] }">
+                          <i class="feather icon-heart" (click)="addToWishlist(item.id)"></i>
+                        </a>
+
+                      </div>
+
+                    </div>
+                    <div class="listing-content">
+                      <div class="listing-features d-flex align-items-end justify-content-between"
+                        (click)="getAllProductDataByID(item.id)">
+                        <div class="list-rating">
+
+                          <h3 class="listing-title">
+                            <a>{{item.productName}}</a>
+                          </h3>
+                          <div class="list-rating">
+                            <i class="fas fa-star filled"></i>
+                            <i class="fas fa-star filled"></i>
+                            <i class="fas fa-star filled"></i>
+                            <i class="fas fa-star filled"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.0) 150 Reviews</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="listing-location-details" (click)="getAllProductDataByID(item.id)">
+                        <div class="listing-price">
+                          <h5>₹ {{item.mrp}} </h5>
+                         
+                        </div>
+                      </div>
+                      <div class="listing-button" (click)="addIntrestedItemToCart(item.id)">
+                        <a class="btn btn-order"><span><i class="fa-solid fa-bag-shopping"></i></span>Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </owl-carousel-o>
+          </div>
+          }
+        
+        </div>
+      </div>
+    </div> -->
+
+
+
+  </div>
+</section>

@@ -1,0 +1,64 @@
+<div
+  class="main-wrapper"
+  [ngClass]="{
+    'menu-opened': showMiniSidebar === true,
+    'expand-menu': expandMenu === true && miniSidebar === true,
+    'mini-sidebar': miniSidebar === true,
+    'slide-nav': mobileSidebar === true,
+    'home-three': base  === 'home-3',
+    'listing-page map-page': page === 'listing-map',
+    'listing-page': page === 'listing-grid' || 'listing-list',
+    
+    'login-body':
+      page === 'forgot-password' ||
+      page === 'login' ||
+      page === 'register' ||
+      page === 'reset-password' 
+  }"
+  >
+  <!-- @if (base !== 'user') {
+    <app-header [ngClass]="{ 'd-none': headerActive === false }"></app-header>
+  } -->
+     <app-header ></app-header>
+  <router-outlet></router-outlet>
+  <app-footer [ngClass]="{ 'd-none': footerActive === false }"></app-footer>
+</div>
+
+<app-modal></app-modal>
+
+<!-- scrollToTop start -->
+@if (
+  base === 'blog' ||
+  base === 'booking' ||
+  base === 'home' ||
+  base === 'home-1' ||
+  base === 'home-2' ||
+  base === 'home-3' ||
+  base === 'listings' ||
+  base === 'pages' ||
+  base === 'user'
+  ) {
+  <div
+    (click)="scrollToTop()"
+    (keydown.enter)="scrollToTop()"
+    role="button"
+    tabindex="0"
+    class="progress-wrap"
+    [class.active-progress]="strokeValue < progress"
+    >
+    <svg
+      class="progress-circle svg-content"
+      width="100%"
+      height="100%"
+      viewBox="-1 -1 102 102"
+      >
+      <path
+        d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+        style="transition: stroke-dashoffset 10ms linear 0s"
+        attr.stroke-dasharray="{{ progress + 'px' + ',' + progress + 'px' }}"
+        attr.stroke-dashoffset="{{ strokeValue + 'px' }}"
+      ></path>
+    </svg>
+  </div>
+}
+<!-- scrollToTop end -->

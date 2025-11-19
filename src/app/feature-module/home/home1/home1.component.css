@@ -1,0 +1,522 @@
+.sec-one-img img {
+  border-radius: 10px;
+}
+.business-section {
+  background-color: #faf9fc;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+.section-subtitle {
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.business-card {
+  transition: all 0.4s ease;
+}
+
+.business-card:hover {
+  transform: translateY(-6px);
+}
+
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.img-wrap img {
+  transition: transform 0.7s ease;
+}
+
+.img-wrap:hover img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+  border-radius: 16px;
+}
+
+.img-wrap:hover .overlay {
+  opacity: 1;
+}
+
+.overlay span {
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.business-card h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 15px;
+  text-transform: capitalize;
+}
+
+
+
+/* section 3 */
+.hero-section {
+  padding: 80px 0;
+  background: #fff;
+}
+.hero-title {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111;
+}
+.hero-btn {
+  background-color: #004a97;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 30px;
+  color: white;
+  margin-top: 25px;
+}
+.hero-btn:hover {
+  background-color: #003d7a;
+}
+.hero-image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  object-fit: cover;
+}
+
+.lenisna-section {
+  padding: 80px 0;
+  background: #f7eef2;
+}
+.lenisna-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.grid-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 150px;
+  transition: 0.35s ease;
+  position: relative;
+  border: 15px solid white;
+}
+.grid-img:nth-child(1),
+.grid-img:nth-child(3) {
+  height: 420px;
+  margin-top: 70px;
+}
+.grid-img:nth-child(2) {
+  height: 550px;
+}
+.grid-img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+.lenisna-title {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.lenisna-tagline {
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+.lenisna-button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: 0.35s ease;
+}
+.lenisna-button:hover {
+  background: #444;
+  transform: translateY(-3px);
+}
+/* end section 3 */
+/*--------------------------- about section  ----------------------------*/
+.about-section {
+  position: relative;
+      background: linear-gradient(135deg, #b171e4, #fafcff, #f07ca1);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  overflow: hidden;
+}
+
+/* Header */
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #a46ef1, #f57c9b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtext {
+  color: #666;
+  font-size: 1.1rem;
+}
+.header-underline {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #f57c9b, #a46ef1);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* About Card */
+.about-card {
+  background: #ffffff5c;
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+  height: 100%;
+  animation: fadeUp 1.2s ease;
+}
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(164, 110, 241, 0.15);
+}
+.about-card h4 {
+  color: #222;
+}
+.about-card p {
+  color: #000000;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Gradient Button */
+.btn-gradient {
+  background: linear-gradient(90deg, #a46ef1, #f57c9b);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 26px;
+  font-weight: 500;
+  box-shadow: 0 4px 14px rgba(245, 124, 155, 0.3);
+  transition: 0.3s ease;
+}
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(164, 110, 241, 0.35);
+}
+
+/* Video Card */
+.video-card {
+  position: relative;
+  height: 100%;
+}
+.about-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: transform 1s ease;
+}
+.video-card:hover .about-video {
+  transform: scale(1.05);
+}
+.video-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(164,110,241,0.25));
+}
+.video-text {
+  color: #fff;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  padding: 1rem;
+}
+
+/* Animated Circles */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(164,110,241,0.08), transparent 70%);
+  animation: float 10s ease-in-out infinite;
+  z-index: 0;
+}
+.circle-1 { width: 180px; height: 180px; top: -60px; left: -60px; }
+.circle-2 { width: 120px; height: 120px; bottom: 60px; right: 80px; animation-delay: 2s; }
+.circle-3 { width: 100px; height: 100px; top: 60%; left: 40%; animation-delay: 4s; }
+
+/* Keyframes */
+@keyframes fadeUp { from {opacity: 0; transform: translateY(40px);} to {opacity: 1; transform: translateY(0);} }
+@keyframes float { 0%,100% {transform: translateY(0);} 50% {transform: translateY(25px);} }
+@keyframes gradientShift { 0% {background-position: 0% 50%;} 50% {background-position: 100% 50%;} 100% {background-position: 0% 50%;} }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-card { margin-bottom: 25px; }
+  .about-video { height: 300px; }
+  .video-overlay { background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(164,110,241,0.2)); }
+}
+.icon-circle {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffb6c1, #ffd6dc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 25px rgba(255, 118, 152, 0.4);
+  animation: softPulse 4s infinite ease-in-out;
+  position: relative;
+}
+
+.icon-symbol {
+  animation: floatSymbol 3s infinite ease-in-out;
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 118, 152, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(255, 118, 152, 0.6);
+  }
+}
+
+@keyframes floatSymbol {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.icon-circle:before {
+    content: "\e84a";
+    content: none;
+}
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fff5f8, #fbeaff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 0 25px rgba(255, 180, 200, 0.4);
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
+.icon-font {
+  font-family: "Segoe UI Symbol", "Poppins", sans-serif;
+  font-size: 2.8rem;
+  color: #ff6fa5;
+  text-shadow: 0 0 15px rgba(255, 100, 150, 0.4);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 15px rgba(255, 100, 150, 0.3); }
+  50% { text-shadow: 0 0 25px rgba(255, 100, 150, 0.7); }
+}
+
+
+/*------------------------ end about section ------------------------*/
+
+/* brand section (used for Loche Bio Products header) */
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: #303351;
+  align-items: center;
+}
+.section-title span {
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-left: 2px solid gray;
+}
+.section-title i {
+  font-size: 13px;
+}
+@media (max-width: 575.98px) {
+  .section-title {
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .section-title span {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+}
+
+/* New Arrival background gradient */
+@media (max-width: 767.98px) {
+  .our-Stores-product {
+    border-radius: 30px 30px 0 0;
+    margin-top: -10px;
+    width: 100%;
+    background-image: linear-gradient(#f5f7fe, #fff 14%);
+  }
+}
+
+/* Empowering Global Synergies Section */
+.affiliates-section {
+  padding-bottom: 40px;
+}
+
+.affiliates-title {
+  font-size: 30px;
+  
+  font-weight: 700;
+  font-family: sans-serif;
+  color: #303351;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.affiliates-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.affiliate-card {
+  height: 500px;
+  position: relative;
+  padding: 25px;
+  border-radius: 22px;
+  border: 1px solid #c7c7c7;
+  text-align: center;
+  transition: 0.35s ease;
+  overflow: hidden;
+}
+
+.affiliate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 18px rgba(120, 120, 255, 0.25);
+}
+
+.logo {
+  max-width: 140px;
+  margin-bottom: 18px;
+}
+
+.bottom-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid rgba(255, 255, 255, 0.7);
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.bottom-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 21px;
+}
+
+.glass {
+  background: rgb(245 243 243);
+  backdrop-filter: blur(15px);
+}
+
+.gradient {
+  background: linear-gradient(135deg, #d5a6ff, #bce3ff);
+  color: #333;
+}
+
+.neu {
+  background: #f1f3f5;
+}
+
+.split {
+  align-items: center;
+  background: #dbdbdb;
+}
+
+@media (min-width: 768px) {
+  .slider-for-mobile {
+    display: none !important;
+  }
+  .slider-custom {
+    padding: 10px;
+  }
+}
+@media (max-width: 767.9px) {
+  .slider-for-tab {
+    display: none !important;
+  }
+  .hero-title {
+    font-size: 30px;
+}
+.hero-btn {
+    padding: 9px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 16px;
+}
+.lenisna-title {
+    font-size: 31px;
+}
+.lenisna-button {
+    padding: 9px 15px;
+    font-size: 14px;
+}
+}
